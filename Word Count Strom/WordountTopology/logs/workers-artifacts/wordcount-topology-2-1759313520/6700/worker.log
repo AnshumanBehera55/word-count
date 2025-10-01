@@ -1,0 +1,578 @@
+2025-10-01 10:12:07.142 STDERR Thread-1 [INFO] [0.000s][warning][gc] -Xloggc is deprecated. Will use -Xlog:gc:artifacts/gc.log instead.
+2025-10-01 10:12:07.150 STDERR Thread-1 [INFO] [0.001s][warning][gc] -XX:+PrintGCDetails is deprecated. Will use -Xlog:gc* instead.
+2025-10-01 10:12:07.279 o.a.s.v.ConfigValidation main [INFO] Will use [class org.apache.storm.Config] for validation
+2025-10-01 10:12:07.364 o.a.s.d.w.LogConfigManager main [INFO] Started with log levels: {=INFO, STDERR=INFO, STDOUT=INFO, org.apache.storm.metric.LoggingMetricsConsumer=INFO}
+2025-10-01 10:12:07.403 o.a.s.d.w.Worker main [INFO] Adding shutdown hook with kill in 3 secs
+2025-10-01 10:12:07.414 o.a.s.d.w.Worker main [INFO] Launching worker for wordcount-topology-2-1759313520 on 7bc87f19-52c5-4929-9bd8-852182cd9419-172.18.0.6:6700 with id ba931562-7700-46c3-8055-c75b68403880 and conf {storm.messaging.netty.min_wait_ms=100, topology.backpressure.wait.strategy=org.apache.storm.policy.WaitStrategyProgressive, storm.resource.isolation.plugin=org.apache.storm.container.cgroup.CgroupManager, storm.zookeeper.auth.user=null, storm.messaging.netty.buffer_size=5242880, topology.bolt.wait.progressive.level1.count=1, storm.zookeeper.ssl.hostnameVerification=false, pacemaker.auth.method=NONE, storm.oci.cgroup.root=/sys/fs/cgroup, ui.filter=null, worker.profiler.enabled=false, executor.metrics.frequency.secs=60, supervisor.thrift.threads=16, ui.http.creds.plugin=org.apache.storm.security.auth.DefaultHttpCredentialsPlugin, supervisor.supervisors.commands=[], supervisor.queue.size=128, storm.messaging.netty.flush_timeout_ms=600000, logviewer.cleanup.age.mins=10080, topology.tuple.serializer=org.apache.storm.serialization.types.ListDelegateSerializer, storm.cgroup.memory.enforcement.enable=false, drpc.port=3772, supervisor.localizer.update.blob.interval.secs=30, topology.max.spout.pending=null, topology.transfer.buffer.size=1000, nimbus.thrift.tls.max_buffer_size=1048576, storm.oci.nscd.dir=/var/run/nscd, nimbus.worker.heartbeats.recovery.strategy.class=org.apache.storm.nimbus.TimeOutWorkerHeartbeatsRecoveryStrategy, worker.metrics={CGroupMemory=org.apache.storm.metrics2.cgroup.CGroupMemoryUsage, CGroupMemoryLimit=org.apache.storm.metrics2.cgroup.CGroupMemoryLimit, CGroupCpu=org.apache.storm.metrics2.cgroup.CGroupCpu, CGroupCpuGuarantee=org.apache.storm.metrics2.cgroup.CGroupCpuGuarantee, CGroupCpuGuaranteeByCfsQuota=org.apache.storm.metrics2.cgroup.CGroupCpuGuaranteeByCfsQuota, CGroupCpuStat=org.apache.storm.metrics2.cgroup.CGroupCpuStat}, logviewer.port=8000, worker.childopts=-Xmx%HEAP-MEM%m -XX:+IgnoreUnrecognizedVMOptions -XX:+PrintGCDetails -Xloggc:artifacts/gc.log -XX:+PrintGCDateStamps -XX:+PrintGCTimeStamps -XX:+UseGCLogFileRotation -XX:NumberOfGCLogFiles=10 -XX:GCLogFileSize=1M -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=artifacts/heapdump, topology.component.cpu.pcore.percent=10.0, storm.daemon.metrics.reporter.plugins=[org.apache.storm.daemon.metrics.reporters.JmxPreparableReporter], worker.max.timeout.secs=600, blacklist.scheduler.resume.time.secs=1800, drpc.childopts=-Xmx768m, nimbus.task.launch.secs=120, logviewer.childopts=-Xmx128m, topology.ras.acker.executors.per.worker=1, storm.supervisor.hard.memory.limit.overage.mb=2024, storm.zookeeper.servers=[zookeeper], storm.messaging.transport=org.apache.storm.messaging.netty.Context, storm.messaging.netty.authentication=false, topology.localityaware.higher.bound=0.8, storm.cgroup.memory.limit.tolerance.margin.mb=0.0, storm.cgroup.hierarchy.name=storm, blacklist.scheduler.assume.supervisor.bad.based.on.bad.slot=true, storm.metricprocessor.class=org.apache.storm.metricstore.NimbusMetricProcessor, topology.kryo.factory=org.apache.storm.serialization.DefaultKryoFactory, nimbus.assignments.service.threads=10, worker.heap.memory.mb=768, storm.thrift.tls.socket.timeout.ms=600000, nimbus.thrift.client.use.tls=false, storm.network.topography.plugin=org.apache.storm.networktopography.DefaultRackDNSToSwitchMapping, supervisor.slots.ports=[6700, 6701, 6702, 6703], topology.stats.sample.rate=0.05, storm.local.dir=/data, topology.backpressure.wait.park.microsec=100, topology.ras.constraint.max.state.search=10000, storm.oci.cgroup.parent=/storm, topology.testing.always.try.serialize=false, nimbus.assignments.service.thread.queue.size=100, storm.principal.tolocal=org.apache.storm.security.auth.DefaultPrincipalToLocal, java.library.path=/usr/local/lib:/opt/local/lib:/usr/lib:/usr/lib64, nimbus.local.assignments.backend.class=org.apache.storm.assignments.InMemoryAssignmentBackend, worker.gc.childopts=, storm.group.mapping.service.cache.duration.secs=120, topology.multilang.serializer=org.apache.storm.multilang.JsonSerializer, drpc.request.timeout.secs=600, nimbus.blobstore.class=org.apache.storm.blobstore.LocalFsBlobStore, topology.state.synchronization.timeout.secs=60, topology.bolt.wait.progressive.level2.count=1000, nimbus.thrift.tls.client.auth.required=true, topology.worker.shared.thread.pool.size=4, nimbus.thrift.tls.port=0, topology.executor.receive.buffer.size=32768, pacemaker.servers=[], storm.daemon.metrics.reporter.interval.secs=10, supervisor.monitor.frequency.secs=3, storm.nimbus.retry.times=5, topology.transfer.batch.size=1, transactional.zookeeper.port=null, storm.auth.simple-white-list.users=[], topology.scheduler.strategy=org.apache.storm.scheduler.resource.strategies.scheduling.DefaultResourceAwareStrategy, storm.zookeeper.port=2181, storm.zookeeper.retry.intervalceiling.millis=30000, storm.cluster.state.store=org.apache.storm.cluster.ZKStateStorageFactory, nimbus.thrift.port=6627, blacklist.scheduler.tolerance.count=3, nimbus.thrift.threads=64, supervisor.supervisors=[], nimbus.seeds=[nimbus], storm.cluster.metrics.consumer.publish.interval.secs=60, logviewer.filter.params=null, topology.min.replication.count=1, nimbus.blobstore.expiration.secs=600, storm.group.mapping.service=org.apache.storm.security.auth.ShellBasedGroupsMapping, storm.nimbus.retry.interval.millis=2000, topology.max.task.parallelism=null, topology.backpressure.wait.progressive.level2.count=1000, drpc.https.keystore.password=, resource.aware.scheduler.constraint.max.state.search=100000, supervisor.heartbeat.frequency.secs=5, nimbus.credential.renewers.freq.secs=600, storm.supervisor.medium.memory.grace.period.ms=30000, nimbus.thrift.tls.transport=org.apache.storm.security.auth.tls.TlsTransportPlugin, storm.thrift.transport=org.apache.storm.security.auth.SimpleTransportPlugin, storm.cgroup.hierarchy.dir=/cgroup/storm_resources, storm.zookeeper.auth.password=null, ui.port=8080, drpc.authorizer.acl.strict=false, topology.message.timeout.secs=30, topology.error.throttle.interval.secs=10, topology.backpressure.check.millis=50, drpc.https.keystore.type=JKS, supervisor.memory.capacity.mb=4096.0, storm.metricstore.class=org.apache.storm.metricstore.rocksdb.RocksDbStore, storm.zookeeper.ssl.enable=false, drpc.authorizer.acl.filename=drpc-auth-acl.yaml, topology.builtin.metrics.bucket.size.secs=60, topology.spout.wait.park.microsec=100, storm.local.mode.zmq=false, pacemaker.client.max.threads=2, ui.header.buffer.bytes=4096, topology.shellbolt.max.pending=100, topology.serialized.message.size.metrics=false, drpc.max_buffer_size=1048576, drpc.disable.http.binding=true, storm.codedistributor.class=org.apache.storm.codedistributor.LocalFileSystemCodeDistributor, worker.profiler.childopts=-XX:+UnlockCommercialFeatures -XX:+FlightRecorder, nimbus.supervisor.timeout.secs=60, storm.supervisor.cgroup.rootdir=storm, topology.worker.max.heap.size.mb=768.0, storm.zookeeper.root=/storm, topology.disable.loadaware.messaging=false, topology.ras.one.executor.per.worker=false, storm.supervisor.hard.memory.limit.multiplier=2.0, nimbus.topology.validator=org.apache.storm.nimbus.DefaultTopologyValidator, worker.heartbeat.frequency.secs=1, storm.messaging.netty.max_wait_ms=1000, topology.backpressure.wait.progressive.level1.count=1, topology.max.error.report.per.interval=5, nimbus.thrift.max_buffer_size=1048576, storm.metricstore.rocksdb.location=storm_rocks, storm.supervisor.low.memory.threshold.mb=1024, pacemaker.max.threads=50, ui.pagination=20, ui.disable.http.binding=true, supervisor.blobstore.download.max_retries=3, topology.enable.message.timeouts=true, logviewer.disable.http.binding=true, storm.messaging.netty.transfer.batch.size=262144, topology.spout.wait.progressive.level2.count=0, topology.worker.nimbus.thrift.client.use.tls=false, ui.title=Storm UI, blacklist.scheduler.strategy=org.apache.storm.scheduler.blacklist.strategies.DefaultBlacklistStrategy, storm.metricstore.rocksdb.retention_hours=240, supervisor.run.worker.as.user=false, storm.messaging.netty.client_worker_threads=1, topology.tasks=null, supervisor.thrift.socket.timeout.ms=5000, storm.group.mapping.service.params=null, drpc.http.port=3774, transactional.zookeeper.root=/transactional, supervisor.blobstore.download.thread.count=5, logviewer.filter=null, pacemaker.kerberos.users=[], topology.spout.wait.strategy=org.apache.storm.policy.WaitStrategyProgressive, storm.blobstore.inputstream.buffer.size.bytes=65536, supervisor.worker.heartbeats.max.timeout.secs=600, supervisor.worker.timeout.secs=30, topology.worker.receiver.thread.count=1, logviewer.max.sum.worker.logs.size.mb=4096, topology.executor.overflow.limit=0, topology.batch.flush.interval.millis=1, nimbus.file.copy.expiration.secs=600, pacemaker.port=6699, topology.worker.logwriter.childopts=-Xmx64m, drpc.http.creds.plugin=org.apache.storm.security.auth.DefaultHttpCredentialsPlugin, nimbus.topology.blobstore.deletion.delay.ms=300000, storm.blobstore.acl.validation.enabled=false, ui.filter.params=null, topology.workers=1, blacklist.scheduler.tolerance.time.secs=300, storm.supervisor.medium.memory.threshold.mb=1536, topology.environment=null, drpc.invocations.port=3773, storm.metricstore.rocksdb.create_if_missing=true, nimbus.cleanup.inbox.freq.secs=600, client.blobstore.class=org.apache.storm.blobstore.NimbusBlobStore, topology.fall.back.on.java.serialization=false, storm.nimbus.retry.intervalceiling.millis=60000, storm.nimbus.zookeeper.acls.fixup=true, logviewer.appender.name=A1, ui.users=null, pacemaker.childopts=-Xmx1024m, storm.messaging.netty.server_worker_threads=1, scheduler.display.resource=false, ui.actions.enabled=true, storm.thrift.socket.timeout.ms=600000, storm.topology.classpath.beginning.enabled=false, storm.zookeeper.connection.timeout=15000, topology.tick.tuple.freq.secs=null, nimbus.inbox.jar.expiration.secs=3600, topology.debug=false, storm.zookeeper.retry.interval=1000, storm.messaging.netty.buffer.high.watermark=16777216, storm.blobstore.dependency.jar.upload.chunk.size.bytes=1048576, worker.log.level.reset.poll.secs=30, storm.zookeeper.retry.times=5, nimbus.code.sync.freq.secs=120, topology.component.resources.offheap.memory.mb=0.0, nimbus.thrift.tls.threads=64, topology.spout.wait.progressive.level1.count=0, topology.state.checkpoint.interval.ms=1000, topology.priority=29, supervisor.localizer.cleanup.interval.ms=30000, storm.health.check.dir=healthchecks, supervisor.cpu.capacity=400.0, topology.backpressure.wait.progressive.level3.sleep.millis=1, storm.cgroup.resources=[cpu, memory], storm.worker.min.cpu.pcore.percent=0.0, topology.classpath=null, storm.nimbus.zookeeper.acls.check=true, num.stat.buckets=20, topology.spout.wait.progressive.level3.sleep.millis=1, supervisor.localizer.cache.target.size.mb=10240, topology.worker.childopts=null, drpc.https.port=-1, topology.bolt.wait.park.microsec=100, topology.max.replication.wait.time.sec=60, storm.cgroup.cgexec.cmd=/bin/cgexec, topology.acker.executors=null, topology.bolt.wait.progressive.level3.sleep.millis=1, supervisor.worker.start.timeout.secs=120, supervisor.worker.shutdown.sleep.secs=3, logviewer.max.per.worker.logs.size.mb=2048, topology.trident.batch.emit.interval.millis=500, task.heartbeat.frequency.secs=3, supervisor.enable=true, supervisor.thrift.max_buffer_size=1048576, supervisor.blobstore.class=org.apache.storm.blobstore.NimbusBlobStore, topology.producer.batch.size=1, drpc.worker.threads=64, resource.aware.scheduler.priority.strategy=org.apache.storm.scheduler.resource.strategies.priority.DefaultSchedulingPriorityStrategy, blacklist.scheduler.reporter=org.apache.storm.scheduler.blacklist.reporters.LogReporter, storm.messaging.netty.socket.backlog=500, storm.cgroup.inherit.cpuset.configs=false, nimbus.queue.size=100000, drpc.queue.size=128, ui.disable.spout.lag.monitoring=true, topology.eventlogger.executors=0, pacemaker.base.threads=10, nimbus.childopts=-Xmx1024m, storm.log.dir=/logs, topology.spout.recvq.skips=3, storm.resource.isolation.plugin.enable=false, nimbus.monitor.freq.secs=10, storm.supervisor.memory.limit.tolerance.margin.mb=128.0, storm.disable.symlinks=false, topology.localityaware.lower.bound=0.2, transactional.zookeeper.servers=null, nimbus.task.timeout.secs=30, logs.users=null, pacemaker.thrift.message.size.max=10485760, topology.ras.one.component.per.worker=false, ui.host=0.0.0.0, supervisor.thrift.port=6628, topology.bolt.wait.strategy=org.apache.storm.policy.WaitStrategyProgressive, pacemaker.thread.timeout=10, storm.meta.serialization.delegate=org.apache.storm.serialization.GzipThriftSerializationDelegate, dev.zookeeper.path=/tmp/dev-storm-zookeeper, topology.skip.missing.kryo.registrations=false, drpc.invocations.threads=64, storm.zookeeper.session.timeout=20000, storm.metricstore.rocksdb.metadata_string_cache_capacity=4000, storm.workers.artifacts.dir=workers-artifacts, topology.component.resources.onheap.memory.mb=128.0, storm.log4j2.conf.dir=log4j2, storm.cluster.mode=distributed, ui.childopts=-Xmx768m, task.refresh.poll.secs=10, supervisor.childopts=-Xmx256m, task.credentials.poll.secs=30, storm.health.check.timeout.ms=5000, storm.blobstore.replication.factor=3, worker.profiler.command=flight.bash, storm.messaging.netty.buffer.low.watermark=8388608}
+2025-10-01 10:12:07.418 o.a.s.s.u.o.l.s.c.SysOutOverSLF4JInitialiser main [WARN] Your logging framework class org.apache.logging.slf4j.Log4jLogger is not known - if it needs access to the standard println methods on the console you will need to register it by calling registerLoggingSystemPackage
+2025-10-01 10:12:07.422 o.a.s.s.u.o.l.s.c.SysOutOverSLF4J main [INFO] Replaced standard System.out and System.err PrintStreams with SLF4JPrintStreams
+2025-10-01 10:12:07.424 o.a.s.s.u.o.l.s.c.SysOutOverSLF4J main [INFO] Redirected System.out and System.err to SLF4J for this context
+2025-10-01 10:12:07.493 o.a.s.z.ClientZookeeper main [INFO] Starting ZK Curator
+2025-10-01 10:12:07.494 o.a.s.s.o.a.c.f.i.CuratorFrameworkImpl main [INFO] Starting
+2025-10-01 10:12:07.500 o.a.s.s.o.a.z.ZooKeeper main [INFO] Client environment:zookeeper.version=3.9.3-c26634f34490bb0ea7a09cc51e05ede3b4e320ee, built on 2024-10-17 23:21 UTC
+2025-10-01 10:12:07.501 o.a.s.s.o.a.z.ZooKeeper main [INFO] Client environment:host.name=66fced6c6083
+2025-10-01 10:12:07.502 o.a.s.s.o.a.z.ZooKeeper main [INFO] Client environment:java.version=21.0.8
+2025-10-01 10:12:07.502 o.a.s.s.o.a.z.ZooKeeper main [INFO] Client environment:java.vendor=Eclipse Adoptium
+2025-10-01 10:12:07.502 o.a.s.s.o.a.z.ZooKeeper main [INFO] Client environment:java.home=/opt/java/openjdk
+2025-10-01 10:12:07.502 o.a.s.s.o.a.z.ZooKeeper main [INFO] Client environment:java.class.path=/apache-storm/lib-worker/bcpkix-jdk18on-1.81.jar:/apache-storm/lib-worker/kryo-5.6.2.jar:/apache-storm/lib-worker/jakarta.activation-1.2.1.jar:/apache-storm/lib-worker/jakarta.xml.bind-api-2.3.2.jar:/apache-storm/lib-worker/minlog-1.3.1.jar:/apache-storm/lib-worker/jakarta.activation-api-1.2.1.jar:/apache-storm/lib-worker/metrics-core-4.2.33.jar:/apache-storm/lib-worker/javax.annotation-api-1.3.2.jar:/apache-storm/lib-worker/metrics-jmx-4.2.33.jar:/apache-storm/lib-worker/objenesis-3.4.jar:/apache-storm/lib-worker/reflectasm-1.11.9.jar:/apache-storm/lib-worker/bcprov-jdk18on-1.81.jar:/apache-storm/lib-worker/bcutil-jdk18on-1.81.jar:/apache-storm/lib-worker/storm-shaded-deps-2.8.2.jar:/apache-storm/lib-worker/log4j-slf4j2-impl-2.25.1.jar:/apache-storm/lib-worker/metrics-graphite-4.2.33.jar:/apache-storm/lib-worker/storm-client-2.8.2.jar:/apache-storm/lib-worker/amqp-client-5.25.0.jar:/apache-storm/lib-worker/metrics-jvm-4.2.33.jar:/apache-storm/lib-worker/log4j-api-2.25.1.jar:/apache-storm/lib-worker/log4j-core-2.25.1.jar:/apache-storm/lib-worker/log4j-over-slf4j-2.0.17.jar:/apache-storm/lib-worker/slf4j-api-2.0.17.jar:/apache-storm/extlib/*:/conf:/data/supervisor/stormdist/wordcount-topology-2-1759313520/stormjar.jar
+2025-10-01 10:12:07.503 o.a.s.s.o.a.z.ZooKeeper main [INFO] Client environment:java.library.path=/data/supervisor/stormdist/wordcount-topology-2-1759313520/resources/Linux-amd64:/data/supervisor/stormdist/wordcount-topology-2-1759313520/resources:/usr/local/lib:/opt/local/lib:/usr/lib:/usr/lib64
+2025-10-01 10:12:07.503 o.a.s.s.o.a.z.ZooKeeper main [INFO] Client environment:java.io.tmpdir=/data/workers/ba931562-7700-46c3-8055-c75b68403880/tmp
+2025-10-01 10:12:07.504 o.a.s.s.o.a.z.ZooKeeper main [INFO] Client environment:java.compiler=<NA>
+2025-10-01 10:12:07.504 o.a.s.s.o.a.z.ZooKeeper main [INFO] Client environment:os.name=Linux
+2025-10-01 10:12:07.505 o.a.s.s.o.a.z.ZooKeeper main [INFO] Client environment:os.arch=amd64
+2025-10-01 10:12:07.505 o.a.s.s.o.a.z.ZooKeeper main [INFO] Client environment:os.version=6.6.87.2-microsoft-standard-WSL2
+2025-10-01 10:12:07.506 o.a.s.s.o.a.z.ZooKeeper main [INFO] Client environment:user.name=storm
+2025-10-01 10:12:07.506 o.a.s.s.o.a.z.ZooKeeper main [INFO] Client environment:user.home=/home/storm
+2025-10-01 10:12:07.507 o.a.s.s.o.a.z.ZooKeeper main [INFO] Client environment:user.dir=/data/workers/ba931562-7700-46c3-8055-c75b68403880
+2025-10-01 10:12:07.507 o.a.s.s.o.a.z.ZooKeeper main [INFO] Client environment:os.memory.free=216MB
+2025-10-01 10:12:07.508 o.a.s.s.o.a.z.ZooKeeper main [INFO] Client environment:os.memory.max=768MB
+2025-10-01 10:12:07.508 o.a.s.s.o.a.z.ZooKeeper main [INFO] Client environment:os.memory.total=249MB
+2025-10-01 10:12:07.510 o.a.s.s.o.a.z.ZooKeeper main [INFO] Initiating client connection, connectString=zookeeper:2181 sessionTimeout=20000 watcher=org.apache.storm.shade.org.apache.curator.ConnectionState@f713686
+2025-10-01 10:12:07.515 o.a.s.s.o.a.z.c.X509Util main [INFO] Setting -D jdk.tls.rejectClientInitiatedRenegotiation=true to disable client-initiated TLS renegotiation
+2025-10-01 10:12:07.710 o.a.s.s.o.a.z.c.X509Util main [INFO] Default TLS protocol is TLSv1.3, supported TLS protocols are [TLSv1.3, TLSv1.2, TLSv1.1, TLSv1, SSLv3, SSLv2Hello]
+2025-10-01 10:12:07.716 o.a.s.s.o.a.z.ClientCnxnSocket main [INFO] jute.maxbuffer value is 1048575 Bytes
+2025-10-01 10:12:07.721 o.a.s.s.o.a.z.ClientCnxn main [INFO] zookeeper.request.timeout value is 0. feature enabled=false
+2025-10-01 10:12:07.728 o.a.s.s.o.a.z.ClientCnxn main-SendThread(zookeeper:2181) [INFO] Opening socket connection to server zookeeper/172.18.0.3:2181.
+2025-10-01 10:12:07.729 o.a.s.s.o.a.c.f.i.CuratorFrameworkImpl main [INFO] Default schema
+2025-10-01 10:12:07.731 o.a.s.s.o.a.z.ClientCnxn main-SendThread(zookeeper:2181) [INFO] SASL config status: Will not attempt to authenticate using SASL (unknown error)
+2025-10-01 10:12:07.738 o.a.s.s.o.a.z.ClientCnxn main-SendThread(zookeeper:2181) [INFO] Socket connection established, initiating session, client: /172.18.0.6:38730, server: zookeeper/172.18.0.3:2181
+2025-10-01 10:12:07.744 o.a.s.s.o.a.z.ClientCnxn main-SendThread(zookeeper:2181) [INFO] Session establishment complete on server zookeeper/172.18.0.3:2181, session id = 0x100077ea3e1017b, negotiated timeout = 20000
+2025-10-01 10:12:07.750 o.a.s.s.o.a.c.f.s.ConnectionStateManager main-EventThread [INFO] State change: CONNECTED
+2025-10-01 10:12:07.757 o.a.s.s.o.a.c.f.i.EnsembleTracker main-EventThread [INFO] New config event received: {}
+2025-10-01 10:12:07.757 o.a.s.s.o.a.c.f.i.CuratorFrameworkImpl Curator-Framework-0 [INFO] backgroundOperationsLoop exiting
+2025-10-01 10:12:07.758 o.a.s.s.o.a.c.f.i.EnsembleTracker main-EventThread [INFO] New config event received: {}
+2025-10-01 10:12:07.866 o.a.s.s.o.a.z.ClientCnxn main-EventThread [INFO] EventThread shut down for session: 0x100077ea3e1017b
+2025-10-01 10:12:07.866 o.a.s.s.o.a.z.ZooKeeper main [INFO] Session: 0x100077ea3e1017b closed
+2025-10-01 10:12:07.869 o.a.s.z.ClientZookeeper main [INFO] Starting ZK Curator
+2025-10-01 10:12:07.870 o.a.s.s.o.a.c.f.i.CuratorFrameworkImpl main [INFO] Starting
+2025-10-01 10:12:07.871 o.a.s.s.o.a.z.ZooKeeper main [INFO] Initiating client connection, connectString=zookeeper:2181/storm sessionTimeout=20000 watcher=org.apache.storm.shade.org.apache.curator.ConnectionState@5baaae4c
+2025-10-01 10:12:07.872 o.a.s.s.o.a.z.ClientCnxnSocket main [INFO] jute.maxbuffer value is 1048575 Bytes
+2025-10-01 10:12:07.872 o.a.s.s.o.a.z.ClientCnxn main [INFO] zookeeper.request.timeout value is 0. feature enabled=false
+2025-10-01 10:12:07.873 o.a.s.s.o.a.z.ClientCnxn main-SendThread(zookeeper:2181) [INFO] Opening socket connection to server zookeeper/172.18.0.3:2181.
+2025-10-01 10:12:07.885 o.a.s.s.o.a.z.ClientCnxn main-SendThread(zookeeper:2181) [INFO] SASL config status: Will not attempt to authenticate using SASL (unknown error)
+2025-10-01 10:12:07.885 o.a.s.s.o.a.c.f.i.CuratorFrameworkImpl main [INFO] Default schema
+2025-10-01 10:12:07.886 o.a.s.s.o.a.z.ClientCnxn main-SendThread(zookeeper:2181) [INFO] Socket connection established, initiating session, client: /172.18.0.6:48808, server: zookeeper/172.18.0.3:2181
+2025-10-01 10:12:07.889 o.a.s.s.o.a.z.ClientCnxn main-SendThread(zookeeper:2181) [INFO] Session establishment complete on server zookeeper/172.18.0.3:2181, session id = 0x100077ea3e1017d, negotiated timeout = 20000
+2025-10-01 10:12:07.890 o.a.s.s.o.a.c.f.s.ConnectionStateManager main-EventThread [INFO] State change: CONNECTED
+2025-10-01 10:12:07.893 o.a.s.s.o.a.c.f.i.EnsembleTracker main-EventThread [INFO] New config event received: {}
+2025-10-01 10:12:07.894 o.a.s.s.o.a.c.f.i.EnsembleTracker main-EventThread [INFO] New config event received: {}
+2025-10-01 10:12:07.905 o.a.s.m.StormMetricRegistry main [INFO] Starting metrics reporters...
+2025-10-01 10:12:07.910 o.a.s.s.a.ClientAuthUtils main [INFO] Got AutoCreds []
+2025-10-01 10:12:07.925 o.a.s.m.TransportFactory main [INFO] Storm peer transport plugin:org.apache.storm.messaging.netty.Context
+2025-10-01 10:12:08.055 o.a.s.d.w.WorkerState main [INFO] Registering IConnectionCallbacks for 7bc87f19-52c5-4929-9bd8-852182cd9419-172.18.0.6:6700
+2025-10-01 10:12:08.102 o.a.s.m.n.Server main [INFO] Create Netty Server Netty-server-localhost-6700, buffer_size: 5242880, maxWorkers: 1
+2025-10-01 10:12:08.208 o.a.s.m.n.Client main [INFO] Creating Netty Client, connecting to 66fced6c6083:6701, bufferSize: 5242880, lowWatermark: 8388608, highWatermark: 16777216
+2025-10-01 10:12:08.370 o.a.s.d.w.WorkerState Netty-server-localhost-6700-worker-1 [INFO] Sending BackPressure status to new client. BPStatus: {worker=ba931562-7700-46c3-8055-c75b68403880, bpStatusId=1, bpTasks=[], nonBpTasks=[1, 3, 5, 7, 9, 11]}
+2025-10-01 10:12:08.566 o.a.s.e.Executor main [INFO] Loading executor tasks __system:[-1, -1]
+2025-10-01 10:12:08.569 o.a.s.e.Executor main [INFO] Finished loading executor __system:[-1, -1]
+2025-10-01 10:12:08.571 o.a.s.e.Executor main [INFO] Loading executor tasks sentenceSplitBolt:[7, 7]
+2025-10-01 10:12:08.572 o.a.s.e.Executor main [INFO] Finished loading executor sentenceSplitBolt:[7, 7]
+2025-10-01 10:12:08.572 o.a.s.e.Executor main [INFO] Loading executor tasks sentenceSplitBolt:[5, 5]
+2025-10-01 10:12:08.573 o.a.s.e.Executor main [INFO] Finished loading executor sentenceSplitBolt:[5, 5]
+2025-10-01 10:12:08.574 o.a.s.e.Executor main [INFO] Loading executor tasks kafkaSpout:[3, 3]
+2025-10-01 10:12:08.576 o.a.s.e.Executor main [INFO] Finished loading executor kafkaSpout:[3, 3]
+2025-10-01 10:12:08.580 o.a.s.e.Executor main [INFO] Loading executor tasks wordCountBolt:[11, 11]
+2025-10-01 10:12:08.581 o.a.s.e.Executor main [INFO] Finished loading executor wordCountBolt:[11, 11]
+2025-10-01 10:12:08.582 o.a.s.e.Executor main [INFO] Loading executor tasks __acker:[1, 1]
+2025-10-01 10:12:08.584 o.a.s.e.Executor main [INFO] Finished loading executor __acker:[1, 1]
+2025-10-01 10:12:08.584 o.a.s.e.Executor main [INFO] Loading executor tasks wordCountBolt:[9, 9]
+2025-10-01 10:12:08.585 o.a.s.e.Executor main [INFO] Finished loading executor wordCountBolt:[9, 9]
+2025-10-01 10:12:08.593 o.a.s.d.w.Worker main [INFO] Flush Tuple generation disabled. producerBatchSize=1, xferBatchSize=1, flushIntervalMillis=1
+2025-10-01 10:12:08.594 o.a.s.d.w.Worker main [INFO] BackPressure status change checking will be performed every 50 millis
+2025-10-01 10:12:08.596 o.a.s.d.w.Worker main [INFO] Worker has topology config {storm.messaging.netty.min_wait_ms=100, topology.backpressure.wait.strategy=org.apache.storm.policy.WaitStrategyProgressive, topology.submitter.principal=, storm.resource.isolation.plugin=org.apache.storm.container.cgroup.CgroupManager, storm.zookeeper.auth.user=null, storm.messaging.netty.buffer_size=5242880, topology.name=wordcount-topology, topology.bolt.wait.progressive.level1.count=1, storm.zookeeper.ssl.hostnameVerification=false, pacemaker.auth.method=NONE, storm.oci.cgroup.root=/sys/fs/cgroup, ui.filter=null, worker.profiler.enabled=false, executor.metrics.frequency.secs=60, storm.id=wordcount-topology-2-1759313520, supervisor.thrift.threads=16, ui.http.creds.plugin=org.apache.storm.security.auth.DefaultHttpCredentialsPlugin, supervisor.supervisors.commands=[], supervisor.queue.size=128, storm.messaging.netty.flush_timeout_ms=600000, logviewer.cleanup.age.mins=10080, topology.tuple.serializer=org.apache.storm.serialization.types.ListDelegateSerializer, storm.cgroup.memory.enforcement.enable=false, drpc.port=3772, supervisor.localizer.update.blob.interval.secs=30, topology.max.spout.pending=null, topology.transfer.buffer.size=1000, nimbus.thrift.tls.max_buffer_size=1048576, storm.oci.nscd.dir=/var/run/nscd, nimbus.worker.heartbeats.recovery.strategy.class=org.apache.storm.nimbus.TimeOutWorkerHeartbeatsRecoveryStrategy, worker.metrics={CGroupCpuStat=org.apache.storm.metrics2.cgroup.CGroupCpuStat, CGroupMemoryLimit=org.apache.storm.metrics2.cgroup.CGroupMemoryLimit, CGroupCpuGuaranteeByCfsQuota=org.apache.storm.metrics2.cgroup.CGroupCpuGuaranteeByCfsQuota, CGroupMemory=org.apache.storm.metrics2.cgroup.CGroupMemoryUsage, CGroupCpu=org.apache.storm.metrics2.cgroup.CGroupCpu, CGroupCpuGuarantee=org.apache.storm.metrics2.cgroup.CGroupCpuGuarantee}, logviewer.port=8000, worker.childopts=-Xmx%HEAP-MEM%m -XX:+IgnoreUnrecognizedVMOptions -XX:+PrintGCDetails -Xloggc:artifacts/gc.log -XX:+PrintGCDateStamps -XX:+PrintGCTimeStamps -XX:+UseGCLogFileRotation -XX:NumberOfGCLogFiles=10 -XX:GCLogFileSize=1M -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=artifacts/heapdump, topology.component.cpu.pcore.percent=10.0, storm.daemon.metrics.reporter.plugins=[org.apache.storm.daemon.metrics.reporters.JmxPreparableReporter], worker.max.timeout.secs=600, blacklist.scheduler.resume.time.secs=1800, drpc.childopts=-Xmx768m, nimbus.task.launch.secs=120, logviewer.childopts=-Xmx128m, topology.ras.acker.executors.per.worker=1, storm.supervisor.hard.memory.limit.overage.mb=2024, storm.zookeeper.servers=[zookeeper], storm.messaging.transport=org.apache.storm.messaging.netty.Context, storm.messaging.netty.authentication=false, topology.localityaware.higher.bound=0.8, storm.cgroup.memory.limit.tolerance.margin.mb=0.0, storm.cgroup.hierarchy.name=storm, blacklist.scheduler.assume.supervisor.bad.based.on.bad.slot=true, storm.metricprocessor.class=org.apache.storm.metricstore.NimbusMetricProcessor, topology.kryo.factory=org.apache.storm.serialization.DefaultKryoFactory, nimbus.assignments.service.threads=10, worker.heap.memory.mb=768, storm.thrift.tls.socket.timeout.ms=600000, nimbus.thrift.client.use.tls=false, storm.network.topography.plugin=org.apache.storm.networktopography.DefaultRackDNSToSwitchMapping, supervisor.slots.ports=[6700, 6701, 6702, 6703], topology.stats.sample.rate=0.05, storm.local.dir=/data, topology.backpressure.wait.park.microsec=100, topology.ras.constraint.max.state.search=10000, storm.oci.cgroup.parent=/storm, topology.testing.always.try.serialize=false, nimbus.assignments.service.thread.queue.size=100, storm.principal.tolocal=org.apache.storm.security.auth.DefaultPrincipalToLocal, java.library.path=/usr/local/lib:/opt/local/lib:/usr/lib:/usr/lib64, nimbus.local.assignments.backend.class=org.apache.storm.assignments.InMemoryAssignmentBackend, worker.gc.childopts=, storm.group.mapping.service.cache.duration.secs=120, topology.multilang.serializer=org.apache.storm.multilang.JsonSerializer, topology.kryo.register={}, drpc.request.timeout.secs=600, nimbus.blobstore.class=org.apache.storm.blobstore.LocalFsBlobStore, topology.state.synchronization.timeout.secs=60, topology.bolt.wait.progressive.level2.count=1000, topology.kryo.decorators=[], nimbus.thrift.tls.client.auth.required=true, topology.worker.shared.thread.pool.size=4, topology.submitter.user=storm, nimbus.thrift.tls.port=0, topology.executor.receive.buffer.size=32768, pacemaker.servers=[], storm.daemon.metrics.reporter.interval.secs=10, supervisor.monitor.frequency.secs=3, storm.nimbus.retry.times=5, topology.transfer.batch.size=1, transactional.zookeeper.port=null, storm.auth.simple-white-list.users=[], topology.scheduler.strategy=org.apache.storm.scheduler.resource.strategies.scheduling.DefaultResourceAwareStrategy, storm.zookeeper.port=2181, storm.zookeeper.retry.intervalceiling.millis=30000, storm.cluster.state.store=org.apache.storm.cluster.ZKStateStorageFactory, nimbus.thrift.port=6627, blacklist.scheduler.tolerance.count=3, nimbus.thrift.threads=64, supervisor.supervisors=[], nimbus.seeds=[nimbus], storm.cluster.metrics.consumer.publish.interval.secs=60, logviewer.filter.params=null, topology.min.replication.count=1, nimbus.blobstore.expiration.secs=600, storm.group.mapping.service=org.apache.storm.security.auth.ShellBasedGroupsMapping, storm.nimbus.retry.interval.millis=2000, topology.max.task.parallelism=null, topology.backpressure.wait.progressive.level2.count=1000, drpc.https.keystore.password=, resource.aware.scheduler.constraint.max.state.search=100000, supervisor.heartbeat.frequency.secs=5, nimbus.credential.renewers.freq.secs=600, storm.supervisor.medium.memory.grace.period.ms=30000, nimbus.thrift.tls.transport=org.apache.storm.security.auth.tls.TlsTransportPlugin, storm.thrift.transport=org.apache.storm.security.auth.SimpleTransportPlugin, storm.cgroup.hierarchy.dir=/cgroup/storm_resources, storm.zookeeper.auth.password=null, ui.port=8080, drpc.authorizer.acl.strict=false, topology.message.timeout.secs=30, topology.error.throttle.interval.secs=10, topology.backpressure.check.millis=50, drpc.https.keystore.type=JKS, supervisor.memory.capacity.mb=4096.0, storm.metricstore.class=org.apache.storm.metricstore.rocksdb.RocksDbStore, storm.zookeeper.ssl.enable=false, drpc.authorizer.acl.filename=drpc-auth-acl.yaml, topology.builtin.metrics.bucket.size.secs=60, topology.spout.wait.park.microsec=100, storm.local.mode.zmq=false, pacemaker.client.max.threads=2, ui.header.buffer.bytes=4096, topology.shellbolt.max.pending=100, topology.serialized.message.size.metrics=false, drpc.max_buffer_size=1048576, drpc.disable.http.binding=true, storm.codedistributor.class=org.apache.storm.codedistributor.LocalFileSystemCodeDistributor, worker.profiler.childopts=-XX:+UnlockCommercialFeatures -XX:+FlightRecorder, nimbus.supervisor.timeout.secs=60, storm.supervisor.cgroup.rootdir=storm, topology.worker.max.heap.size.mb=768.0, storm.zookeeper.root=/storm, topology.disable.loadaware.messaging=false, topology.ras.one.executor.per.worker=false, storm.supervisor.hard.memory.limit.multiplier=2.0, nimbus.topology.validator=org.apache.storm.nimbus.DefaultTopologyValidator, worker.heartbeat.frequency.secs=1, storm.messaging.netty.max_wait_ms=1000, topology.backpressure.wait.progressive.level1.count=1, topology.max.error.report.per.interval=5, nimbus.thrift.max_buffer_size=1048576, storm.metricstore.rocksdb.location=storm_rocks, storm.supervisor.low.memory.threshold.mb=1024, pacemaker.max.threads=50, ui.pagination=20, ui.disable.http.binding=true, supervisor.blobstore.download.max_retries=3, topology.enable.message.timeouts=true, logviewer.disable.http.binding=true, storm.messaging.netty.transfer.batch.size=262144, topology.spout.wait.progressive.level2.count=0, topology.worker.nimbus.thrift.client.use.tls=false, ui.title=Storm UI, blacklist.scheduler.strategy=org.apache.storm.scheduler.blacklist.strategies.DefaultBlacklistStrategy, storm.metricstore.rocksdb.retention_hours=240, supervisor.run.worker.as.user=false, storm.messaging.netty.client_worker_threads=1, topology.tasks=null, supervisor.thrift.socket.timeout.ms=5000, storm.group.mapping.service.params=null, drpc.http.port=3774, transactional.zookeeper.root=/transactional, supervisor.blobstore.download.thread.count=5, logviewer.filter=null, pacemaker.kerberos.users=[], topology.spout.wait.strategy=org.apache.storm.policy.WaitStrategyProgressive, storm.blobstore.inputstream.buffer.size.bytes=65536, supervisor.worker.heartbeats.max.timeout.secs=600, supervisor.worker.timeout.secs=30, topology.worker.receiver.thread.count=1, logviewer.max.sum.worker.logs.size.mb=4096, topology.executor.overflow.limit=0, topology.batch.flush.interval.millis=1, nimbus.file.copy.expiration.secs=600, pacemaker.port=6699, topology.worker.logwriter.childopts=-Xmx64m, drpc.http.creds.plugin=org.apache.storm.security.auth.DefaultHttpCredentialsPlugin, nimbus.topology.blobstore.deletion.delay.ms=300000, storm.blobstore.acl.validation.enabled=false, ui.filter.params=null, topology.workers=2, blacklist.scheduler.tolerance.time.secs=300, storm.supervisor.medium.memory.threshold.mb=1536, topology.environment=null, drpc.invocations.port=3773, storm.metricstore.rocksdb.create_if_missing=true, nimbus.cleanup.inbox.freq.secs=600, client.blobstore.class=org.apache.storm.blobstore.NimbusBlobStore, topology.fall.back.on.java.serialization=false, storm.nimbus.retry.intervalceiling.millis=60000, storm.nimbus.zookeeper.acls.fixup=true, logviewer.appender.name=A1, ui.users=null, pacemaker.childopts=-Xmx1024m, storm.messaging.netty.server_worker_threads=1, scheduler.display.resource=false, ui.actions.enabled=true, storm.thrift.socket.timeout.ms=600000, storm.topology.classpath.beginning.enabled=false, storm.zookeeper.connection.timeout=15000, topology.tick.tuple.freq.secs=null, nimbus.inbox.jar.expiration.secs=3600, topology.debug=false, storm.zookeeper.retry.interval=1000, storm.messaging.netty.buffer.high.watermark=16777216, storm.blobstore.dependency.jar.upload.chunk.size.bytes=1048576, worker.log.level.reset.poll.secs=30, storm.zookeeper.retry.times=5, nimbus.code.sync.freq.secs=120, topology.component.resources.offheap.memory.mb=0.0, nimbus.thrift.tls.threads=64, topology.spout.wait.progressive.level1.count=0, topology.state.checkpoint.interval.ms=1000, topology.priority=29, supervisor.localizer.cleanup.interval.ms=30000, storm.health.check.dir=healthchecks, supervisor.cpu.capacity=400.0, topology.backpressure.wait.progressive.level3.sleep.millis=1, storm.cgroup.resources=[cpu, memory], storm.worker.min.cpu.pcore.percent=0.0, topology.classpath=null, storm.nimbus.zookeeper.acls.check=true, num.stat.buckets=20, topology.spout.wait.progressive.level3.sleep.millis=1, supervisor.localizer.cache.target.size.mb=10240, topology.worker.childopts=null, drpc.https.port=-1, topology.bolt.wait.park.microsec=100, topology.max.replication.wait.time.sec=60, storm.cgroup.cgexec.cmd=/bin/cgexec, topology.users=[null], topology.acker.executors=null, topology.bolt.wait.progressive.level3.sleep.millis=1, supervisor.worker.start.timeout.secs=120, supervisor.worker.shutdown.sleep.secs=3, logviewer.max.per.worker.logs.size.mb=2048, topology.trident.batch.emit.interval.millis=500, task.heartbeat.frequency.secs=3, supervisor.enable=true, supervisor.thrift.max_buffer_size=1048576, supervisor.blobstore.class=org.apache.storm.blobstore.NimbusBlobStore, topology.producer.batch.size=1, drpc.worker.threads=64, resource.aware.scheduler.priority.strategy=org.apache.storm.scheduler.resource.strategies.priority.DefaultSchedulingPriorityStrategy, blacklist.scheduler.reporter=org.apache.storm.scheduler.blacklist.reporters.LogReporter, storm.messaging.netty.socket.backlog=500, storm.cgroup.inherit.cpuset.configs=false, nimbus.queue.size=100000, drpc.queue.size=128, ui.disable.spout.lag.monitoring=true, topology.eventlogger.executors=0, pacemaker.base.threads=10, nimbus.childopts=-Xmx1024m, storm.log.dir=/logs, topology.spout.recvq.skips=3, storm.zookeeper.superACL=null, storm.resource.isolation.plugin.enable=false, nimbus.monitor.freq.secs=10, storm.supervisor.memory.limit.tolerance.margin.mb=128.0, storm.disable.symlinks=false, topology.localityaware.lower.bound=0.2, transactional.zookeeper.servers=null, nimbus.task.timeout.secs=30, logs.users=null, pacemaker.thrift.message.size.max=10485760, topology.ras.one.component.per.worker=false, ui.host=0.0.0.0, supervisor.thrift.port=6628, topology.bolt.wait.strategy=org.apache.storm.policy.WaitStrategyProgressive, pacemaker.thread.timeout=10, storm.meta.serialization.delegate=org.apache.storm.serialization.GzipThriftSerializationDelegate, dev.zookeeper.path=/tmp/dev-storm-zookeeper, topology.skip.missing.kryo.registrations=false, drpc.invocations.threads=64, storm.zookeeper.session.timeout=20000, storm.metricstore.rocksdb.metadata_string_cache_capacity=4000, storm.workers.artifacts.dir=workers-artifacts, topology.component.resources.onheap.memory.mb=128.0, storm.log4j2.conf.dir=log4j2, storm.cluster.mode=distributed, ui.childopts=-Xmx768m, task.refresh.poll.secs=10, supervisor.childopts=-Xmx256m, task.credentials.poll.secs=30, storm.health.check.timeout.ms=5000, storm.blobstore.replication.factor=3, worker.profiler.command=flight.bash, storm.messaging.netty.buffer.low.watermark=8388608}
+2025-10-01 10:12:08.598 o.a.s.d.w.Worker main [INFO] Worker ba931562-7700-46c3-8055-c75b68403880 for storm wordcount-topology-2-1759313520 on 7bc87f19-52c5-4929-9bd8-852182cd9419-172.18.0.6:6700  has finished loading
+2025-10-01 10:12:08.924 o.a.s.d.w.WorkerState refresh-active-timer [INFO] All connections are ready for worker 7bc87f19-52c5-4929-9bd8-852182cd9419-172.18.0.6:6700 with id ba931562-7700-46c3-8055-c75b68403880
+2025-10-01 10:12:08.928 o.a.s.e.b.BoltExecutor Thread-14-__system-executor[-1, -1] [INFO] Preparing bolt __system:[-1]
+2025-10-01 10:12:08.928 o.a.s.e.b.BoltExecutor Thread-19-__acker-executor[1, 1] [INFO] Preparing bolt __acker:[1]
+2025-10-01 10:12:08.928 o.a.s.e.b.BoltExecutor Thread-18-wordCountBolt-executor[11, 11] [INFO] Preparing bolt wordCountBolt:[11]
+2025-10-01 10:12:08.928 o.a.s.e.b.BoltExecutor Thread-15-sentenceSplitBolt-executor[7, 7] [INFO] Preparing bolt sentenceSplitBolt:[7]
+2025-10-01 10:12:08.931 o.a.s.e.b.BoltExecutor Thread-19-__acker-executor[1, 1] [INFO] Prepared bolt __acker:[1]
+2025-10-01 10:12:08.928 o.a.s.e.s.SpoutExecutor Thread-17-kafkaSpout-executor[3, 3] [INFO] Opening spout kafkaSpout:[3]
+2025-10-01 10:12:08.928 o.a.s.e.b.BoltExecutor Thread-16-sentenceSplitBolt-executor[5, 5] [INFO] Preparing bolt sentenceSplitBolt:[5]
+2025-10-01 10:12:08.928 o.a.s.e.b.BoltExecutor Thread-20-wordCountBolt-executor[9, 9] [INFO] Preparing bolt wordCountBolt:[9]
+2025-10-01 10:12:08.940 o.e.b.SentenceSplitBolt Thread-15-sentenceSplitBolt-executor[7, 7] [INFO] started sentence
+2025-10-01 10:12:08.958 o.a.s.e.b.BoltExecutor Thread-15-sentenceSplitBolt-executor[7, 7] [INFO] Prepared bolt sentenceSplitBolt:[7]
+2025-10-01 10:12:08.958 o.a.s.m.c.CGroupMetricsBase Thread-14-__system-executor[-1, -1] [WARN] CGroupCpuStat is disabled. cpu is not a mounted subsystem
+2025-10-01 10:12:08.961 o.a.s.m.c.CGroupMetricsBase Thread-14-__system-executor[-1, -1] [WARN] CGroupMemoryLimit is disabled. memory is not a mounted subsystem
+2025-10-01 10:12:08.958 o.e.b.SentenceSplitBolt Thread-16-sentenceSplitBolt-executor[5, 5] [INFO] started sentence
+2025-10-01 10:12:08.963 o.a.s.m.c.CGroupMetricsBase Thread-14-__system-executor[-1, -1] [WARN] CGroupCpuGuaranteeByCfsQuota is disabled. cpu is not a mounted subsystem
+2025-10-01 10:12:08.964 o.a.s.e.b.BoltExecutor Thread-16-sentenceSplitBolt-executor[5, 5] [INFO] Prepared bolt sentenceSplitBolt:[5]
+2025-10-01 10:12:08.965 o.a.s.m.c.CGroupMetricsBase Thread-14-__system-executor[-1, -1] [WARN] CGroupMemoryUsage is disabled. memory is not a mounted subsystem
+2025-10-01 10:12:08.969 o.a.k.c.p.ProducerConfig Thread-20-wordCountBolt-executor[9, 9] [INFO] ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [kafka:29092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+2025-10-01 10:12:08.970 o.a.s.m.c.CGroupMetricsBase Thread-14-__system-executor[-1, -1] [WARN] CGroupCpu is disabled. cpuacct is not a mounted subsystem
+2025-10-01 10:12:08.970 o.a.k.c.p.ProducerConfig Thread-18-wordCountBolt-executor[11, 11] [INFO] ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [kafka:29092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-2
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+2025-10-01 10:12:08.978 o.a.s.m.c.CGroupMetricsBase Thread-14-__system-executor[-1, -1] [WARN] CGroupCpuGuarantee is disabled. cpu is not a mounted subsystem
+2025-10-01 10:12:08.990 o.a.s.e.b.BoltExecutor Thread-14-__system-executor[-1, -1] [INFO] Prepared bolt __system:[-1]
+2025-10-01 10:12:09.201 o.a.k.c.c.ConsumerConfig Thread-17-kafkaSpout-executor[3, 3] [INFO] ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [kafka:29092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-data-events-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = data-events
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2025-10-01 10:12:09.213 o.a.k.c.p.KafkaProducer Thread-20-wordCountBolt-executor[9, 9] [INFO] [Producer clientId=producer-1] Instantiated an idempotent producer.
+2025-10-01 10:12:09.213 o.a.k.c.p.KafkaProducer Thread-18-wordCountBolt-executor[11, 11] [INFO] [Producer clientId=producer-2] Instantiated an idempotent producer.
+2025-10-01 10:12:09.284 o.a.k.c.u.AppInfoParser Thread-20-wordCountBolt-executor[9, 9] [INFO] Kafka version: 3.6.0
+2025-10-01 10:12:09.285 o.a.k.c.u.AppInfoParser Thread-20-wordCountBolt-executor[9, 9] [INFO] Kafka commitId: 60e845626d8a465a
+2025-10-01 10:12:09.285 o.a.k.c.u.AppInfoParser Thread-20-wordCountBolt-executor[9, 9] [INFO] Kafka startTimeMs: 1759313529281
+2025-10-01 10:12:09.288 o.a.s.e.b.BoltExecutor Thread-20-wordCountBolt-executor[9, 9] [INFO] Prepared bolt wordCountBolt:[9]
+2025-10-01 10:12:09.288 o.a.k.c.u.AppInfoParser Thread-18-wordCountBolt-executor[11, 11] [INFO] Kafka version: 3.6.0
+2025-10-01 10:12:09.292 o.a.k.c.u.AppInfoParser Thread-18-wordCountBolt-executor[11, 11] [INFO] Kafka commitId: 60e845626d8a465a
+2025-10-01 10:12:09.293 o.a.k.c.u.AppInfoParser Thread-18-wordCountBolt-executor[11, 11] [INFO] Kafka startTimeMs: 1759313529282
+2025-10-01 10:12:09.295 o.a.s.e.b.BoltExecutor Thread-18-wordCountBolt-executor[11, 11] [INFO] Prepared bolt wordCountBolt:[11]
+2025-10-01 10:12:09.350 o.a.k.c.u.AppInfoParser Thread-17-kafkaSpout-executor[3, 3] [INFO] Kafka version: 3.6.0
+2025-10-01 10:12:09.351 o.a.k.c.u.AppInfoParser Thread-17-kafkaSpout-executor[3, 3] [INFO] Kafka commitId: 60e845626d8a465a
+2025-10-01 10:12:09.353 o.a.k.c.u.AppInfoParser Thread-17-kafkaSpout-executor[3, 3] [INFO] Kafka startTimeMs: 1759313529350
+2025-10-01 10:12:09.360 o.a.s.k.s.KafkaSpout Thread-17-kafkaSpout-executor[3, 3] [INFO] Registering Spout Metrics
+2025-10-01 10:12:09.376 o.a.s.k.s.KafkaSpout Thread-17-kafkaSpout-executor[3, 3] [INFO] Kafka Spout opened with the following configuration: KafkaSpoutConfig[offsetCommitPeriodMs=30000,maxUncommittedOffsets=10000000,retryService=KafkaSpoutRetryExponentialBackoff{delay=TimeInterval{length=0, timeUnit=SECONDS}, ratio=TimeInterval{length=2, timeUnit=MILLISECONDS}, maxRetries=2147483647, maxRetryDelay=TimeInterval{length=10, timeUnit=SECONDS}},tupleListener=EmptyKafkaTupleListener,processingGuarantee=AT_LEAST_ONCE,emitNullTuples=false,tupleTrackingEnforced=false,metricsTimeBucketSizeInSecs=60]
+2025-10-01 10:12:09.378 o.a.s.e.s.SpoutExecutor Thread-17-kafkaSpout-executor[3, 3] [INFO] Opened spout kafkaSpout:[3]
+2025-10-01 10:12:09.380 o.a.s.e.s.SpoutExecutor Thread-17-kafkaSpout-executor[3, 3] [INFO] Activating spout kafkaSpout:[3]
+2025-10-01 10:12:09.597 o.a.k.c.Metadata kafka-producer-network-thread | producer-1 [INFO] [Producer clientId=producer-1] Cluster ID: DzNw4IrBRdSjrdxCNfEK9g
+2025-10-01 10:12:09.597 o.a.k.c.Metadata kafka-producer-network-thread | producer-2 [INFO] [Producer clientId=producer-2] Cluster ID: DzNw4IrBRdSjrdxCNfEK9g
+2025-10-01 10:12:09.597 o.a.k.c.Metadata Thread-17-kafkaSpout-executor[3, 3] [INFO] [Consumer clientId=consumer-data-events-1, groupId=data-events] Cluster ID: DzNw4IrBRdSjrdxCNfEK9g
+2025-10-01 10:12:09.600 o.a.k.c.p.i.TransactionManager kafka-producer-network-thread | producer-1 [INFO] [Producer clientId=producer-1] ProducerId set to 369 with epoch 0
+2025-10-01 10:12:09.600 o.a.k.c.p.i.TransactionManager kafka-producer-network-thread | producer-2 [INFO] [Producer clientId=producer-2] ProducerId set to 370 with epoch 0
+2025-10-01 10:12:09.603 o.a.s.k.s.KafkaSpout Thread-17-kafkaSpout-executor[3, 3] [INFO] Partitions revoked. [consumer-group=data-events, consumer=org.apache.kafka.clients.consumer.KafkaConsumer@4c1106d3, topic-partitions=[]]
+2025-10-01 10:12:09.605 o.a.k.c.c.KafkaConsumer Thread-17-kafkaSpout-executor[3, 3] [INFO] [Consumer clientId=consumer-data-events-1, groupId=data-events] Assigned to partition(s): data-events-2, data-events-1, data-events-0
+2025-10-01 10:12:09.611 o.a.s.k.s.KafkaSpout Thread-17-kafkaSpout-executor[3, 3] [INFO] Partitions reassignment. [task-ID=3, consumer-group=data-events, consumer=org.apache.kafka.clients.consumer.KafkaConsumer@4c1106d3, topic-partitions=[data-events-2, data-events-1, data-events-0]]
+2025-10-01 10:12:09.623 o.a.k.c.c.i.ConsumerCoordinator Thread-17-kafkaSpout-executor[3, 3] [INFO] [Consumer clientId=consumer-data-events-1, groupId=data-events] Discovered group coordinator kafka:29092 (id: 2147483646 rack: null)
+2025-10-01 10:12:09.639 o.a.k.c.c.i.ConsumerCoordinator Thread-17-kafkaSpout-executor[3, 3] [INFO] [Consumer clientId=consumer-data-events-1, groupId=data-events] Found no committed offset for partition data-events-1
+2025-10-01 10:12:09.641 o.a.k.c.c.i.SubscriptionState Thread-17-kafkaSpout-executor[3, 3] [INFO] [Consumer clientId=consumer-data-events-1, groupId=data-events] Seeking to earliest offset of partition data-events-1
+2025-10-01 10:12:09.650 o.a.k.c.c.i.ConsumerCoordinator Thread-17-kafkaSpout-executor[3, 3] [INFO] [Consumer clientId=consumer-data-events-1, groupId=data-events] Found no committed offset for partition data-events-0
+2025-10-01 10:12:09.651 o.a.k.c.c.i.ConsumerCoordinator Thread-17-kafkaSpout-executor[3, 3] [INFO] [Consumer clientId=consumer-data-events-1, groupId=data-events] Found no committed offset for partition data-events-2
+2025-10-01 10:12:09.659 o.a.k.c.c.i.SubscriptionState Thread-17-kafkaSpout-executor[3, 3] [INFO] [Consumer clientId=consumer-data-events-1, groupId=data-events] Resetting offset for partition data-events-1 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[kafka:29092 (id: 1 rack: null)], epoch=0}}.
+2025-10-01 10:12:09.660 o.a.k.c.c.i.SubscriptionState Thread-17-kafkaSpout-executor[3, 3] [INFO] [Consumer clientId=consumer-data-events-1, groupId=data-events] Resetting offset for partition data-events-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[kafka:29092 (id: 1 rack: null)], epoch=0}}.
+2025-10-01 10:12:09.660 o.a.k.c.c.i.SubscriptionState Thread-17-kafkaSpout-executor[3, 3] [INFO] [Consumer clientId=consumer-data-events-1, groupId=data-events] Resetting offset for partition data-events-2 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[kafka:29092 (id: 1 rack: null)], epoch=0}}.
+2025-10-01 10:12:09.665 o.a.k.c.c.i.ConsumerCoordinator Thread-17-kafkaSpout-executor[3, 3] [INFO] [Consumer clientId=consumer-data-events-1, groupId=data-events] Found no committed offset for partition data-events-0
+2025-10-01 10:12:09.667 o.a.k.c.c.i.SubscriptionState Thread-17-kafkaSpout-executor[3, 3] [INFO] [Consumer clientId=consumer-data-events-1, groupId=data-events] Seeking to earliest offset of partition data-events-0
+2025-10-01 10:12:09.670 o.a.k.c.c.i.SubscriptionState Thread-17-kafkaSpout-executor[3, 3] [INFO] [Consumer clientId=consumer-data-events-1, groupId=data-events] Resetting offset for partition data-events-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[kafka:29092 (id: 1 rack: null)], epoch=0}}.
+2025-10-01 10:12:09.673 o.a.k.c.c.i.ConsumerCoordinator Thread-17-kafkaSpout-executor[3, 3] [INFO] [Consumer clientId=consumer-data-events-1, groupId=data-events] Found no committed offset for partition data-events-2
+2025-10-01 10:12:09.674 o.a.k.c.c.i.SubscriptionState Thread-17-kafkaSpout-executor[3, 3] [INFO] [Consumer clientId=consumer-data-events-1, groupId=data-events] Seeking to earliest offset of partition data-events-2
+2025-10-01 10:12:09.677 o.a.k.c.c.i.SubscriptionState Thread-17-kafkaSpout-executor[3, 3] [INFO] [Consumer clientId=consumer-data-events-1, groupId=data-events] Resetting offset for partition data-events-2 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[kafka:29092 (id: 1 rack: null)], epoch=0}}.
+2025-10-01 10:12:09.678 o.a.s.k.s.KafkaSpout Thread-17-kafkaSpout-executor[3, 3] [INFO] Initialization complete
+2025-10-01 10:12:09.739 o.e.b.SentenceSplitBolt Thread-16-sentenceSplitBolt-executor[5, 5] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {-1093474253059549891=-5743954971364439928}, [data-events, 1, 0, null, hello] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:09.740 o.e.b.SentenceSplitBolt Thread-15-sentenceSplitBolt-executor[7, 7] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {6466775222037116367=-735715681605040063}, [data-events, 1, 5, null, Spouts are sources of streams in a Storm topology] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:09.744 o.e.b.SentenceSplitBolt Thread-15-sentenceSplitBolt-executor[7, 7] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {5285408572415797915=711224664308121791}, [data-events, 1, 6, null, Bolts process streams of data in Storm] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:09.745 o.e.b.SentenceSplitBolt Thread-16-sentenceSplitBolt-executor[5, 5] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {-2696778561704110750=5081595646327481170}, [data-events, 1, 1, null, Apache Storm is a distributed realtime computation system] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:09.746 o.e.b.SentenceSplitBolt Thread-15-sentenceSplitBolt-executor[7, 7] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {-511064211785650255=-8122054192897993108}, [data-events, 1, 7, null, Apache Storm is a distributed realtime computation system] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:09.748 o.e.b.SentenceSplitBolt Thread-15-sentenceSplitBolt-executor[7, 7] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {6119528310108856951=-9071631524509948953}, [data-events, 1, 8, null, Kafka provides a high throughput distributed messaging system] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): 1759313529747
+2025-10-01 10:12:09.750 o.e.b.SentenceSplitBolt Thread-15-sentenceSplitBolt-executor[7, 7] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {-486711495509253126=1022713770999590978}, [data-events, 1, 10, null, Storm topologies consist of spouts and bolts] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:09.753 o.e.b.SentenceSplitBolt Thread-16-sentenceSplitBolt-executor[5, 5] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {-7009678955704522354=5836700137088930307}, [data-events, 1, 2, null, Kafka provides a high throughput distributed messaging system] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:09.754 o.e.b.SentenceSplitBolt Thread-15-sentenceSplitBolt-executor[7, 7] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {-726038850582202340=-8688901345301016555}, [data-events, 1, 11, null, Spouts are sources of streams in a Storm topology] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:09.760 o.e.b.SentenceSplitBolt Thread-16-sentenceSplitBolt-executor[5, 5] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {-5613135205926253217=-8074420353582532817}, [data-events, 1, 3, null, Big data processing requires scalability and fault tolerance] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:09.763 o.e.b.SentenceSplitBolt Thread-16-sentenceSplitBolt-executor[5, 5] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {7112283955038495123=8967811315950957088}, [data-events, 1, 4, null, Storm topologies consist of spouts and bolts] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:09.766 o.e.b.SentenceSplitBolt Thread-16-sentenceSplitBolt-executor[5, 5] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {-9068973502097485624=5413349921814441466}, [data-events, 1, 9, null, Big data processing requires scalability and fault tolerance] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:09.767 o.e.b.SentenceSplitBolt Thread-15-sentenceSplitBolt-executor[7, 7] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {-143761250492599689=-3923035999095231666}, [data-events, 1, 13, null, Stream processing is powerful for real time analytics] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:09.769 o.e.b.SentenceSplitBolt Thread-15-sentenceSplitBolt-executor[7, 7] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {5152128143582059362=-3000476298161753232}, [data-events, 1, 14, null, Machine learning pipelines often use Kafka as the data backbone] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:09.770 o.e.b.SentenceSplitBolt Thread-16-sentenceSplitBolt-executor[5, 5] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {-5585814480701611137=-3806711060589110881}, [data-events, 1, 12, null, Bolts process streams of data in Storm] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:09.772 o.e.b.SentenceSplitBolt Thread-16-sentenceSplitBolt-executor[5, 5] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {-6803786550172504343=-5629788583976000487}, [data-events, 1, 15, null, Storm guarantees at least once processing semantics] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:09.774 o.e.b.SentenceSplitBolt Thread-15-sentenceSplitBolt-executor[7, 7] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {-2325755166864719035=3893639613976816974}, [data-events, 1, 17, null, This is a word count example using Storm and Kafka] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:09.776 o.e.b.SentenceSplitBolt Thread-15-sentenceSplitBolt-executor[7, 7] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {8276372422818988193=-4282593818303893334}, [data-events, 1, 19, null, Kubernetes can orchestrate Kafka and Storm clusters] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:09.778 o.e.b.SentenceSplitBolt Thread-16-sentenceSplitBolt-executor[5, 5] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {114831276228921477=-2270502411173134007}, [data-events, 1, 16, null, Kafka supports partitioning and replication for fault tolerance] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:09.782 o.e.b.SentenceSplitBolt Thread-15-sentenceSplitBolt-executor[7, 7] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {-2509355348122069030=3670066677996390220}, [data-events, 1, 21, null, Logs and metrics provide observability into pipelines] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:09.783 o.e.b.SentenceSplitBolt Thread-16-sentenceSplitBolt-executor[5, 5] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {-4273408442020383027=-5090142989030172825}, [data-events, 1, 18, null, Docker helps run distributed systems locally] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): 1759313529782
+2025-10-01 10:12:09.787 o.e.b.SentenceSplitBolt Thread-16-sentenceSplitBolt-executor[5, 5] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {8966553365180833187=1219513113238063911}, [data-events, 1, 20, null, Monitoring is crucial for production big data systems] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:09.789 o.e.b.SentenceSplitBolt Thread-16-sentenceSplitBolt-executor[5, 5] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {-4348534180792251276=-7062525275505233014}, [data-events, 1, 22, null, Data engineers use Kafka Connect for integration] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:09.792 o.e.b.SentenceSplitBolt Thread-15-sentenceSplitBolt-executor[7, 7] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {5161304012958236960=-270359406818704681}, [data-events, 1, 25, null, Real time sentiment analysis requires low latency processing] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:09.793 o.e.b.SentenceSplitBolt Thread-15-sentenceSplitBolt-executor[7, 7] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {-7636716715346038064=-6628941858378385031}, [data-events, 1, 26, null, Word count is the Hello World of stream processing] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:09.797 o.e.b.SentenceSplitBolt Thread-16-sentenceSplitBolt-executor[5, 5] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {2543733209490787854=4543346269097640504}, [data-events, 1, 23, null, ETL jobs can be implemented using streaming frameworks] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:09.800 o.e.b.SentenceSplitBolt Thread-15-sentenceSplitBolt-executor[7, 7] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {8581798534193988710=8393189249473916242}, [data-events, 1, 31, null, Google Cloud PubSub is similar to Kafka] PROC_START_TIME(sampled): 1759313529797 EXEC_START_TIME(sampled): null
+2025-10-01 10:12:09.801 o.e.b.SentenceSplitBolt Thread-16-sentenceSplitBolt-executor[5, 5] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {372792112664700721=-726842898031068744}, [data-events, 1, 24, null, Fraud detection pipelines rely on fast stream processing] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:09.804 o.e.b.SentenceSplitBolt Thread-16-sentenceSplitBolt-executor[5, 5] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {-5903628949144568777=-4977338309851110539}, [data-events, 1, 27, null, Python and Java are popular languages for big data] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:09.806 o.e.b.SentenceSplitBolt Thread-15-sentenceSplitBolt-executor[7, 7] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {-4085340387434150876=-9185348049562134785}, [data-events, 1, 35, null, Kafka Streams is a lightweight stream processing library] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:09.808 o.e.b.SentenceSplitBolt Thread-16-sentenceSplitBolt-executor[5, 5] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {8238637146545009097=8826377743066444221}, [data-events, 1, 28, null, Cloud providers offer managed Kafka services] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:09.810 o.e.b.SentenceSplitBolt Thread-15-sentenceSplitBolt-executor[7, 7] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {8529104557767329207=-3908447337407095700}, [data-events, 1, 36, null, Flink competes with Spark and Storm for stream processing] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:09.811 o.e.b.SentenceSplitBolt Thread-16-sentenceSplitBolt-executor[5, 5] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {952518258388393023=-2773127635627462718}, [data-events, 1, 29, null, AWS MSK provides a fully managed Kafka cluster] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:09.814 o.e.b.SentenceSplitBolt Thread-15-sentenceSplitBolt-executor[7, 7] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {7399972098554362349=-5543127478714803143}, [data-events, 1, 37, null, Hadoop introduced the era of distributed data processing] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:09.815 o.e.b.SentenceSplitBolt Thread-16-sentenceSplitBolt-executor[5, 5] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {6317747489470156953=-6178566889009167082}, [data-events, 1, 30, null, Azure Event Hubs can act as Kafka brokers] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:09.817 o.e.b.SentenceSplitBolt Thread-16-sentenceSplitBolt-executor[5, 5] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {-1116463314103999933=-1603336679990703559}, [data-events, 1, 32, null, Stream joins are useful for correlating events] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:09.819 o.e.b.SentenceSplitBolt Thread-16-sentenceSplitBolt-executor[5, 5] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {5838449627420992160=1903156311144379421}, [data-events, 1, 33, null, Windowing allows aggregation of data over time] PROC_START_TIME(sampled): 1759313529819 EXEC_START_TIME(sampled): null
+2025-10-01 10:12:09.824 o.e.b.SentenceSplitBolt Thread-15-sentenceSplitBolt-executor[7, 7] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {786899418221563195=7238500817935058414}, [data-events, 1, 39, null, Batch processing is different from stream processing] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:09.832 o.e.b.SentenceSplitBolt Thread-15-sentenceSplitBolt-executor[7, 7] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {-8644784197439610495=-8651095038051970090}, [data-events, 1, 40, null, Real time dashboards visualize live data feeds] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:09.836 o.e.b.SentenceSplitBolt Thread-15-sentenceSplitBolt-executor[7, 7] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {4516089497882182671=-3666815917263361369}, [data-events, 1, 41, null, Microservices often communicate using Kafka] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:09.838 o.e.b.SentenceSplitBolt Thread-15-sentenceSplitBolt-executor[7, 7] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {-3785423486297473662=4911244129388538502}, [data-events, 1, 42, null, Producers send records to Kafka topics] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:09.839 o.e.b.SentenceSplitBolt Thread-16-sentenceSplitBolt-executor[5, 5] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {-6487074383686751031=-2973724147900126079}, [data-events, 1, 34, null, Storm Trident provides higher level stream APIs] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:09.841 o.e.b.SentenceSplitBolt Thread-15-sentenceSplitBolt-executor[7, 7] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {-4125855375152725193=4315784414128471610}, [data-events, 1, 44, null, Offsets track consumer progress in Kafka] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:09.845 o.e.b.SentenceSplitBolt Thread-15-sentenceSplitBolt-executor[7, 7] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {-8071079080360759506=-2137562415110494152}, [data-events, 1, 45, null, Zookeeper was traditionally used to manage Kafka] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:09.876 o.e.b.SentenceSplitBolt Thread-16-sentenceSplitBolt-executor[5, 5] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {-2320380589344162151=-8820114862796910564}, [data-events, 1, 38, null, MapReduce was the first widely used big data framework] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:09.877 o.e.b.SentenceSplitBolt Thread-15-sentenceSplitBolt-executor[7, 7] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {-4651465308553776835=-4842855942158606173}, [data-events, 1, 46, null, Newer Kafka versions remove Zookeeper dependency] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:09.879 o.e.b.SentenceSplitBolt Thread-16-sentenceSplitBolt-executor[5, 5] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {9140563102221350322=392802262170000848}, [data-events, 1, 43, null, Consumers read records from Kafka topics] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:09.880 o.e.b.SentenceSplitBolt Thread-15-sentenceSplitBolt-executor[7, 7] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {712099241872363700=408226379536407447}, [data-events, 1, 48, null, Backpressure occurs when consumers cannot keep up] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:09.882 o.e.b.SentenceSplitBolt Thread-15-sentenceSplitBolt-executor[7, 7] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {-4573654345899937240=-2856667855279755665}, [data-events, 1, 51, null, Parallelism helps scale out stream topologies] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:09.885 o.e.b.SentenceSplitBolt Thread-16-sentenceSplitBolt-executor[5, 5] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {4189707688168712147=2591683038692528277}, [data-events, 1, 47, null, Exactly once semantics are hard but achievable] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:09.887 o.e.b.SentenceSplitBolt Thread-15-sentenceSplitBolt-executor[7, 7] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {3281892107549998665=-4411691538994195639}, [data-events, 1, 53, null, Field grouping ensures tuples with same key go to same bolt] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:09.891 o.e.b.SentenceSplitBolt Thread-16-sentenceSplitBolt-executor[5, 5] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {5522838609159865780=3903107410573505534}, [data-events, 1, 49, null, Storm uses tuples to represent data records] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:09.893 o.e.b.SentenceSplitBolt Thread-15-sentenceSplitBolt-executor[7, 7] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {7646445047149245962=6180046460375967572}, [data-events, 1, 60, null, Replication ensures high availability in Kafka] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:09.896 o.e.b.SentenceSplitBolt Thread-16-sentenceSplitBolt-executor[5, 5] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {-6131170357121809982=-5128385815083331183}, [data-events, 1, 50, null, Tuple fields carry named values across bolts] PROC_START_TIME(sampled): 1759313529893 EXEC_START_TIME(sampled): null
+2025-10-01 10:12:09.900 o.e.b.SentenceSplitBolt Thread-15-sentenceSplitBolt-executor[7, 7] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {-5254821976266756730=-6816204190846451471}, [data-events, 1, 61, null, High throughput is a key feature of Kafka] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:09.902 o.e.b.SentenceSplitBolt Thread-16-sentenceSplitBolt-executor[5, 5] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {-122208837812463600=-3711375598680904145}, [data-events, 1, 52, null, Shuffling distributes tuples randomly across bolts] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:09.905 o.e.b.SentenceSplitBolt Thread-15-sentenceSplitBolt-executor[7, 7] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {5767469825833936107=3594945830295354169}, [data-events, 1, 67, null, Retention policies control how long data is stored] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:09.911 o.e.b.SentenceSplitBolt Thread-16-sentenceSplitBolt-executor[5, 5] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {-7269694716026599605=-7106102902909540685}, [data-events, 1, 54, null, Global grouping routes all tuples to a single bolt] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:09.913 o.e.b.SentenceSplitBolt Thread-15-sentenceSplitBolt-executor[7, 7] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {3752128448437900012=985515444212648113}, [data-events, 1, 68, null, Schema evolution is a challenge in big data] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:09.915 o.e.b.SentenceSplitBolt Thread-16-sentenceSplitBolt-executor[5, 5] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {-8428790178762778760=-4198693675944577585}, [data-events, 1, 55, null, Custom grouping provides user defined routing logic] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:09.921 o.e.b.SentenceSplitBolt Thread-15-sentenceSplitBolt-executor[7, 7] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {8200256738079000365=-6732661080544429894}, [data-events, 1, 69, null, Avro and Protobuf are common serialization formats] PROC_START_TIME(sampled): 1759313529916 EXEC_START_TIME(sampled): 1759313529916
+2025-10-01 10:12:09.923 o.e.b.SentenceSplitBolt Thread-15-sentenceSplitBolt-executor[7, 7] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {-6065045194480112440=-5317565529081395311}, [data-events, 1, 70, null, JSON is human readable but less efficient] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:09.924 o.e.b.SentenceSplitBolt Thread-16-sentenceSplitBolt-executor[5, 5] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {-8574585214029717596=7132888652998740611}, [data-events, 1, 56, null, Local clusters help developers test Storm topologies] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:09.930 o.e.b.SentenceSplitBolt Thread-15-sentenceSplitBolt-executor[7, 7] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {6133749353699743493=7835831486746109465}, [data-events, 1, 71, null, Binary formats reduce payload size in Kafka] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:09.932 o.e.b.SentenceSplitBolt Thread-15-sentenceSplitBolt-executor[7, 7] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {1129834283507259782=6103772365929293356}, [data-events, 1, 77, null, CDC (Change Data Capture) streams database updates] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:09.935 o.e.b.SentenceSplitBolt Thread-15-sentenceSplitBolt-executor[7, 7] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {6759506639436713416=-3095198876795963793}, [data-events, 1, 78, null, Debezium is a popular CDC tool with Kafka] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:09.937 o.e.b.SentenceSplitBolt Thread-16-sentenceSplitBolt-executor[5, 5] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {7137381172673399767=-1231786476634979927}, [data-events, 1, 57, null, Nimbus is the master node in Storm] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:09.940 o.e.b.SentenceSplitBolt Thread-16-sentenceSplitBolt-executor[5, 5] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {-7307721431571047855=586330041743057834}, [data-events, 1, 58, null, Supervisors run worker processes in Storm] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:09.942 o.e.b.SentenceSplitBolt Thread-15-sentenceSplitBolt-executor[7, 7] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {-1115420465110276941=-3773700530582980450}, [data-events, 1, 80, null, Kafka supports stream processing with Kafka Streams] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:09.944 o.e.b.SentenceSplitBolt Thread-16-sentenceSplitBolt-executor[5, 5] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {3722279680262364877=-574887674938842267}, [data-events, 1, 59, null, Kafka brokers handle topic partitions] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:09.945 o.e.b.SentenceSplitBolt Thread-15-sentenceSplitBolt-executor[7, 7] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {-5486372066082529276=-2205616771936202761}, [data-events, 1, 81, null, Storm is written in Java and Clojure] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:09.949 o.e.b.SentenceSplitBolt Thread-16-sentenceSplitBolt-executor[5, 5] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {517973035789017996=8148672050611648086}, [data-events, 1, 62, null, Storm can be integrated with HDFS for storage] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:09.951 o.e.b.SentenceSplitBolt Thread-15-sentenceSplitBolt-executor[7, 7] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {2084676797864108455=1844614633803926677}, [data-events, 1, 82, null, Storm topologies can be submitted via CLI or API] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:09.952 o.e.b.SentenceSplitBolt Thread-15-sentenceSplitBolt-executor[7, 7] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {-5999495800477207411=2746643426834904113}, [data-events, 1, 84, null, Online recommendation engines rely on streaming pipelines] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:09.953 o.e.b.SentenceSplitBolt Thread-16-sentenceSplitBolt-executor[5, 5] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {3544998534516024177=-6756928999299038685}, [data-events, 1, 63, null, Checkpointing helps recover from failures] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:09.955 o.e.b.SentenceSplitBolt Thread-15-sentenceSplitBolt-executor[7, 7] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {-6027746525732178606=-3290568586610916618}, [data-events, 1, 86, null, Telemetry pipelines monitor connected devices] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:09.962 o.e.b.SentenceSplitBolt Thread-16-sentenceSplitBolt-executor[5, 5] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {-2505046412499631591=-1618334689640043101}, [data-events, 1, 64, null, Data pipelines must handle late arriving data] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:09.965 o.e.b.SentenceSplitBolt Thread-16-sentenceSplitBolt-executor[5, 5] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {-5925222428878848320=-8685186773879477967}, [data-events, 1, 65, null, Idempotent producers avoid duplicate Kafka records] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:09.968 o.e.b.SentenceSplitBolt Thread-15-sentenceSplitBolt-executor[7, 7] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {-8056124172126570973=8663159886049504014}, [data-events, 1, 87, null, Event driven architectures depend on messaging systems] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:09.972 o.e.b.SentenceSplitBolt Thread-15-sentenceSplitBolt-executor[7, 7] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {-3553543660226256792=3761153441970876040}, [data-events, 1, 88, null, Backpressure must be carefully managed in streaming systems] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:09.973 o.e.b.SentenceSplitBolt Thread-16-sentenceSplitBolt-executor[5, 5] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {-4902454740049220618=-704295413865806120}, [data-events, 1, 66, null, Compaction keeps the latest value per key in Kafka] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:09.978 o.e.b.SentenceSplitBolt Thread-15-sentenceSplitBolt-executor[7, 7] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {7039383633964213058=1886830945122037555}, [data-events, 1, 90, null, Storm spouts emit tuples to downstream bolts] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:09.980 o.e.b.SentenceSplitBolt Thread-16-sentenceSplitBolt-executor[5, 5] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {-6310532058842894372=5200736287903610367}, [data-events, 1, 72, null, Kafka topics can have multiple partitions] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:09.981 o.e.b.SentenceSplitBolt Thread-15-sentenceSplitBolt-executor[7, 7] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {-4148603122183362331=-3723152903757323971}, [data-events, 1, 91, null, Bolts transform, filter, and aggregate tuples] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:09.982 o.e.b.SentenceSplitBolt Thread-15-sentenceSplitBolt-executor[7, 7] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {7205734581491848752=9124291008619319598}, [data-events, 1, 94, null, HBase stores time series and big table data] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:09.983 o.e.b.SentenceSplitBolt Thread-15-sentenceSplitBolt-executor[7, 7] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {-1592910927726134335=4983391879473112206}, [data-events, 1, 97, null, Exactly once delivery requires careful design] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:09.986 o.e.b.SentenceSplitBolt Thread-16-sentenceSplitBolt-executor[5, 5] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {-7409179430621001033=8293174128711263262}, [data-events, 1, 73, null, Consumers in the same group share partitions] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): 1759313529981
+2025-10-01 10:12:09.987 o.e.b.SentenceSplitBolt Thread-15-sentenceSplitBolt-executor[7, 7] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {8474825980317712819=6879947920632579548}, [data-events, 1, 99, null, Anomaly detection is applied to time series data] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:09.988 o.e.b.SentenceSplitBolt Thread-16-sentenceSplitBolt-executor[5, 5] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {-3884266828788392069=6839193653258552611}, [data-events, 1, 74, null, Rebalancing redistributes partitions across consumers] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:09.993 o.e.b.SentenceSplitBolt Thread-16-sentenceSplitBolt-executor[5, 5] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {8642126000675369417=-8243425904477284236}, [data-events, 1, 75, null, Sticky partitioning reduces rebalancing churn] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:09.997 o.e.b.SentenceSplitBolt Thread-16-sentenceSplitBolt-executor[5, 5] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {-2126109499404507008=-2296542900852517555}, [data-events, 1, 76, null, Kafka Connect simplifies integration with databases] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:09.999 o.e.b.SentenceSplitBolt Thread-15-sentenceSplitBolt-executor[7, 7] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {-5340227711782520014=7504024502125705455}, [data-events, 1, 100, null, Operational dashboards help business teams] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:10.001 o.e.b.SentenceSplitBolt Thread-16-sentenceSplitBolt-executor[5, 5] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {-6874655925558754946=-7680920995826993606}, [data-events, 1, 79, null, Confluent provides enterprise Kafka features] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:10.002 o.e.b.SentenceSplitBolt Thread-15-sentenceSplitBolt-executor[7, 7] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {-6161135712261378162=5753815779621355461}, [data-events, 1, 101, null, Metrics can be stored in Prometheus] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:10.005 o.e.b.SentenceSplitBolt Thread-16-sentenceSplitBolt-executor[5, 5] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {-7563944294823348561=5010036065220002205}, [data-events, 1, 83, null, Real time fraud detection is a common use case] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:10.007 o.e.b.SentenceSplitBolt Thread-15-sentenceSplitBolt-executor[7, 7] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {4832626199225218752=-2205776668926624675}, [data-events, 1, 105, null, ksqlDB builds on top of Kafka Streams] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:10.011 o.e.b.SentenceSplitBolt Thread-15-sentenceSplitBolt-executor[7, 7] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {7298813256120663013=-4926218493275520487}, [data-events, 1, 106, null, Complex Event Processing correlates multiple streams] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:10.016 o.e.b.SentenceSplitBolt Thread-15-sentenceSplitBolt-executor[7, 7] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {-7462737482029007263=-6427735097329098239}, [data-events, 1, 107, null, CEP is used in telecom and fraud detection] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:10.019 o.e.b.SentenceSplitBolt Thread-16-sentenceSplitBolt-executor[5, 5] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {8331411237147653849=8083952188223789262}, [data-events, 1, 85, null, IoT devices generate large amounts of streaming data] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:10.021 o.e.b.SentenceSplitBolt Thread-15-sentenceSplitBolt-executor[7, 7] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {8652329854618649946=-4747703883262091046}, [data-events, 1, 108, null, Kafka supports log compaction for key-value use cases] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:10.022 o.e.b.SentenceSplitBolt Thread-15-sentenceSplitBolt-executor[7, 7] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {2600263379935658879=-8476182965544384727}, [data-events, 1, 109, null, Storm topologies scale horizontally with more bolts] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): 1759313530022
+2025-10-01 10:12:10.026 o.e.b.SentenceSplitBolt Thread-16-sentenceSplitBolt-executor[5, 5] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {-766483481906498833=335904325722451524}, [data-events, 1, 89, null, Storm guarantees message processing via acking mechanism] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:10.034 o.e.b.SentenceSplitBolt Thread-16-sentenceSplitBolt-executor[5, 5] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {2651546935171709147=4171794472122380388}, [data-events, 1, 92, null, Kafka can buffer bursts of incoming data] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:10.039 o.e.b.SentenceSplitBolt Thread-15-sentenceSplitBolt-executor[7, 7] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {-5590381150651844989=-4056468949384308131}, [data-events, 1, 112, null, Memory and CPU affect Storm worker performance] PROC_START_TIME(sampled): 1759313530026 EXEC_START_TIME(sampled): null
+2025-10-01 10:12:10.041 o.e.b.SentenceSplitBolt Thread-15-sentenceSplitBolt-executor[7, 7] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {-2820908459468331748=3806695036604784428}, [data-events, 1, 116, null, Linger.ms controls batching delay in Kafka] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:10.044 o.e.b.SentenceSplitBolt Thread-16-sentenceSplitBolt-executor[5, 5] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {1925703044330550639=4904066221891404841}, [data-events, 1, 93, null, Storm integrates with Redis and Cassandra] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:10.050 o.e.b.SentenceSplitBolt Thread-15-sentenceSplitBolt-executor[7, 7] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {-1358575800425866372=-2528533352004769850}, [data-events, 1, 120, null, Segment.bytes controls Kafka log segment size] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:10.051 o.e.b.SentenceSplitBolt Thread-16-sentenceSplitBolt-executor[5, 5] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {705651854422133820=-2800440972092923620}, [data-events, 1, 95, null, Spark Streaming is a micro batch system] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:10.053 o.e.b.SentenceSplitBolt Thread-16-sentenceSplitBolt-executor[5, 5] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {-5520720397589076287=-6313466628951198522}, [data-events, 1, 96, null, Flink supports event time and watermarks] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:10.055 o.e.b.SentenceSplitBolt Thread-15-sentenceSplitBolt-executor[7, 7] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {-3736937017575946135=1374252080107285160}, [data-events, 1, 121, null, Consumers use poll() to fetch data] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:10.056 o.e.b.SentenceSplitBolt Thread-16-sentenceSplitBolt-executor[5, 5] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {-8631727423027078892=5691369136355549959}, [data-events, 1, 98, null, Data enrichment adds context to raw events] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:10.057 o.e.b.SentenceSplitBolt Thread-15-sentenceSplitBolt-executor[7, 7] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {-3094544543107470211=2108726455326097151}, [data-events, 1, 123, null, Kafka partition skew can cause imbalance] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:10.064 o.e.b.SentenceSplitBolt Thread-15-sentenceSplitBolt-executor[7, 7] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {-4732725806757864827=-7913698694202910816}, [data-events, 1, 126, null, Data pipelines must handle null and malformed messages] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:10.065 o.e.b.SentenceSplitBolt Thread-16-sentenceSplitBolt-executor[5, 5] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {-8756938043211045080=-6721698036869928672}, [data-events, 1, 102, null, Grafana visualizes real time metrics] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:10.067 o.e.b.SentenceSplitBolt Thread-15-sentenceSplitBolt-executor[7, 7] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {4357758203880804553=3732166707541601343}, [data-events, 1, 127, null, Whitespace should be trimmed from input sentences] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:10.068 o.e.b.SentenceSplitBolt Thread-15-sentenceSplitBolt-executor[7, 7] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {-5274467147379496030=-1340335265106950091}, [data-events, 1, 129, null, Stop words can be removed during processing] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:10.069 o.e.b.SentenceSplitBolt Thread-16-sentenceSplitBolt-executor[5, 5] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {-5189225532135170287=3244847904327801069}, [data-events, 1, 103, null, OpenTelemetry provides unified observability] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:10.070 o.e.b.SentenceSplitBolt Thread-15-sentenceSplitBolt-executor[7, 7] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {5775638707811871867=122024471426144488}, [data-events, 1, 131, null, Lemmatization provides dictionary based normalization] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:10.071 o.e.b.SentenceSplitBolt Thread-16-sentenceSplitBolt-executor[5, 5] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {-4647800091033469048=4941406231040543840}, [data-events, 1, 104, null, Streaming SQL allows queries on live streams] PROC_START_TIME(sampled): 1759313530070 EXEC_START_TIME(sampled): null
+2025-10-01 10:12:10.072 o.e.b.SentenceSplitBolt Thread-16-sentenceSplitBolt-executor[5, 5] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {3999058850278630148=-6263879011381381420}, [data-events, 1, 110, null, Local testing prevents costly cloud experiments] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:10.073 o.e.b.SentenceSplitBolt Thread-15-sentenceSplitBolt-executor[7, 7] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {-7064084973428248439=-7977948379782615257}, [data-events, 1, 132, null, Text cleaning is vital for NLP pipelines] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:10.093 o.e.b.SentenceSplitBolt Thread-16-sentenceSplitBolt-executor[5, 5] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {-6153071674748334614=3444697678149105416}, [data-events, 1, 111, null, Cluster deployment requires tuning resources] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:10.096 o.e.b.SentenceSplitBolt Thread-15-sentenceSplitBolt-executor[7, 7] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {4563414481058308025=4385803492996232904}, [data-events, 1, 134, null, Kafka can feed TensorFlow serving systems] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:10.099 o.e.b.SentenceSplitBolt Thread-15-sentenceSplitBolt-executor[7, 7] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {6903488097621194590=-8348017396560969622}, [data-events, 1, 135, null, Streaming AI enables real time decision making] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): 1759313530099
+2025-10-01 10:12:10.102 o.e.b.SentenceSplitBolt Thread-15-sentenceSplitBolt-executor[7, 7] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {-3401471547196652351=-5245677094365633688}, [data-events, 1, 138, null, Fraud pipelines analyze user transactions] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:10.103 o.e.b.SentenceSplitBolt Thread-15-sentenceSplitBolt-executor[7, 7] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {2010468942157515718=-7041387597175332129}, [data-events, 1, 140, null, Social media pipelines analyze posts and comments] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:10.105 o.e.b.SentenceSplitBolt Thread-16-sentenceSplitBolt-executor[5, 5] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {5592946999280968757=8891937172645995320}, [data-events, 1, 113, null, Storm UI shows topology stats and errors] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:10.110 o.e.b.SentenceSplitBolt Thread-16-sentenceSplitBolt-executor[5, 5] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {-8498943357212981122=5838126160010136177}, [data-events, 1, 114, null, Kafka metrics are exposed via JMX] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:10.111 o.e.b.SentenceSplitBolt Thread-16-sentenceSplitBolt-executor[5, 5] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {6490953994089406519=-2233215626388026315}, [data-events, 1, 115, null, Producers can batch messages for throughput] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): 1759313530111
+2025-10-01 10:12:10.113 o.e.b.SentenceSplitBolt Thread-15-sentenceSplitBolt-executor[7, 7] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {-886947314610266345=-8594040497965779712}, [data-events, 1, 143, null, Serialization and deserialization are costly] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:10.114 o.e.b.SentenceSplitBolt Thread-15-sentenceSplitBolt-executor[7, 7] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {1986115341000996901=5074167648110805718}, [data-events, 1, 144, null, Compression reduces bandwidth usage] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:10.115 o.e.b.SentenceSplitBolt Thread-16-sentenceSplitBolt-executor[5, 5] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {4359644190596977547=-3063941430933194275}, [data-events, 1, 117, null, Acks setting controls delivery guarantees] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:10.118 o.e.b.SentenceSplitBolt Thread-15-sentenceSplitBolt-executor[7, 7] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {9114331739470013511=-4731289726262685757}, [data-events, 1, 145, null, Snappy and Gzip are common Kafka compressions] PROC_START_TIME(sampled): 1759313530115 EXEC_START_TIME(sampled): null
+2025-10-01 10:12:10.120 o.e.b.SentenceSplitBolt Thread-16-sentenceSplitBolt-executor[5, 5] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {2210279072326977675=4915583788423514705}, [data-events, 1, 118, null, Replication factor determines resilience] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:10.121 o.e.b.SentenceSplitBolt Thread-15-sentenceSplitBolt-executor[7, 7] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {9163197605519140933=-4745242591593607898}, [data-events, 1, 146, null, Cloud native Kafka deployments use operators] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:10.122 o.e.b.SentenceSplitBolt Thread-15-sentenceSplitBolt-executor[7, 7] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {5780948669885448384=-3410380940555489227}, [data-events, 1, 147, null, Helm charts simplify Kubernetes deployment] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:10.124 o.e.b.SentenceSplitBolt Thread-16-sentenceSplitBolt-executor[5, 5] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {-4885438953797534704=5144116124897166326}, [data-events, 1, 119, null, Retention.ms controls log retention duration] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:10.125 o.e.b.SentenceSplitBolt Thread-15-sentenceSplitBolt-executor[7, 7] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {-99903574087506339=-8616972268182136715}, [data-events, 1, 149, null, Containerization helps reproducibility] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:10.128 o.e.b.SentenceSplitBolt Thread-15-sentenceSplitBolt-executor[7, 7] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {-4324688122939002124=-5108019438946664763}, [data-events, 1, 150, null, CI/CD pipelines deploy data applications] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:10.129 o.e.b.SentenceSplitBolt Thread-16-sentenceSplitBolt-executor[5, 5] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {-3438040101869977691=156775557444607510}, [data-events, 1, 122, null, Consumer lag must be monitored] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:10.131 o.e.b.SentenceSplitBolt Thread-15-sentenceSplitBolt-executor[7, 7] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {-2864603601927668931=-7347709239221280120}, [data-events, 1, 151, null, Integration testing validates streaming jobs] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:10.133 o.e.b.SentenceSplitBolt Thread-16-sentenceSplitBolt-executor[5, 5] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {-7439477391371211714=-5100495723497599251}, [data-events, 1, 124, null, Storm bolts can write results back to Kafka] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:10.137 o.e.b.SentenceSplitBolt Thread-16-sentenceSplitBolt-executor[5, 5] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {6474255086101120504=2226137915692669802}, [data-events, 1, 125, null, Word count results can be written to another Kafka topic] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:10.139 o.e.b.SentenceSplitBolt Thread-16-sentenceSplitBolt-executor[5, 5] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {749574448100016698=-9064911609611345501}, [data-events, 1, 128, null, Tokenization splits text into words] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:10.140 o.e.b.SentenceSplitBolt Thread-15-sentenceSplitBolt-executor[7, 7] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {-1989125272090426654=3581566745335199805}, [data-events, 1, 152, null, Load testing simulates heavy event flow] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:10.143 o.e.b.SentenceSplitBolt Thread-16-sentenceSplitBolt-executor[5, 5] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {2003649908759438883=-7623216803351346416}, [data-events, 1, 130, null, Stemming reduces words to root forms] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:10.147 o.e.b.SentenceSplitBolt Thread-15-sentenceSplitBolt-executor[7, 7] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {-7257224136649957821=-5754239058356283179}, [data-events, 1, 153, null, Chaos testing validates resilience] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:10.148 o.e.b.SentenceSplitBolt Thread-16-sentenceSplitBolt-executor[5, 5] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {-5365099547024095984=-5911213589753244840}, [data-events, 1, 133, null, Storm can integrate with machine learning models] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:10.150 o.e.b.SentenceSplitBolt Thread-16-sentenceSplitBolt-executor[5, 5] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {-8378619107430645115=873332147795613947}, [data-events, 1, 136, null, Predictive maintenance analyzes IoT sensor streams] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:10.151 o.e.b.SentenceSplitBolt Thread-15-sentenceSplitBolt-executor[7, 7] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {4820857059198411129=-4911547639227125167}, [data-events, 1, 154, null, Monitoring prevents silent failures] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:10.153 o.e.b.SentenceSplitBolt Thread-15-sentenceSplitBolt-executor[7, 7] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {-6121700626213979241=-6111385966393155927}, [data-events, 1, 155, null, Alerts notify engineers of pipeline issues] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:10.155 o.e.b.SentenceSplitBolt Thread-15-sentenceSplitBolt-executor[7, 7] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {-5083344402059120349=6109950475101317300}, [data-events, 1, 157, null, Cost optimization reduces cloud expenses] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:10.156 o.e.b.SentenceSplitBolt Thread-16-sentenceSplitBolt-executor[5, 5] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {6923402129001388586=-1672603495524280987}, [data-events, 1, 137, null, Cybersecurity pipelines analyze network events] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:10.158 o.e.b.SentenceSplitBolt Thread-15-sentenceSplitBolt-executor[7, 7] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {-4707843238466600170=5530401751894443402}, [data-events, 1, 159, null, Polyglot systems mix Python, Java, and Scala] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:10.160 o.e.b.SentenceSplitBolt Thread-16-sentenceSplitBolt-executor[5, 5] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {-9191636075951067782=-6994423288961917833}, [data-events, 1, 139, null, AdTech pipelines optimize real time bidding] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:10.162 o.e.b.SentenceSplitBolt Thread-16-sentenceSplitBolt-executor[5, 5] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {2561959685245370137=2195869764896156974}, [data-events, 1, 141, null, Streaming pipelines must minimize latency] PROC_START_TIME(sampled): 1759313530162 EXEC_START_TIME(sampled): null
+2025-10-01 10:12:10.164 o.e.b.SentenceSplitBolt Thread-16-sentenceSplitBolt-executor[5, 5] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {3604332189602325233=1694977212552225746}, [data-events, 1, 142, null, Data locality improves throughput] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:10.167 o.e.b.SentenceSplitBolt Thread-16-sentenceSplitBolt-executor[5, 5] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {-8083078685625492549=-297867016683245280}, [data-events, 1, 148, null, Storm and Kafka can both run in Docker] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:10.170 o.e.b.SentenceSplitBolt Thread-16-sentenceSplitBolt-executor[5, 5] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {1329278528701891122=8954450291790742768}, [data-events, 1, 156, null, Scaling policies auto adjust resources] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:10.173 o.e.b.SentenceSplitBolt Thread-16-sentenceSplitBolt-executor[5, 5] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {-1517673146992762230=-7800828332115588182}, [data-events, 1, 158, null, Stream processing complements batch processing] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null
+2025-10-01 10:12:10.176 o.e.b.SentenceSplitBolt Thread-16-sentenceSplitBolt-executor[5, 5] [INFO] Data Entered:source: kafkaSpout:3, stream: default, id: {8993956064063178372=-2441578520886888904}, [data-events, 1, 160, null, Streaming is central to modern big data] PROC_START_TIME(sampled): null EXEC_START_TIME(sampled): null

@@ -1,0 +1,105 @@
+version: "3.9"
+
+services:
+  # Zookeeper (for Kafka)
+  zookeeper:
+    image: confluentinc/cp-zookeeper:7.5.0
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2181
+      ZOOKEEPER_TICK_TIME: 2000
+    ports:
+      - "2181:2181"
+    networks:
+      - stormnet
+
+  # Kafka
+  kafka:
+    image: confluentinc/cp-kafka:7.5.0
+    container_name: kafka
+    depends_on:
+      - zookeeper
+    ports:
+      - "9092:9092"       # host machine access
+      - "29092:29092"     # internal container access
+    environment:
+      KAFKA_BROKER_ID: 1
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_LISTENERS: PLAINTEXT://0.0.0.0:9092,PLAINTEXT_INTERNAL://0.0.0.0:29092
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://localhost:9092,PLAINTEXT_INTERNAL://kafka:29092
+      KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT_INTERNAL
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_INTERNAL:PLAINTEXT
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+    networks:
+      - stormnet
+
+  # Redis
+  redis:
+    image: redis:7
+    container_name: redis
+    ports:
+      - "6379:6379"
+    networks:
+      - stormnet
+
+  # Storm Nimbus
+  nimbus:
+    image: storm:2.8.2-jre21
+    container_name: nimbus
+    command: ["storm", "nimbus"]
+    depends_on:
+      - zookeeper
+      - kafka
+    restart: always
+    ports:
+      - "6627:6627"
+    environment:
+      STORM_ZOOKEEPER_SERVERS: '["zookeeper"]'
+      STORM_LOCAL_DIR: /data/storm
+    volumes:
+      - ./data:/data/storm
+      - ./logs:/logs
+    networks:
+      - stormnet
+
+  # Storm Supervisor
+  supervisor:
+    image: storm:2.8.2-jre21
+    container_name: supervisor
+    command: ["storm", "supervisor"]
+    depends_on:
+      - nimbus
+      - zookeeper
+      - kafka
+    restart: always
+    environment:
+      STORM_NIMBUS_SEEDS: '["nimbus"]'
+      STORM_ZOOKEEPER_SERVERS: '["zookeeper"]'
+      STORM_LOCAL_DIR: /data/storm
+    volumes:
+      - ./data:/data/storm
+      - ./logs:/logs
+    networks:
+      - stormnet
+
+  # Storm UI
+  ui:
+    image: storm:2.8.2-jre21
+    container_name: storm-ui
+    command: ["storm", "ui"]
+    depends_on:
+      - nimbus
+    restart: always
+    ports:
+      - "8080:8080"
+    environment:
+      STORM_NIMBUS_SEEDS: '["nimbus"]'
+      STORM_LOCAL_DIR: /data/storm
+    volumes:
+      - ./data:/data/storm
+      - ./logs:/logs
+    networks:
+      - stormnet
+
+networks:
+  stormnet:
+    driver: bridge

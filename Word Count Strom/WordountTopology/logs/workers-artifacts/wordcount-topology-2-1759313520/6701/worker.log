@@ -1,0 +1,1377 @@
+2025-10-01 10:12:07.114 STDERR Thread-1 [INFO] [0.000s][warning][gc] -Xloggc is deprecated. Will use -Xlog:gc:artifacts/gc.log instead.
+2025-10-01 10:12:07.124 STDERR Thread-1 [INFO] [0.000s][warning][gc] -XX:+PrintGCDetails is deprecated. Will use -Xlog:gc* instead.
+2025-10-01 10:12:07.249 o.a.s.v.ConfigValidation main [INFO] Will use [class org.apache.storm.Config] for validation
+2025-10-01 10:12:07.334 o.a.s.d.w.LogConfigManager main [INFO] Started with log levels: {=INFO, STDERR=INFO, STDOUT=INFO, org.apache.storm.metric.LoggingMetricsConsumer=INFO}
+2025-10-01 10:12:07.372 o.a.s.d.w.Worker main [INFO] Adding shutdown hook with kill in 3 secs
+2025-10-01 10:12:07.390 o.a.s.d.w.Worker main [INFO] Launching worker for wordcount-topology-2-1759313520 on 7bc87f19-52c5-4929-9bd8-852182cd9419-172.18.0.6:6701 with id 19cc7d6c-ebfe-4fae-b2d2-5aed207b4501 and conf {storm.messaging.netty.min_wait_ms=100, topology.backpressure.wait.strategy=org.apache.storm.policy.WaitStrategyProgressive, storm.resource.isolation.plugin=org.apache.storm.container.cgroup.CgroupManager, storm.zookeeper.auth.user=null, storm.messaging.netty.buffer_size=5242880, topology.bolt.wait.progressive.level1.count=1, storm.zookeeper.ssl.hostnameVerification=false, pacemaker.auth.method=NONE, storm.oci.cgroup.root=/sys/fs/cgroup, ui.filter=null, worker.profiler.enabled=false, executor.metrics.frequency.secs=60, supervisor.thrift.threads=16, ui.http.creds.plugin=org.apache.storm.security.auth.DefaultHttpCredentialsPlugin, supervisor.supervisors.commands=[], supervisor.queue.size=128, storm.messaging.netty.flush_timeout_ms=600000, logviewer.cleanup.age.mins=10080, topology.tuple.serializer=org.apache.storm.serialization.types.ListDelegateSerializer, storm.cgroup.memory.enforcement.enable=false, drpc.port=3772, supervisor.localizer.update.blob.interval.secs=30, topology.max.spout.pending=null, topology.transfer.buffer.size=1000, nimbus.thrift.tls.max_buffer_size=1048576, storm.oci.nscd.dir=/var/run/nscd, nimbus.worker.heartbeats.recovery.strategy.class=org.apache.storm.nimbus.TimeOutWorkerHeartbeatsRecoveryStrategy, worker.metrics={CGroupMemory=org.apache.storm.metrics2.cgroup.CGroupMemoryUsage, CGroupMemoryLimit=org.apache.storm.metrics2.cgroup.CGroupMemoryLimit, CGroupCpu=org.apache.storm.metrics2.cgroup.CGroupCpu, CGroupCpuGuarantee=org.apache.storm.metrics2.cgroup.CGroupCpuGuarantee, CGroupCpuGuaranteeByCfsQuota=org.apache.storm.metrics2.cgroup.CGroupCpuGuaranteeByCfsQuota, CGroupCpuStat=org.apache.storm.metrics2.cgroup.CGroupCpuStat}, logviewer.port=8000, worker.childopts=-Xmx%HEAP-MEM%m -XX:+IgnoreUnrecognizedVMOptions -XX:+PrintGCDetails -Xloggc:artifacts/gc.log -XX:+PrintGCDateStamps -XX:+PrintGCTimeStamps -XX:+UseGCLogFileRotation -XX:NumberOfGCLogFiles=10 -XX:GCLogFileSize=1M -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=artifacts/heapdump, topology.component.cpu.pcore.percent=10.0, storm.daemon.metrics.reporter.plugins=[org.apache.storm.daemon.metrics.reporters.JmxPreparableReporter], worker.max.timeout.secs=600, blacklist.scheduler.resume.time.secs=1800, drpc.childopts=-Xmx768m, nimbus.task.launch.secs=120, logviewer.childopts=-Xmx128m, topology.ras.acker.executors.per.worker=1, storm.supervisor.hard.memory.limit.overage.mb=2024, storm.zookeeper.servers=[zookeeper], storm.messaging.transport=org.apache.storm.messaging.netty.Context, storm.messaging.netty.authentication=false, topology.localityaware.higher.bound=0.8, storm.cgroup.memory.limit.tolerance.margin.mb=0.0, storm.cgroup.hierarchy.name=storm, blacklist.scheduler.assume.supervisor.bad.based.on.bad.slot=true, storm.metricprocessor.class=org.apache.storm.metricstore.NimbusMetricProcessor, topology.kryo.factory=org.apache.storm.serialization.DefaultKryoFactory, nimbus.assignments.service.threads=10, worker.heap.memory.mb=768, storm.thrift.tls.socket.timeout.ms=600000, nimbus.thrift.client.use.tls=false, storm.network.topography.plugin=org.apache.storm.networktopography.DefaultRackDNSToSwitchMapping, supervisor.slots.ports=[6700, 6701, 6702, 6703], topology.stats.sample.rate=0.05, storm.local.dir=/data, topology.backpressure.wait.park.microsec=100, topology.ras.constraint.max.state.search=10000, storm.oci.cgroup.parent=/storm, topology.testing.always.try.serialize=false, nimbus.assignments.service.thread.queue.size=100, storm.principal.tolocal=org.apache.storm.security.auth.DefaultPrincipalToLocal, java.library.path=/usr/local/lib:/opt/local/lib:/usr/lib:/usr/lib64, nimbus.local.assignments.backend.class=org.apache.storm.assignments.InMemoryAssignmentBackend, worker.gc.childopts=, storm.group.mapping.service.cache.duration.secs=120, topology.multilang.serializer=org.apache.storm.multilang.JsonSerializer, drpc.request.timeout.secs=600, nimbus.blobstore.class=org.apache.storm.blobstore.LocalFsBlobStore, topology.state.synchronization.timeout.secs=60, topology.bolt.wait.progressive.level2.count=1000, nimbus.thrift.tls.client.auth.required=true, topology.worker.shared.thread.pool.size=4, nimbus.thrift.tls.port=0, topology.executor.receive.buffer.size=32768, pacemaker.servers=[], storm.daemon.metrics.reporter.interval.secs=10, supervisor.monitor.frequency.secs=3, storm.nimbus.retry.times=5, topology.transfer.batch.size=1, transactional.zookeeper.port=null, storm.auth.simple-white-list.users=[], topology.scheduler.strategy=org.apache.storm.scheduler.resource.strategies.scheduling.DefaultResourceAwareStrategy, storm.zookeeper.port=2181, storm.zookeeper.retry.intervalceiling.millis=30000, storm.cluster.state.store=org.apache.storm.cluster.ZKStateStorageFactory, nimbus.thrift.port=6627, blacklist.scheduler.tolerance.count=3, nimbus.thrift.threads=64, supervisor.supervisors=[], nimbus.seeds=[nimbus], storm.cluster.metrics.consumer.publish.interval.secs=60, logviewer.filter.params=null, topology.min.replication.count=1, nimbus.blobstore.expiration.secs=600, storm.group.mapping.service=org.apache.storm.security.auth.ShellBasedGroupsMapping, storm.nimbus.retry.interval.millis=2000, topology.max.task.parallelism=null, topology.backpressure.wait.progressive.level2.count=1000, drpc.https.keystore.password=, resource.aware.scheduler.constraint.max.state.search=100000, supervisor.heartbeat.frequency.secs=5, nimbus.credential.renewers.freq.secs=600, storm.supervisor.medium.memory.grace.period.ms=30000, nimbus.thrift.tls.transport=org.apache.storm.security.auth.tls.TlsTransportPlugin, storm.thrift.transport=org.apache.storm.security.auth.SimpleTransportPlugin, storm.cgroup.hierarchy.dir=/cgroup/storm_resources, storm.zookeeper.auth.password=null, ui.port=8080, drpc.authorizer.acl.strict=false, topology.message.timeout.secs=30, topology.error.throttle.interval.secs=10, topology.backpressure.check.millis=50, drpc.https.keystore.type=JKS, supervisor.memory.capacity.mb=4096.0, storm.metricstore.class=org.apache.storm.metricstore.rocksdb.RocksDbStore, storm.zookeeper.ssl.enable=false, drpc.authorizer.acl.filename=drpc-auth-acl.yaml, topology.builtin.metrics.bucket.size.secs=60, topology.spout.wait.park.microsec=100, storm.local.mode.zmq=false, pacemaker.client.max.threads=2, ui.header.buffer.bytes=4096, topology.shellbolt.max.pending=100, topology.serialized.message.size.metrics=false, drpc.max_buffer_size=1048576, drpc.disable.http.binding=true, storm.codedistributor.class=org.apache.storm.codedistributor.LocalFileSystemCodeDistributor, worker.profiler.childopts=-XX:+UnlockCommercialFeatures -XX:+FlightRecorder, nimbus.supervisor.timeout.secs=60, storm.supervisor.cgroup.rootdir=storm, topology.worker.max.heap.size.mb=768.0, storm.zookeeper.root=/storm, topology.disable.loadaware.messaging=false, topology.ras.one.executor.per.worker=false, storm.supervisor.hard.memory.limit.multiplier=2.0, nimbus.topology.validator=org.apache.storm.nimbus.DefaultTopologyValidator, worker.heartbeat.frequency.secs=1, storm.messaging.netty.max_wait_ms=1000, topology.backpressure.wait.progressive.level1.count=1, topology.max.error.report.per.interval=5, nimbus.thrift.max_buffer_size=1048576, storm.metricstore.rocksdb.location=storm_rocks, storm.supervisor.low.memory.threshold.mb=1024, pacemaker.max.threads=50, ui.pagination=20, ui.disable.http.binding=true, supervisor.blobstore.download.max_retries=3, topology.enable.message.timeouts=true, logviewer.disable.http.binding=true, storm.messaging.netty.transfer.batch.size=262144, topology.spout.wait.progressive.level2.count=0, topology.worker.nimbus.thrift.client.use.tls=false, ui.title=Storm UI, blacklist.scheduler.strategy=org.apache.storm.scheduler.blacklist.strategies.DefaultBlacklistStrategy, storm.metricstore.rocksdb.retention_hours=240, supervisor.run.worker.as.user=false, storm.messaging.netty.client_worker_threads=1, topology.tasks=null, supervisor.thrift.socket.timeout.ms=5000, storm.group.mapping.service.params=null, drpc.http.port=3774, transactional.zookeeper.root=/transactional, supervisor.blobstore.download.thread.count=5, logviewer.filter=null, pacemaker.kerberos.users=[], topology.spout.wait.strategy=org.apache.storm.policy.WaitStrategyProgressive, storm.blobstore.inputstream.buffer.size.bytes=65536, supervisor.worker.heartbeats.max.timeout.secs=600, supervisor.worker.timeout.secs=30, topology.worker.receiver.thread.count=1, logviewer.max.sum.worker.logs.size.mb=4096, topology.executor.overflow.limit=0, topology.batch.flush.interval.millis=1, nimbus.file.copy.expiration.secs=600, pacemaker.port=6699, topology.worker.logwriter.childopts=-Xmx64m, drpc.http.creds.plugin=org.apache.storm.security.auth.DefaultHttpCredentialsPlugin, nimbus.topology.blobstore.deletion.delay.ms=300000, storm.blobstore.acl.validation.enabled=false, ui.filter.params=null, topology.workers=1, blacklist.scheduler.tolerance.time.secs=300, storm.supervisor.medium.memory.threshold.mb=1536, topology.environment=null, drpc.invocations.port=3773, storm.metricstore.rocksdb.create_if_missing=true, nimbus.cleanup.inbox.freq.secs=600, client.blobstore.class=org.apache.storm.blobstore.NimbusBlobStore, topology.fall.back.on.java.serialization=false, storm.nimbus.retry.intervalceiling.millis=60000, storm.nimbus.zookeeper.acls.fixup=true, logviewer.appender.name=A1, ui.users=null, pacemaker.childopts=-Xmx1024m, storm.messaging.netty.server_worker_threads=1, scheduler.display.resource=false, ui.actions.enabled=true, storm.thrift.socket.timeout.ms=600000, storm.topology.classpath.beginning.enabled=false, storm.zookeeper.connection.timeout=15000, topology.tick.tuple.freq.secs=null, nimbus.inbox.jar.expiration.secs=3600, topology.debug=false, storm.zookeeper.retry.interval=1000, storm.messaging.netty.buffer.high.watermark=16777216, storm.blobstore.dependency.jar.upload.chunk.size.bytes=1048576, worker.log.level.reset.poll.secs=30, storm.zookeeper.retry.times=5, nimbus.code.sync.freq.secs=120, topology.component.resources.offheap.memory.mb=0.0, nimbus.thrift.tls.threads=64, topology.spout.wait.progressive.level1.count=0, topology.state.checkpoint.interval.ms=1000, topology.priority=29, supervisor.localizer.cleanup.interval.ms=30000, storm.health.check.dir=healthchecks, supervisor.cpu.capacity=400.0, topology.backpressure.wait.progressive.level3.sleep.millis=1, storm.cgroup.resources=[cpu, memory], storm.worker.min.cpu.pcore.percent=0.0, topology.classpath=null, storm.nimbus.zookeeper.acls.check=true, num.stat.buckets=20, topology.spout.wait.progressive.level3.sleep.millis=1, supervisor.localizer.cache.target.size.mb=10240, topology.worker.childopts=null, drpc.https.port=-1, topology.bolt.wait.park.microsec=100, topology.max.replication.wait.time.sec=60, storm.cgroup.cgexec.cmd=/bin/cgexec, topology.acker.executors=null, topology.bolt.wait.progressive.level3.sleep.millis=1, supervisor.worker.start.timeout.secs=120, supervisor.worker.shutdown.sleep.secs=3, logviewer.max.per.worker.logs.size.mb=2048, topology.trident.batch.emit.interval.millis=500, task.heartbeat.frequency.secs=3, supervisor.enable=true, supervisor.thrift.max_buffer_size=1048576, supervisor.blobstore.class=org.apache.storm.blobstore.NimbusBlobStore, topology.producer.batch.size=1, drpc.worker.threads=64, resource.aware.scheduler.priority.strategy=org.apache.storm.scheduler.resource.strategies.priority.DefaultSchedulingPriorityStrategy, blacklist.scheduler.reporter=org.apache.storm.scheduler.blacklist.reporters.LogReporter, storm.messaging.netty.socket.backlog=500, storm.cgroup.inherit.cpuset.configs=false, nimbus.queue.size=100000, drpc.queue.size=128, ui.disable.spout.lag.monitoring=true, topology.eventlogger.executors=0, pacemaker.base.threads=10, nimbus.childopts=-Xmx1024m, storm.log.dir=/logs, topology.spout.recvq.skips=3, storm.resource.isolation.plugin.enable=false, nimbus.monitor.freq.secs=10, storm.supervisor.memory.limit.tolerance.margin.mb=128.0, storm.disable.symlinks=false, topology.localityaware.lower.bound=0.2, transactional.zookeeper.servers=null, nimbus.task.timeout.secs=30, logs.users=null, pacemaker.thrift.message.size.max=10485760, topology.ras.one.component.per.worker=false, ui.host=0.0.0.0, supervisor.thrift.port=6628, topology.bolt.wait.strategy=org.apache.storm.policy.WaitStrategyProgressive, pacemaker.thread.timeout=10, storm.meta.serialization.delegate=org.apache.storm.serialization.GzipThriftSerializationDelegate, dev.zookeeper.path=/tmp/dev-storm-zookeeper, topology.skip.missing.kryo.registrations=false, drpc.invocations.threads=64, storm.zookeeper.session.timeout=20000, storm.metricstore.rocksdb.metadata_string_cache_capacity=4000, storm.workers.artifacts.dir=workers-artifacts, topology.component.resources.onheap.memory.mb=128.0, storm.log4j2.conf.dir=log4j2, storm.cluster.mode=distributed, ui.childopts=-Xmx768m, task.refresh.poll.secs=10, supervisor.childopts=-Xmx256m, task.credentials.poll.secs=30, storm.health.check.timeout.ms=5000, storm.blobstore.replication.factor=3, worker.profiler.command=flight.bash, storm.messaging.netty.buffer.low.watermark=8388608}
+2025-10-01 10:12:07.394 o.a.s.s.u.o.l.s.c.SysOutOverSLF4JInitialiser main [WARN] Your logging framework class org.apache.logging.slf4j.Log4jLogger is not known - if it needs access to the standard println methods on the console you will need to register it by calling registerLoggingSystemPackage
+2025-10-01 10:12:07.397 o.a.s.s.u.o.l.s.c.SysOutOverSLF4J main [INFO] Replaced standard System.out and System.err PrintStreams with SLF4JPrintStreams
+2025-10-01 10:12:07.400 o.a.s.s.u.o.l.s.c.SysOutOverSLF4J main [INFO] Redirected System.out and System.err to SLF4J for this context
+2025-10-01 10:12:07.471 o.a.s.z.ClientZookeeper main [INFO] Starting ZK Curator
+2025-10-01 10:12:07.473 o.a.s.s.o.a.c.f.i.CuratorFrameworkImpl main [INFO] Starting
+2025-10-01 10:12:07.478 o.a.s.s.o.a.z.ZooKeeper main [INFO] Client environment:zookeeper.version=3.9.3-c26634f34490bb0ea7a09cc51e05ede3b4e320ee, built on 2024-10-17 23:21 UTC
+2025-10-01 10:12:07.479 o.a.s.s.o.a.z.ZooKeeper main [INFO] Client environment:host.name=66fced6c6083
+2025-10-01 10:12:07.480 o.a.s.s.o.a.z.ZooKeeper main [INFO] Client environment:java.version=21.0.8
+2025-10-01 10:12:07.480 o.a.s.s.o.a.z.ZooKeeper main [INFO] Client environment:java.vendor=Eclipse Adoptium
+2025-10-01 10:12:07.481 o.a.s.s.o.a.z.ZooKeeper main [INFO] Client environment:java.home=/opt/java/openjdk
+2025-10-01 10:12:07.482 o.a.s.s.o.a.z.ZooKeeper main [INFO] Client environment:java.class.path=/apache-storm/lib-worker/bcpkix-jdk18on-1.81.jar:/apache-storm/lib-worker/kryo-5.6.2.jar:/apache-storm/lib-worker/jakarta.activation-1.2.1.jar:/apache-storm/lib-worker/jakarta.xml.bind-api-2.3.2.jar:/apache-storm/lib-worker/minlog-1.3.1.jar:/apache-storm/lib-worker/jakarta.activation-api-1.2.1.jar:/apache-storm/lib-worker/metrics-core-4.2.33.jar:/apache-storm/lib-worker/javax.annotation-api-1.3.2.jar:/apache-storm/lib-worker/metrics-jmx-4.2.33.jar:/apache-storm/lib-worker/objenesis-3.4.jar:/apache-storm/lib-worker/reflectasm-1.11.9.jar:/apache-storm/lib-worker/bcprov-jdk18on-1.81.jar:/apache-storm/lib-worker/bcutil-jdk18on-1.81.jar:/apache-storm/lib-worker/storm-shaded-deps-2.8.2.jar:/apache-storm/lib-worker/log4j-slf4j2-impl-2.25.1.jar:/apache-storm/lib-worker/metrics-graphite-4.2.33.jar:/apache-storm/lib-worker/storm-client-2.8.2.jar:/apache-storm/lib-worker/amqp-client-5.25.0.jar:/apache-storm/lib-worker/metrics-jvm-4.2.33.jar:/apache-storm/lib-worker/log4j-api-2.25.1.jar:/apache-storm/lib-worker/log4j-core-2.25.1.jar:/apache-storm/lib-worker/log4j-over-slf4j-2.0.17.jar:/apache-storm/lib-worker/slf4j-api-2.0.17.jar:/apache-storm/extlib/*:/conf:/data/supervisor/stormdist/wordcount-topology-2-1759313520/stormjar.jar
+2025-10-01 10:12:07.482 o.a.s.s.o.a.z.ZooKeeper main [INFO] Client environment:java.library.path=/data/supervisor/stormdist/wordcount-topology-2-1759313520/resources/Linux-amd64:/data/supervisor/stormdist/wordcount-topology-2-1759313520/resources:/usr/local/lib:/opt/local/lib:/usr/lib:/usr/lib64
+2025-10-01 10:12:07.483 o.a.s.s.o.a.z.ZooKeeper main [INFO] Client environment:java.io.tmpdir=/data/workers/19cc7d6c-ebfe-4fae-b2d2-5aed207b4501/tmp
+2025-10-01 10:12:07.483 o.a.s.s.o.a.z.ZooKeeper main [INFO] Client environment:java.compiler=<NA>
+2025-10-01 10:12:07.484 o.a.s.s.o.a.z.ZooKeeper main [INFO] Client environment:os.name=Linux
+2025-10-01 10:12:07.484 o.a.s.s.o.a.z.ZooKeeper main [INFO] Client environment:os.arch=amd64
+2025-10-01 10:12:07.485 o.a.s.s.o.a.z.ZooKeeper main [INFO] Client environment:os.version=6.6.87.2-microsoft-standard-WSL2
+2025-10-01 10:12:07.485 o.a.s.s.o.a.z.ZooKeeper main [INFO] Client environment:user.name=storm
+2025-10-01 10:12:07.486 o.a.s.s.o.a.z.ZooKeeper main [INFO] Client environment:user.home=/home/storm
+2025-10-01 10:12:07.486 o.a.s.s.o.a.z.ZooKeeper main [INFO] Client environment:user.dir=/data/workers/19cc7d6c-ebfe-4fae-b2d2-5aed207b4501
+2025-10-01 10:12:07.487 o.a.s.s.o.a.z.ZooKeeper main [INFO] Client environment:os.memory.free=216MB
+2025-10-01 10:12:07.487 o.a.s.s.o.a.z.ZooKeeper main [INFO] Client environment:os.memory.max=768MB
+2025-10-01 10:12:07.488 o.a.s.s.o.a.z.ZooKeeper main [INFO] Client environment:os.memory.total=249MB
+2025-10-01 10:12:07.491 o.a.s.s.o.a.z.ZooKeeper main [INFO] Initiating client connection, connectString=zookeeper:2181 sessionTimeout=20000 watcher=org.apache.storm.shade.org.apache.curator.ConnectionState@f713686
+2025-10-01 10:12:07.496 o.a.s.s.o.a.z.c.X509Util main [INFO] Setting -D jdk.tls.rejectClientInitiatedRenegotiation=true to disable client-initiated TLS renegotiation
+2025-10-01 10:12:07.702 o.a.s.s.o.a.z.c.X509Util main [INFO] Default TLS protocol is TLSv1.3, supported TLS protocols are [TLSv1.3, TLSv1.2, TLSv1.1, TLSv1, SSLv3, SSLv2Hello]
+2025-10-01 10:12:07.709 o.a.s.s.o.a.z.ClientCnxnSocket main [INFO] jute.maxbuffer value is 1048575 Bytes
+2025-10-01 10:12:07.715 o.a.s.s.o.a.z.ClientCnxn main [INFO] zookeeper.request.timeout value is 0. feature enabled=false
+2025-10-01 10:12:07.722 o.a.s.s.o.a.c.f.i.CuratorFrameworkImpl main [INFO] Default schema
+2025-10-01 10:12:07.722 o.a.s.s.o.a.z.ClientCnxn main-SendThread(zookeeper:2181) [INFO] Opening socket connection to server zookeeper/172.18.0.3:2181.
+2025-10-01 10:12:07.726 o.a.s.s.o.a.z.ClientCnxn main-SendThread(zookeeper:2181) [INFO] SASL config status: Will not attempt to authenticate using SASL (unknown error)
+2025-10-01 10:12:07.728 o.a.s.s.o.a.z.ClientCnxn main-SendThread(zookeeper:2181) [INFO] Socket connection established, initiating session, client: /172.18.0.6:38718, server: zookeeper/172.18.0.3:2181
+2025-10-01 10:12:07.735 o.a.s.s.o.a.z.ClientCnxn main-SendThread(zookeeper:2181) [INFO] Session establishment complete on server zookeeper/172.18.0.3:2181, session id = 0x100077ea3e1017a, negotiated timeout = 20000
+2025-10-01 10:12:07.738 o.a.s.s.o.a.c.f.s.ConnectionStateManager main-EventThread [INFO] State change: CONNECTED
+2025-10-01 10:12:07.745 o.a.s.s.o.a.c.f.i.EnsembleTracker main-EventThread [INFO] New config event received: {}
+2025-10-01 10:12:07.746 o.a.s.s.o.a.c.f.i.EnsembleTracker main-EventThread [INFO] New config event received: {}
+2025-10-01 10:12:07.746 o.a.s.s.o.a.c.f.i.CuratorFrameworkImpl Curator-Framework-0 [INFO] backgroundOperationsLoop exiting
+2025-10-01 10:12:07.855 o.a.s.s.o.a.z.ClientCnxn main-EventThread [INFO] EventThread shut down for session: 0x100077ea3e1017a
+2025-10-01 10:12:07.857 o.a.s.s.o.a.z.ZooKeeper main [INFO] Session: 0x100077ea3e1017a closed
+2025-10-01 10:12:07.858 o.a.s.z.ClientZookeeper main [INFO] Starting ZK Curator
+2025-10-01 10:12:07.859 o.a.s.s.o.a.c.f.i.CuratorFrameworkImpl main [INFO] Starting
+2025-10-01 10:12:07.861 o.a.s.s.o.a.z.ZooKeeper main [INFO] Initiating client connection, connectString=zookeeper:2181/storm sessionTimeout=20000 watcher=org.apache.storm.shade.org.apache.curator.ConnectionState@5baaae4c
+2025-10-01 10:12:07.862 o.a.s.s.o.a.z.ClientCnxnSocket main [INFO] jute.maxbuffer value is 1048575 Bytes
+2025-10-01 10:12:07.862 o.a.s.s.o.a.z.ClientCnxn main [INFO] zookeeper.request.timeout value is 0. feature enabled=false
+2025-10-01 10:12:07.863 o.a.s.s.o.a.z.ClientCnxn main-SendThread(zookeeper:2181) [INFO] Opening socket connection to server zookeeper/172.18.0.3:2181.
+2025-10-01 10:12:07.874 o.a.s.s.o.a.c.f.i.CuratorFrameworkImpl main [INFO] Default schema
+2025-10-01 10:12:07.874 o.a.s.s.o.a.z.ClientCnxn main-SendThread(zookeeper:2181) [INFO] SASL config status: Will not attempt to authenticate using SASL (unknown error)
+2025-10-01 10:12:07.880 o.a.s.s.o.a.z.ClientCnxn main-SendThread(zookeeper:2181) [INFO] Socket connection established, initiating session, client: /172.18.0.6:48792, server: zookeeper/172.18.0.3:2181
+2025-10-01 10:12:07.883 o.a.s.s.o.a.z.ClientCnxn main-SendThread(zookeeper:2181) [INFO] Session establishment complete on server zookeeper/172.18.0.3:2181, session id = 0x100077ea3e1017c, negotiated timeout = 20000
+2025-10-01 10:12:07.884 o.a.s.s.o.a.c.f.s.ConnectionStateManager main-EventThread [INFO] State change: CONNECTED
+2025-10-01 10:12:07.886 o.a.s.s.o.a.c.f.i.EnsembleTracker main-EventThread [INFO] New config event received: {}
+2025-10-01 10:12:07.887 o.a.s.s.o.a.c.f.i.EnsembleTracker main-EventThread [INFO] New config event received: {}
+2025-10-01 10:12:07.901 o.a.s.m.StormMetricRegistry main [INFO] Starting metrics reporters...
+2025-10-01 10:12:07.905 o.a.s.s.a.ClientAuthUtils main [INFO] Got AutoCreds []
+2025-10-01 10:12:07.920 o.a.s.m.TransportFactory main [INFO] Storm peer transport plugin:org.apache.storm.messaging.netty.Context
+2025-10-01 10:12:08.051 o.a.s.d.w.WorkerState main [INFO] Registering IConnectionCallbacks for 7bc87f19-52c5-4929-9bd8-852182cd9419-172.18.0.6:6701
+2025-10-01 10:12:08.084 o.a.s.m.n.Server main [INFO] Create Netty Server Netty-server-localhost-6701, buffer_size: 5242880, maxWorkers: 1
+2025-10-01 10:12:08.217 o.a.s.m.n.Client main [INFO] Creating Netty Client, connecting to 66fced6c6083:6700, bufferSize: 5242880, lowWatermark: 8388608, highWatermark: 16777216
+2025-10-01 10:12:08.355 o.a.s.d.w.WorkerState Netty-server-localhost-6701-worker-1 [INFO] Sending BackPressure status to new client. BPStatus: {worker=19cc7d6c-ebfe-4fae-b2d2-5aed207b4501, bpStatusId=1, bpTasks=[], nonBpTasks=[2, 4, 6, 8, 10, 12]}
+2025-10-01 10:12:08.562 o.a.s.e.Executor main [INFO] Loading executor tasks __system:[-1, -1]
+2025-10-01 10:12:08.564 o.a.s.e.Executor main [INFO] Finished loading executor __system:[-1, -1]
+2025-10-01 10:12:08.568 o.a.s.e.Executor main [INFO] Loading executor tasks sentenceSplitBolt:[8, 8]
+2025-10-01 10:12:08.569 o.a.s.e.Executor main [INFO] Finished loading executor sentenceSplitBolt:[8, 8]
+2025-10-01 10:12:08.570 o.a.s.e.Executor main [INFO] Loading executor tasks sentenceSplitBolt:[6, 6]
+2025-10-01 10:12:08.571 o.a.s.e.Executor main [INFO] Finished loading executor sentenceSplitBolt:[6, 6]
+2025-10-01 10:12:08.572 o.a.s.e.Executor main [INFO] Loading executor tasks reportBolt:[4, 4]
+2025-10-01 10:12:08.573 o.a.s.e.Executor main [INFO] Finished loading executor reportBolt:[4, 4]
+2025-10-01 10:12:08.574 o.a.s.e.Executor main [INFO] Loading executor tasks wordCountBolt:[12, 12]
+2025-10-01 10:12:08.576 o.a.s.e.Executor main [INFO] Finished loading executor wordCountBolt:[12, 12]
+2025-10-01 10:12:08.579 o.a.s.e.Executor main [INFO] Loading executor tasks __acker:[2, 2]
+2025-10-01 10:12:08.581 o.a.s.e.Executor main [INFO] Finished loading executor __acker:[2, 2]
+2025-10-01 10:12:08.582 o.a.s.e.Executor main [INFO] Loading executor tasks wordCountBolt:[10, 10]
+2025-10-01 10:12:08.583 o.a.s.e.Executor main [INFO] Finished loading executor wordCountBolt:[10, 10]
+2025-10-01 10:12:08.591 o.a.s.d.w.Worker main [INFO] Flush Tuple generation disabled. producerBatchSize=1, xferBatchSize=1, flushIntervalMillis=1
+2025-10-01 10:12:08.593 o.a.s.d.w.Worker main [INFO] BackPressure status change checking will be performed every 50 millis
+2025-10-01 10:12:08.596 o.a.s.d.w.Worker main [INFO] Worker has topology config {storm.messaging.netty.min_wait_ms=100, topology.backpressure.wait.strategy=org.apache.storm.policy.WaitStrategyProgressive, topology.submitter.principal=, storm.resource.isolation.plugin=org.apache.storm.container.cgroup.CgroupManager, storm.zookeeper.auth.user=null, storm.messaging.netty.buffer_size=5242880, topology.name=wordcount-topology, topology.bolt.wait.progressive.level1.count=1, storm.zookeeper.ssl.hostnameVerification=false, pacemaker.auth.method=NONE, storm.oci.cgroup.root=/sys/fs/cgroup, ui.filter=null, worker.profiler.enabled=false, executor.metrics.frequency.secs=60, storm.id=wordcount-topology-2-1759313520, supervisor.thrift.threads=16, ui.http.creds.plugin=org.apache.storm.security.auth.DefaultHttpCredentialsPlugin, supervisor.supervisors.commands=[], supervisor.queue.size=128, storm.messaging.netty.flush_timeout_ms=600000, logviewer.cleanup.age.mins=10080, topology.tuple.serializer=org.apache.storm.serialization.types.ListDelegateSerializer, storm.cgroup.memory.enforcement.enable=false, drpc.port=3772, supervisor.localizer.update.blob.interval.secs=30, topology.max.spout.pending=null, topology.transfer.buffer.size=1000, nimbus.thrift.tls.max_buffer_size=1048576, storm.oci.nscd.dir=/var/run/nscd, nimbus.worker.heartbeats.recovery.strategy.class=org.apache.storm.nimbus.TimeOutWorkerHeartbeatsRecoveryStrategy, worker.metrics={CGroupCpuStat=org.apache.storm.metrics2.cgroup.CGroupCpuStat, CGroupMemoryLimit=org.apache.storm.metrics2.cgroup.CGroupMemoryLimit, CGroupCpuGuaranteeByCfsQuota=org.apache.storm.metrics2.cgroup.CGroupCpuGuaranteeByCfsQuota, CGroupMemory=org.apache.storm.metrics2.cgroup.CGroupMemoryUsage, CGroupCpu=org.apache.storm.metrics2.cgroup.CGroupCpu, CGroupCpuGuarantee=org.apache.storm.metrics2.cgroup.CGroupCpuGuarantee}, logviewer.port=8000, worker.childopts=-Xmx%HEAP-MEM%m -XX:+IgnoreUnrecognizedVMOptions -XX:+PrintGCDetails -Xloggc:artifacts/gc.log -XX:+PrintGCDateStamps -XX:+PrintGCTimeStamps -XX:+UseGCLogFileRotation -XX:NumberOfGCLogFiles=10 -XX:GCLogFileSize=1M -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=artifacts/heapdump, topology.component.cpu.pcore.percent=10.0, storm.daemon.metrics.reporter.plugins=[org.apache.storm.daemon.metrics.reporters.JmxPreparableReporter], worker.max.timeout.secs=600, blacklist.scheduler.resume.time.secs=1800, drpc.childopts=-Xmx768m, nimbus.task.launch.secs=120, logviewer.childopts=-Xmx128m, topology.ras.acker.executors.per.worker=1, storm.supervisor.hard.memory.limit.overage.mb=2024, storm.zookeeper.servers=[zookeeper], storm.messaging.transport=org.apache.storm.messaging.netty.Context, storm.messaging.netty.authentication=false, topology.localityaware.higher.bound=0.8, storm.cgroup.memory.limit.tolerance.margin.mb=0.0, storm.cgroup.hierarchy.name=storm, blacklist.scheduler.assume.supervisor.bad.based.on.bad.slot=true, storm.metricprocessor.class=org.apache.storm.metricstore.NimbusMetricProcessor, topology.kryo.factory=org.apache.storm.serialization.DefaultKryoFactory, nimbus.assignments.service.threads=10, worker.heap.memory.mb=768, storm.thrift.tls.socket.timeout.ms=600000, nimbus.thrift.client.use.tls=false, storm.network.topography.plugin=org.apache.storm.networktopography.DefaultRackDNSToSwitchMapping, supervisor.slots.ports=[6700, 6701, 6702, 6703], topology.stats.sample.rate=0.05, storm.local.dir=/data, topology.backpressure.wait.park.microsec=100, topology.ras.constraint.max.state.search=10000, storm.oci.cgroup.parent=/storm, topology.testing.always.try.serialize=false, nimbus.assignments.service.thread.queue.size=100, storm.principal.tolocal=org.apache.storm.security.auth.DefaultPrincipalToLocal, java.library.path=/usr/local/lib:/opt/local/lib:/usr/lib:/usr/lib64, nimbus.local.assignments.backend.class=org.apache.storm.assignments.InMemoryAssignmentBackend, worker.gc.childopts=, storm.group.mapping.service.cache.duration.secs=120, topology.multilang.serializer=org.apache.storm.multilang.JsonSerializer, topology.kryo.register={}, drpc.request.timeout.secs=600, nimbus.blobstore.class=org.apache.storm.blobstore.LocalFsBlobStore, topology.state.synchronization.timeout.secs=60, topology.bolt.wait.progressive.level2.count=1000, topology.kryo.decorators=[], nimbus.thrift.tls.client.auth.required=true, topology.worker.shared.thread.pool.size=4, topology.submitter.user=storm, nimbus.thrift.tls.port=0, topology.executor.receive.buffer.size=32768, pacemaker.servers=[], storm.daemon.metrics.reporter.interval.secs=10, supervisor.monitor.frequency.secs=3, storm.nimbus.retry.times=5, topology.transfer.batch.size=1, transactional.zookeeper.port=null, storm.auth.simple-white-list.users=[], topology.scheduler.strategy=org.apache.storm.scheduler.resource.strategies.scheduling.DefaultResourceAwareStrategy, storm.zookeeper.port=2181, storm.zookeeper.retry.intervalceiling.millis=30000, storm.cluster.state.store=org.apache.storm.cluster.ZKStateStorageFactory, nimbus.thrift.port=6627, blacklist.scheduler.tolerance.count=3, nimbus.thrift.threads=64, supervisor.supervisors=[], nimbus.seeds=[nimbus], storm.cluster.metrics.consumer.publish.interval.secs=60, logviewer.filter.params=null, topology.min.replication.count=1, nimbus.blobstore.expiration.secs=600, storm.group.mapping.service=org.apache.storm.security.auth.ShellBasedGroupsMapping, storm.nimbus.retry.interval.millis=2000, topology.max.task.parallelism=null, topology.backpressure.wait.progressive.level2.count=1000, drpc.https.keystore.password=, resource.aware.scheduler.constraint.max.state.search=100000, supervisor.heartbeat.frequency.secs=5, nimbus.credential.renewers.freq.secs=600, storm.supervisor.medium.memory.grace.period.ms=30000, nimbus.thrift.tls.transport=org.apache.storm.security.auth.tls.TlsTransportPlugin, storm.thrift.transport=org.apache.storm.security.auth.SimpleTransportPlugin, storm.cgroup.hierarchy.dir=/cgroup/storm_resources, storm.zookeeper.auth.password=null, ui.port=8080, drpc.authorizer.acl.strict=false, topology.message.timeout.secs=30, topology.error.throttle.interval.secs=10, topology.backpressure.check.millis=50, drpc.https.keystore.type=JKS, supervisor.memory.capacity.mb=4096.0, storm.metricstore.class=org.apache.storm.metricstore.rocksdb.RocksDbStore, storm.zookeeper.ssl.enable=false, drpc.authorizer.acl.filename=drpc-auth-acl.yaml, topology.builtin.metrics.bucket.size.secs=60, topology.spout.wait.park.microsec=100, storm.local.mode.zmq=false, pacemaker.client.max.threads=2, ui.header.buffer.bytes=4096, topology.shellbolt.max.pending=100, topology.serialized.message.size.metrics=false, drpc.max_buffer_size=1048576, drpc.disable.http.binding=true, storm.codedistributor.class=org.apache.storm.codedistributor.LocalFileSystemCodeDistributor, worker.profiler.childopts=-XX:+UnlockCommercialFeatures -XX:+FlightRecorder, nimbus.supervisor.timeout.secs=60, storm.supervisor.cgroup.rootdir=storm, topology.worker.max.heap.size.mb=768.0, storm.zookeeper.root=/storm, topology.disable.loadaware.messaging=false, topology.ras.one.executor.per.worker=false, storm.supervisor.hard.memory.limit.multiplier=2.0, nimbus.topology.validator=org.apache.storm.nimbus.DefaultTopologyValidator, worker.heartbeat.frequency.secs=1, storm.messaging.netty.max_wait_ms=1000, topology.backpressure.wait.progressive.level1.count=1, topology.max.error.report.per.interval=5, nimbus.thrift.max_buffer_size=1048576, storm.metricstore.rocksdb.location=storm_rocks, storm.supervisor.low.memory.threshold.mb=1024, pacemaker.max.threads=50, ui.pagination=20, ui.disable.http.binding=true, supervisor.blobstore.download.max_retries=3, topology.enable.message.timeouts=true, logviewer.disable.http.binding=true, storm.messaging.netty.transfer.batch.size=262144, topology.spout.wait.progressive.level2.count=0, topology.worker.nimbus.thrift.client.use.tls=false, ui.title=Storm UI, blacklist.scheduler.strategy=org.apache.storm.scheduler.blacklist.strategies.DefaultBlacklistStrategy, storm.metricstore.rocksdb.retention_hours=240, supervisor.run.worker.as.user=false, storm.messaging.netty.client_worker_threads=1, topology.tasks=null, supervisor.thrift.socket.timeout.ms=5000, storm.group.mapping.service.params=null, drpc.http.port=3774, transactional.zookeeper.root=/transactional, supervisor.blobstore.download.thread.count=5, logviewer.filter=null, pacemaker.kerberos.users=[], topology.spout.wait.strategy=org.apache.storm.policy.WaitStrategyProgressive, storm.blobstore.inputstream.buffer.size.bytes=65536, supervisor.worker.heartbeats.max.timeout.secs=600, supervisor.worker.timeout.secs=30, topology.worker.receiver.thread.count=1, logviewer.max.sum.worker.logs.size.mb=4096, topology.executor.overflow.limit=0, topology.batch.flush.interval.millis=1, nimbus.file.copy.expiration.secs=600, pacemaker.port=6699, topology.worker.logwriter.childopts=-Xmx64m, drpc.http.creds.plugin=org.apache.storm.security.auth.DefaultHttpCredentialsPlugin, nimbus.topology.blobstore.deletion.delay.ms=300000, storm.blobstore.acl.validation.enabled=false, ui.filter.params=null, topology.workers=2, blacklist.scheduler.tolerance.time.secs=300, storm.supervisor.medium.memory.threshold.mb=1536, topology.environment=null, drpc.invocations.port=3773, storm.metricstore.rocksdb.create_if_missing=true, nimbus.cleanup.inbox.freq.secs=600, client.blobstore.class=org.apache.storm.blobstore.NimbusBlobStore, topology.fall.back.on.java.serialization=false, storm.nimbus.retry.intervalceiling.millis=60000, storm.nimbus.zookeeper.acls.fixup=true, logviewer.appender.name=A1, ui.users=null, pacemaker.childopts=-Xmx1024m, storm.messaging.netty.server_worker_threads=1, scheduler.display.resource=false, ui.actions.enabled=true, storm.thrift.socket.timeout.ms=600000, storm.topology.classpath.beginning.enabled=false, storm.zookeeper.connection.timeout=15000, topology.tick.tuple.freq.secs=null, nimbus.inbox.jar.expiration.secs=3600, topology.debug=false, storm.zookeeper.retry.interval=1000, storm.messaging.netty.buffer.high.watermark=16777216, storm.blobstore.dependency.jar.upload.chunk.size.bytes=1048576, worker.log.level.reset.poll.secs=30, storm.zookeeper.retry.times=5, nimbus.code.sync.freq.secs=120, topology.component.resources.offheap.memory.mb=0.0, nimbus.thrift.tls.threads=64, topology.spout.wait.progressive.level1.count=0, topology.state.checkpoint.interval.ms=1000, topology.priority=29, supervisor.localizer.cleanup.interval.ms=30000, storm.health.check.dir=healthchecks, supervisor.cpu.capacity=400.0, topology.backpressure.wait.progressive.level3.sleep.millis=1, storm.cgroup.resources=[cpu, memory], storm.worker.min.cpu.pcore.percent=0.0, topology.classpath=null, storm.nimbus.zookeeper.acls.check=true, num.stat.buckets=20, topology.spout.wait.progressive.level3.sleep.millis=1, supervisor.localizer.cache.target.size.mb=10240, topology.worker.childopts=null, drpc.https.port=-1, topology.bolt.wait.park.microsec=100, topology.max.replication.wait.time.sec=60, storm.cgroup.cgexec.cmd=/bin/cgexec, topology.users=[null], topology.acker.executors=null, topology.bolt.wait.progressive.level3.sleep.millis=1, supervisor.worker.start.timeout.secs=120, supervisor.worker.shutdown.sleep.secs=3, logviewer.max.per.worker.logs.size.mb=2048, topology.trident.batch.emit.interval.millis=500, task.heartbeat.frequency.secs=3, supervisor.enable=true, supervisor.thrift.max_buffer_size=1048576, supervisor.blobstore.class=org.apache.storm.blobstore.NimbusBlobStore, topology.producer.batch.size=1, drpc.worker.threads=64, resource.aware.scheduler.priority.strategy=org.apache.storm.scheduler.resource.strategies.priority.DefaultSchedulingPriorityStrategy, blacklist.scheduler.reporter=org.apache.storm.scheduler.blacklist.reporters.LogReporter, storm.messaging.netty.socket.backlog=500, storm.cgroup.inherit.cpuset.configs=false, nimbus.queue.size=100000, drpc.queue.size=128, ui.disable.spout.lag.monitoring=true, topology.eventlogger.executors=0, pacemaker.base.threads=10, nimbus.childopts=-Xmx1024m, storm.log.dir=/logs, topology.spout.recvq.skips=3, storm.zookeeper.superACL=null, storm.resource.isolation.plugin.enable=false, nimbus.monitor.freq.secs=10, storm.supervisor.memory.limit.tolerance.margin.mb=128.0, storm.disable.symlinks=false, topology.localityaware.lower.bound=0.2, transactional.zookeeper.servers=null, nimbus.task.timeout.secs=30, logs.users=null, pacemaker.thrift.message.size.max=10485760, topology.ras.one.component.per.worker=false, ui.host=0.0.0.0, supervisor.thrift.port=6628, topology.bolt.wait.strategy=org.apache.storm.policy.WaitStrategyProgressive, pacemaker.thread.timeout=10, storm.meta.serialization.delegate=org.apache.storm.serialization.GzipThriftSerializationDelegate, dev.zookeeper.path=/tmp/dev-storm-zookeeper, topology.skip.missing.kryo.registrations=false, drpc.invocations.threads=64, storm.zookeeper.session.timeout=20000, storm.metricstore.rocksdb.metadata_string_cache_capacity=4000, storm.workers.artifacts.dir=workers-artifacts, topology.component.resources.onheap.memory.mb=128.0, storm.log4j2.conf.dir=log4j2, storm.cluster.mode=distributed, ui.childopts=-Xmx768m, task.refresh.poll.secs=10, supervisor.childopts=-Xmx256m, task.credentials.poll.secs=30, storm.health.check.timeout.ms=5000, storm.blobstore.replication.factor=3, worker.profiler.command=flight.bash, storm.messaging.netty.buffer.low.watermark=8388608}
+2025-10-01 10:12:08.598 o.a.s.d.w.Worker main [INFO] Worker 19cc7d6c-ebfe-4fae-b2d2-5aed207b4501 for storm wordcount-topology-2-1759313520 on 7bc87f19-52c5-4929-9bd8-852182cd9419-172.18.0.6:6701  has finished loading
+2025-10-01 10:12:08.919 o.a.s.d.w.WorkerState refresh-active-timer [INFO] All connections are ready for worker 7bc87f19-52c5-4929-9bd8-852182cd9419-172.18.0.6:6701 with id 19cc7d6c-ebfe-4fae-b2d2-5aed207b4501
+2025-10-01 10:12:08.921 o.a.s.e.b.BoltExecutor Thread-17-reportBolt-executor[4, 4] [INFO] Preparing bolt reportBolt:[4]
+2025-10-01 10:12:08.921 o.a.s.e.b.BoltExecutor Thread-15-sentenceSplitBolt-executor[8, 8] [INFO] Preparing bolt sentenceSplitBolt:[8]
+2025-10-01 10:12:08.922 o.a.s.e.b.BoltExecutor Thread-20-wordCountBolt-executor[10, 10] [INFO] Preparing bolt wordCountBolt:[10]
+2025-10-01 10:12:08.921 o.a.s.e.b.BoltExecutor Thread-16-sentenceSplitBolt-executor[6, 6] [INFO] Preparing bolt sentenceSplitBolt:[6]
+2025-10-01 10:12:08.921 o.a.s.e.b.BoltExecutor Thread-14-__system-executor[-1, -1] [INFO] Preparing bolt __system:[-1]
+2025-10-01 10:12:08.923 o.a.s.e.b.BoltExecutor Thread-17-reportBolt-executor[4, 4] [INFO] Prepared bolt reportBolt:[4]
+2025-10-01 10:12:08.921 o.a.s.e.b.BoltExecutor Thread-18-wordCountBolt-executor[12, 12] [INFO] Preparing bolt wordCountBolt:[12]
+2025-10-01 10:12:08.921 o.a.s.e.b.BoltExecutor Thread-19-__acker-executor[2, 2] [INFO] Preparing bolt __acker:[2]
+2025-10-01 10:12:08.936 o.a.s.e.b.BoltExecutor Thread-19-__acker-executor[2, 2] [INFO] Prepared bolt __acker:[2]
+2025-10-01 10:12:08.928 o.e.b.SentenceSplitBolt Thread-15-sentenceSplitBolt-executor[8, 8] [INFO] started sentence
+2025-10-01 10:12:08.941 o.a.s.e.b.BoltExecutor Thread-15-sentenceSplitBolt-executor[8, 8] [INFO] Prepared bolt sentenceSplitBolt:[8]
+2025-10-01 10:12:08.941 o.e.b.SentenceSplitBolt Thread-16-sentenceSplitBolt-executor[6, 6] [INFO] started sentence
+2025-10-01 10:12:08.954 o.a.s.e.b.BoltExecutor Thread-16-sentenceSplitBolt-executor[6, 6] [INFO] Prepared bolt sentenceSplitBolt:[6]
+2025-10-01 10:12:08.956 o.a.s.m.c.CGroupMetricsBase Thread-14-__system-executor[-1, -1] [WARN] CGroupCpuStat is disabled. cpu is not a mounted subsystem
+2025-10-01 10:12:08.959 o.a.s.m.c.CGroupMetricsBase Thread-14-__system-executor[-1, -1] [WARN] CGroupMemoryLimit is disabled. memory is not a mounted subsystem
+2025-10-01 10:12:08.963 o.a.s.m.c.CGroupMetricsBase Thread-14-__system-executor[-1, -1] [WARN] CGroupCpuGuaranteeByCfsQuota is disabled. cpu is not a mounted subsystem
+2025-10-01 10:12:08.966 o.a.s.m.c.CGroupMetricsBase Thread-14-__system-executor[-1, -1] [WARN] CGroupMemoryUsage is disabled. memory is not a mounted subsystem
+2025-10-01 10:12:08.968 o.a.s.m.c.CGroupMetricsBase Thread-14-__system-executor[-1, -1] [WARN] CGroupCpu is disabled. cpuacct is not a mounted subsystem
+2025-10-01 10:12:08.971 o.a.k.c.p.ProducerConfig Thread-20-wordCountBolt-executor[10, 10] [INFO] ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [kafka:29092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+2025-10-01 10:12:08.971 o.a.s.m.c.CGroupMetricsBase Thread-14-__system-executor[-1, -1] [WARN] CGroupCpuGuarantee is disabled. cpu is not a mounted subsystem
+2025-10-01 10:12:08.971 o.a.k.c.p.ProducerConfig Thread-18-wordCountBolt-executor[12, 12] [INFO] ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [kafka:29092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-2
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+2025-10-01 10:12:08.977 o.a.s.e.b.BoltExecutor Thread-14-__system-executor[-1, -1] [INFO] Prepared bolt __system:[-1]
+2025-10-01 10:12:09.178 o.a.k.c.p.KafkaProducer Thread-20-wordCountBolt-executor[10, 10] [INFO] [Producer clientId=producer-1] Instantiated an idempotent producer.
+2025-10-01 10:12:09.178 o.a.k.c.p.KafkaProducer Thread-18-wordCountBolt-executor[12, 12] [INFO] [Producer clientId=producer-2] Instantiated an idempotent producer.
+2025-10-01 10:12:09.269 o.a.k.c.u.AppInfoParser Thread-20-wordCountBolt-executor[10, 10] [INFO] Kafka version: 3.6.0
+2025-10-01 10:12:09.271 o.a.k.c.u.AppInfoParser Thread-20-wordCountBolt-executor[10, 10] [INFO] Kafka commitId: 60e845626d8a465a
+2025-10-01 10:12:09.272 o.a.k.c.u.AppInfoParser Thread-20-wordCountBolt-executor[10, 10] [INFO] Kafka startTimeMs: 1759313529267
+2025-10-01 10:12:09.276 o.a.s.e.b.BoltExecutor Thread-20-wordCountBolt-executor[10, 10] [INFO] Prepared bolt wordCountBolt:[10]
+2025-10-01 10:12:09.276 o.a.k.c.u.AppInfoParser Thread-18-wordCountBolt-executor[12, 12] [INFO] Kafka version: 3.6.0
+2025-10-01 10:12:09.279 o.a.k.c.u.AppInfoParser Thread-18-wordCountBolt-executor[12, 12] [INFO] Kafka commitId: 60e845626d8a465a
+2025-10-01 10:12:09.281 o.a.k.c.u.AppInfoParser Thread-18-wordCountBolt-executor[12, 12] [INFO] Kafka startTimeMs: 1759313529267
+2025-10-01 10:12:09.284 o.a.s.e.b.BoltExecutor Thread-18-wordCountBolt-executor[12, 12] [INFO] Prepared bolt wordCountBolt:[12]
+2025-10-01 10:12:09.596 o.a.k.c.Metadata kafka-producer-network-thread | producer-1 [INFO] [Producer clientId=producer-1] Cluster ID: DzNw4IrBRdSjrdxCNfEK9g
+2025-10-01 10:12:09.596 o.a.k.c.Metadata kafka-producer-network-thread | producer-2 [INFO] [Producer clientId=producer-2] Cluster ID: DzNw4IrBRdSjrdxCNfEK9g
+2025-10-01 10:12:09.600 o.a.k.c.p.i.TransactionManager kafka-producer-network-thread | producer-2 [INFO] [Producer clientId=producer-2] ProducerId set to 368 with epoch 0
+2025-10-01 10:12:09.600 o.a.k.c.p.i.TransactionManager kafka-producer-network-thread | producer-1 [INFO] [Producer clientId=producer-1] ProducerId set to 367 with epoch 0
+2025-10-01 10:12:09.749 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] of->1
+2025-10-01 10:12:09.752 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] in->1
+2025-10-01 10:12:09.753 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Spouts->1
+2025-10-01 10:12:09.754 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] are->1
+2025-10-01 10:12:09.778 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] a->1
+2025-10-01 10:12:09.782 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Storm->1
+2025-10-01 10:12:09.783 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] in->2
+2025-10-01 10:12:09.786 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Storm->2
+2025-10-01 10:12:09.787 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Storm->3
+2025-10-01 10:12:09.789 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] streams->1
+2025-10-01 10:12:09.794 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] topology->1
+2025-10-01 10:12:09.797 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] process->1
+2025-10-01 10:12:09.799 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] streams->2
+2025-10-01 10:12:09.800 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] a->2
+2025-10-01 10:12:09.802 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Storm->4
+2025-10-01 10:12:09.803 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] a->3
+2025-10-01 10:12:09.805 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] a->4
+2025-10-01 10:12:09.807 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Storm->5
+2025-10-01 10:12:09.810 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] of->2
+2025-10-01 10:12:09.814 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] topologies->1
+2025-10-01 10:12:09.815 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] consist->1
+2025-10-01 10:12:09.817 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] distributed->1
+2025-10-01 10:12:09.821 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] a->5
+2025-10-01 10:12:09.826 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] tolerance->1
+2025-10-01 10:12:09.827 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Storm->6
+2025-10-01 10:12:09.832 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] topologies->2
+2025-10-01 10:12:09.836 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] consist->2
+2025-10-01 10:12:09.837 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] realtime->1
+2025-10-01 10:12:09.838 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] in->3
+2025-10-01 10:12:09.839 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] computation->1
+2025-10-01 10:12:09.843 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] a->6
+2025-10-01 10:12:09.876 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Storm->7
+2025-10-01 10:12:09.877 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] tolerance->2
+2025-10-01 10:12:09.880 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] for->1
+2025-10-01 10:12:09.886 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] system->1
+2025-10-01 10:12:09.887 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] distributed->2
+2025-10-01 10:12:09.889 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] realtime->2
+2025-10-01 10:12:09.893 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] computation->2
+2025-10-01 10:12:09.897 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] system->2
+2025-10-01 10:12:09.902 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] distributed->3
+2025-10-01 10:12:09.903 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] system->3
+2025-10-01 10:12:09.904 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] of->3
+2025-10-01 10:12:09.907 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] and->1
+2025-10-01 10:12:09.909 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] distributed->4
+2025-10-01 10:12:09.911 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] system->4
+2025-10-01 10:12:09.915 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] time->1
+2025-10-01 10:12:09.920 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] pipelines->1
+2025-10-01 10:12:09.923 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] the->1
+2025-10-01 10:12:09.925 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] in->4
+2025-10-01 10:12:09.931 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Storm->8
+2025-10-01 10:12:09.932 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Storm->9
+2025-10-01 10:12:09.933 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] least->1
+2025-10-01 10:12:09.936 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] once->1
+2025-10-01 10:12:09.940 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] semantics->1
+2025-10-01 10:12:09.943 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] a->7
+2025-10-01 10:12:09.945 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Storm->10
+2025-10-01 10:12:09.947 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Storm->11
+2025-10-01 10:12:09.949 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] clusters->1
+2025-10-01 10:12:09.950 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] of->4
+2025-10-01 10:12:09.953 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] processing->1
+2025-10-01 10:12:09.956 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] for->2
+2025-10-01 10:12:09.961 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] tolerance->3
+2025-10-01 10:12:09.964 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] scalability->1
+2025-10-01 10:12:09.969 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] and->2
+2025-10-01 10:12:09.972 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] of->5
+2025-10-01 10:12:09.978 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] and->3
+2025-10-01 10:12:09.980 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] streams->3
+2025-10-01 10:12:09.982 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] topology->2
+2025-10-01 10:12:09.983 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] processing->2
+2025-10-01 10:12:09.985 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] scalability->2
+2025-10-01 10:12:09.986 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] and->4
+2025-10-01 10:12:09.987 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] processing->3
+2025-10-01 10:12:09.988 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Machine->1
+2025-10-01 10:12:09.990 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] provide->1
+2025-10-01 10:12:09.993 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] use->1
+2025-10-01 10:12:09.997 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] backbone->1
+2025-10-01 10:12:10.005 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] observability->1
+2025-10-01 10:12:10.008 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] process->2
+2025-10-01 10:12:10.010 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] streams->4
+2025-10-01 10:12:10.014 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] pipelines->2
+2025-10-01 10:12:10.015 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] of->6
+2025-10-01 10:12:10.023 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] guarantees->1
+2025-10-01 10:12:10.025 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] at->1
+2025-10-01 10:12:10.027 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] processing->4
+2025-10-01 10:12:10.029 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] count->1
+2025-10-01 10:12:10.031 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] and->5
+2025-10-01 10:12:10.035 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] and->6
+2025-10-01 10:12:10.038 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] and->7
+2025-10-01 10:12:10.040 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Logs->1
+2025-10-01 10:12:10.041 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] and->8
+2025-10-01 10:12:10.044 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] metrics->1
+2025-10-01 10:12:10.046 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] run->1
+2025-10-01 10:12:10.050 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] distributed->5
+2025-10-01 10:12:10.053 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] crucial->1
+2025-10-01 10:12:10.054 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] for->3
+2025-10-01 10:12:10.056 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] production->1
+2025-10-01 10:12:10.060 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] hello->1
+2025-10-01 10:12:10.063 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Bolts->1
+2025-10-01 10:12:10.065 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] sources->1
+2025-10-01 10:12:10.066 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] data->1
+2025-10-01 10:12:10.068 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Apache->1
+2025-10-01 10:12:10.070 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] is->1
+2025-10-01 10:12:10.071 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Apache->2
+2025-10-01 10:12:10.073 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] is->2
+2025-10-01 10:12:10.075 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Kafka->1
+2025-10-01 10:12:10.081 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] provides->1
+2025-10-01 10:12:10.083 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] messaging->1
+2025-10-01 10:12:10.086 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] messaging->2
+2025-10-01 10:12:10.087 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] high->1
+2025-10-01 10:12:10.089 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] are->2
+2025-10-01 10:12:10.090 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] sources->2
+2025-10-01 10:12:10.092 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] throughput->1
+2025-10-01 10:12:10.093 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] spouts->1
+2025-10-01 10:12:10.095 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Big->1
+2025-10-01 10:12:10.098 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] bolts->1
+2025-10-01 10:12:10.101 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Kafka->2
+2025-10-01 10:12:10.104 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] provides->2
+2025-10-01 10:12:10.106 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] high->2
+2025-10-01 10:12:10.109 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Big->2
+2025-10-01 10:12:10.111 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Stream->1
+2025-10-01 10:12:10.116 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] use->2
+2025-10-01 10:12:10.117 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] for->4
+2025-10-01 10:12:10.118 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] time->2
+2025-10-01 10:12:10.119 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] sentiment->1
+2025-10-01 10:12:10.121 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] processing->5
+2025-10-01 10:12:10.122 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] powerful->1
+2025-10-01 10:12:10.123 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] throughput->2
+2025-10-01 10:12:10.126 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Spouts->2
+2025-10-01 10:12:10.128 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] using->1
+2025-10-01 10:12:10.135 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] can->1
+2025-10-01 10:12:10.138 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] supports->1
+2025-10-01 10:12:10.140 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] the->2
+2025-10-01 10:12:10.141 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] count->2
+2025-10-01 10:12:10.147 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] of->7
+2025-10-01 10:12:10.150 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] processing->6
+2025-10-01 10:12:10.152 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] partitioning->1
+2025-10-01 10:12:10.153 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] replication->1
+2025-10-01 10:12:10.155 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] into->1
+2025-10-01 10:12:10.160 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Docker->1
+2025-10-01 10:12:10.162 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] systems->1
+2025-10-01 10:12:10.163 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] locally->1
+2025-10-01 10:12:10.167 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] data->2
+2025-10-01 10:12:10.168 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Monitoring->1
+2025-10-01 10:12:10.169 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] big->1
+2025-10-01 10:12:10.169 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] systems->2
+2025-10-01 10:12:10.173 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] engineers->1
+2025-10-01 10:12:10.176 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] integration->1
+2025-10-01 10:12:10.177 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] analysis->1
+2025-10-01 10:12:10.178 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] low->1
+2025-10-01 10:12:10.180 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] requires->1
+2025-10-01 10:12:10.181 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] stream->1
+2025-10-01 10:12:10.183 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] fault->1
+2025-10-01 10:12:10.184 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] spouts->2
+2025-10-01 10:12:10.185 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] bolts->2
+2025-10-01 10:12:10.188 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] data->3
+2025-10-01 10:12:10.192 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] requires->2
+2025-10-01 10:12:10.193 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] fault->2
+2025-10-01 10:12:10.194 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] is->3
+2025-10-01 10:12:10.195 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] real->1
+2025-10-01 10:12:10.197 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] analytics->1
+2025-10-01 10:12:10.198 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] learning->1
+2025-10-01 10:12:10.199 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] often->1
+2025-10-01 10:12:10.200 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Kafka->3
+2025-10-01 10:12:10.201 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] as->1
+2025-10-01 10:12:10.202 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] data->4
+2025-10-01 10:12:10.203 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Bolts->2
+2025-10-01 10:12:10.203 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] data->5
+2025-10-01 10:12:10.204 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] This->1
+2025-10-01 10:12:10.205 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] is->4
+2025-10-01 10:12:10.206 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] word->1
+2025-10-01 10:12:10.207 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] example->1
+2025-10-01 10:12:10.208 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Kafka->4
+2025-10-01 10:12:10.209 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Kubernetes->1
+2025-10-01 10:12:10.210 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] orchestrate->1
+2025-10-01 10:12:10.211 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Kafka->5
+2025-10-01 10:12:10.212 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Kafka->6
+2025-10-01 10:12:10.213 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] fault->3
+2025-10-01 10:12:10.214 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] helps->1
+2025-10-01 10:12:10.215 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] is->5
+2025-10-01 10:12:10.215 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] data->6
+2025-10-01 10:12:10.216 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Data->1
+2025-10-01 10:12:10.217 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Kafka->7
+2025-10-01 10:12:10.218 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Connect->1
+2025-10-01 10:12:10.219 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Real->1
+2025-10-01 10:12:10.219 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] requires->3
+2025-10-01 10:12:10.220 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] latency->1
+2025-10-01 10:12:10.221 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Word->1
+2025-10-01 10:12:10.221 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] is->6
+2025-10-01 10:12:10.222 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Hello->1
+2025-10-01 10:12:10.223 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] World->1
+2025-10-01 10:12:10.223 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] be->1
+2025-10-01 10:12:10.224 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] ETL->1
+2025-10-01 10:12:10.224 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] frameworks->1
+2025-10-01 10:12:10.225 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] can->2
+2025-10-01 10:12:10.225 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Google->1
+2025-10-01 10:12:10.226 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] PubSub->1
+2025-10-01 10:12:10.227 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] similar->1
+2025-10-01 10:12:10.227 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] to->1
+2025-10-01 10:12:10.228 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] jobs->1
+2025-10-01 10:12:10.229 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] implemented->1
+2025-10-01 10:12:10.230 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] streaming->1
+2025-10-01 10:12:10.231 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] using->2
+2025-10-01 10:12:10.231 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] is->7
+2025-10-01 10:12:10.232 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Kafka->8
+2025-10-01 10:12:10.232 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Cloud->1
+2025-10-01 10:12:10.233 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Fraud->1
+2025-10-01 10:12:10.233 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] rely->1
+2025-10-01 10:12:10.234 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] fast->1
+2025-10-01 10:12:10.234 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] stream->2
+2025-10-01 10:12:10.235 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] on->1
+2025-10-01 10:12:10.235 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] processing->7
+2025-10-01 10:12:10.236 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] detection->1
+2025-10-01 10:12:10.236 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] pipelines->3
+2025-10-01 10:12:10.237 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] and->9
+2025-10-01 10:12:10.237 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] popular->1
+2025-10-01 10:12:10.237 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Python->1
+2025-10-01 10:12:10.238 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] are->3
+2025-10-01 10:12:10.238 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Java->1
+2025-10-01 10:12:10.239 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] languages->1
+2025-10-01 10:12:10.240 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] for->5
+2025-10-01 10:12:10.240 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Streams->1
+2025-10-01 10:12:10.241 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] a->8
+2025-10-01 10:12:10.241 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] processing->8
+2025-10-01 10:12:10.242 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] library->1
+2025-10-01 10:12:10.242 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] stream->3
+2025-10-01 10:12:10.246 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] big->2
+2025-10-01 10:12:10.247 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Cloud->2
+2025-10-01 10:12:10.248 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Spark->1
+2025-10-01 10:12:10.248 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] managed->1
+2025-10-01 10:12:10.249 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Storm->12
+2025-10-01 10:12:10.249 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] for->6
+2025-10-01 10:12:10.250 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] and->10
+2025-10-01 10:12:10.250 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] offer->1
+2025-10-01 10:12:10.251 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Flink->1
+2025-10-01 10:12:10.251 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] competes->1
+2025-10-01 10:12:10.252 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] stream->4
+2025-10-01 10:12:10.252 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Kafka->9
+2025-10-01 10:12:10.253 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] is->8
+2025-10-01 10:12:10.253 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] lightweight->1
+2025-10-01 10:12:10.254 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] data->7
+2025-10-01 10:12:10.254 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] providers->1
+2025-10-01 10:12:10.255 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Kafka->10
+2025-10-01 10:12:10.255 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] services->1
+2025-10-01 10:12:10.256 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] with->1
+2025-10-01 10:12:10.256 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] processing->9
+2025-10-01 10:12:10.258 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] AWS->1
+2025-10-01 10:12:10.259 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] MSK->1
+2025-10-01 10:12:10.260 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] managed->2
+2025-10-01 10:12:10.261 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] a->9
+2025-10-01 10:12:10.261 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] provides->3
+2025-10-01 10:12:10.262 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Hadoop->1
+2025-10-01 10:12:10.263 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] of->8
+2025-10-01 10:12:10.263 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] distributed->6
+2025-10-01 10:12:10.264 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] introduced->1
+2025-10-01 10:12:10.264 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] processing->10
+2025-10-01 10:12:10.265 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] fully->1
+2025-10-01 10:12:10.265 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] era->1
+2025-10-01 10:12:10.266 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Kafka->11
+2025-10-01 10:12:10.266 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] cluster->1
+2025-10-01 10:12:10.267 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] the->3
+2025-10-01 10:12:10.267 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] data->8
+2025-10-01 10:12:10.267 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Event->1
+2025-10-01 10:12:10.268 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] can->3
+2025-10-01 10:12:10.269 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Hubs->1
+2025-10-01 10:12:10.269 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] act->1
+2025-10-01 10:12:10.270 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] as->2
+2025-10-01 10:12:10.270 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Kafka->12
+2025-10-01 10:12:10.271 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Azure->1
+2025-10-01 10:12:10.271 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Stream->2
+2025-10-01 10:12:10.272 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] are->4
+2025-10-01 10:12:10.273 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] brokers->1
+2025-10-01 10:12:10.274 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] correlating->1
+2025-10-01 10:12:10.275 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] useful->1
+2025-10-01 10:12:10.275 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] joins->1
+2025-10-01 10:12:10.276 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] for->7
+2025-10-01 10:12:10.276 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] events->1
+2025-10-01 10:12:10.277 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] of->9
+2025-10-01 10:12:10.277 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] time->3
+2025-10-01 10:12:10.278 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] different->1
+2025-10-01 10:12:10.278 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] processing->11
+2025-10-01 10:12:10.278 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Windowing->1
+2025-10-01 10:12:10.279 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] allows->1
+2025-10-01 10:12:10.279 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] aggregation->1
+2025-10-01 10:12:10.279 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] data->9
+2025-10-01 10:12:10.279 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Batch->1
+2025-10-01 10:12:10.280 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] is->9
+2025-10-01 10:12:10.280 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] from->1
+2025-10-01 10:12:10.280 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] processing->12
+2025-10-01 10:12:10.281 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] over->1
+2025-10-01 10:12:10.281 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] stream->5
+2025-10-01 10:12:10.281 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] dashboards->1
+2025-10-01 10:12:10.282 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] time->4
+2025-10-01 10:12:10.282 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] feeds->1
+2025-10-01 10:12:10.282 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] visualize->1
+2025-10-01 10:12:10.283 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Real->2
+2025-10-01 10:12:10.283 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] communicate->1
+2025-10-01 10:12:10.283 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] data->10
+2025-10-01 10:12:10.284 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Microservices->1
+2025-10-01 10:12:10.284 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] often->2
+2025-10-01 10:12:10.284 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Kafka->13
+2025-10-01 10:12:10.284 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] records->1
+2025-10-01 10:12:10.285 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Kafka->14
+2025-10-01 10:12:10.285 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Producers->1
+2025-10-01 10:12:10.285 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] to->2
+2025-10-01 10:12:10.286 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] live->1
+2025-10-01 10:12:10.286 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] using->3
+2025-10-01 10:12:10.286 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] send->1
+2025-10-01 10:12:10.286 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] topics->1
+2025-10-01 10:12:10.287 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Offsets->1
+2025-10-01 10:12:10.287 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] consumer->1
+2025-10-01 10:12:10.287 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Kafka->15
+2025-10-01 10:12:10.287 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] level->1
+2025-10-01 10:12:10.288 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] stream->6
+2025-10-01 10:12:10.288 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Trident->1
+2025-10-01 10:12:10.289 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] progress->1
+2025-10-01 10:12:10.289 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] track->1
+2025-10-01 10:12:10.289 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] in->5
+2025-10-01 10:12:10.289 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] higher->1
+2025-10-01 10:12:10.290 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Storm->13
+2025-10-01 10:12:10.290 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] APIs->1
+2025-10-01 10:12:10.291 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] provides->4
+2025-10-01 10:12:10.291 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] was->1
+2025-10-01 10:12:10.291 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] to->3
+2025-10-01 10:12:10.292 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] used->1
+2025-10-01 10:12:10.292 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] manage->1
+2025-10-01 10:12:10.293 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Kafka->16
+2025-10-01 10:12:10.293 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Zookeeper->1
+2025-10-01 10:12:10.293 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] was->2
+2025-10-01 10:12:10.294 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] the->4
+2025-10-01 10:12:10.294 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] used->2
+2025-10-01 10:12:10.294 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] MapReduce->1
+2025-10-01 10:12:10.294 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] traditionally->1
+2025-10-01 10:12:10.295 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] first->1
+2025-10-01 10:12:10.296 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] widely->1
+2025-10-01 10:12:10.296 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] big->3
+2025-10-01 10:12:10.296 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] data->11
+2025-10-01 10:12:10.297 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] framework->1
+2025-10-01 10:12:10.297 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] versions->1
+2025-10-01 10:12:10.299 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Kafka->17
+2025-10-01 10:12:10.299 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Newer->1
+2025-10-01 10:12:10.300 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] dependency->1
+2025-10-01 10:12:10.300 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] read->1
+2025-10-01 10:12:10.300 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] records->2
+2025-10-01 10:12:10.301 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] from->2
+2025-10-01 10:12:10.301 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] remove->1
+2025-10-01 10:12:10.301 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Kafka->18
+2025-10-01 10:12:10.301 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Zookeeper->2
+2025-10-01 10:12:10.302 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] topics->2
+2025-10-01 10:12:10.302 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Consumers->1
+2025-10-01 10:12:10.302 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] consumers->1
+2025-10-01 10:12:10.302 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] keep->1
+2025-10-01 10:12:10.303 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] occurs->1
+2025-10-01 10:12:10.303 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] when->1
+2025-10-01 10:12:10.303 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Backpressure->1
+2025-10-01 10:12:10.304 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] cannot->1
+2025-10-01 10:12:10.304 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] up->1
+2025-10-01 10:12:10.304 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] topologies->3
+2025-10-01 10:12:10.305 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] helps->2
+2025-10-01 10:12:10.305 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] hard->1
+2025-10-01 10:12:10.305 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] once->2
+2025-10-01 10:12:10.305 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] semantics->2
+2025-10-01 10:12:10.306 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] but->1
+2025-10-01 10:12:10.306 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Parallelism->1
+2025-10-01 10:12:10.306 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] scale->1
+2025-10-01 10:12:10.307 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] out->1
+2025-10-01 10:12:10.307 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] stream->7
+2025-10-01 10:12:10.307 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] achievable->1
+2025-10-01 10:12:10.308 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Exactly->1
+2025-10-01 10:12:10.308 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] are->5
+2025-10-01 10:12:10.308 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] ensures->1
+2025-10-01 10:12:10.309 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] go->1
+2025-10-01 10:12:10.309 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Field->1
+2025-10-01 10:12:10.309 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] with->2
+2025-10-01 10:12:10.310 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] same->1
+2025-10-01 10:12:10.310 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] bolt->1
+2025-10-01 10:12:10.310 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] grouping->1
+2025-10-01 10:12:10.310 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] tuples->1
+2025-10-01 10:12:10.311 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] key->1
+2025-10-01 10:12:10.311 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] to->4
+2025-10-01 10:12:10.312 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] same->2
+2025-10-01 10:12:10.312 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Storm->14
+2025-10-01 10:12:10.312 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] tuples->2
+2025-10-01 10:12:10.313 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] to->5
+2025-10-01 10:12:10.316 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] uses->1
+2025-10-01 10:12:10.317 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] represent->1
+2025-10-01 10:12:10.317 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] data->12
+2025-10-01 10:12:10.317 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] records->3
+2025-10-01 10:12:10.318 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] ensures->2
+2025-10-01 10:12:10.318 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] availability->1
+2025-10-01 10:12:10.318 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] in->6
+2025-10-01 10:12:10.318 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] fields->1
+2025-10-01 10:12:10.319 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] named->1
+2025-10-01 10:12:10.319 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Replication->1
+2025-10-01 10:12:10.319 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] high->3
+2025-10-01 10:12:10.320 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Tuple->1
+2025-10-01 10:12:10.321 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Kafka->19
+2025-10-01 10:12:10.322 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] values->1
+2025-10-01 10:12:10.322 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] bolts->3
+2025-10-01 10:12:10.323 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] carry->1
+2025-10-01 10:12:10.324 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] across->1
+2025-10-01 10:12:10.324 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] a->10
+2025-10-01 10:12:10.325 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] key->2
+2025-10-01 10:12:10.325 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] of->10
+2025-10-01 10:12:10.326 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] High->1
+2025-10-01 10:12:10.326 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] throughput->3
+2025-10-01 10:12:10.326 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] is->10
+2025-10-01 10:12:10.327 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] feature->1
+2025-10-01 10:12:10.327 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Kafka->20
+2025-10-01 10:12:10.327 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] tuples->3
+2025-10-01 10:12:10.328 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] across->2
+2025-10-01 10:12:10.328 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] randomly->1
+2025-10-01 10:12:10.328 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Shuffling->1
+2025-10-01 10:12:10.328 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] distributes->1
+2025-10-01 10:12:10.329 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] bolts->4
+2025-10-01 10:12:10.329 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] control->1
+2025-10-01 10:12:10.329 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] policies->1
+2025-10-01 10:12:10.330 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] how->1
+2025-10-01 10:12:10.330 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] long->1
+2025-10-01 10:12:10.330 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Retention->1
+2025-10-01 10:12:10.333 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Global->1
+2025-10-01 10:12:10.334 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] grouping->2
+2025-10-01 10:12:10.334 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] tuples->4
+2025-10-01 10:12:10.334 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] to->6
+2025-10-01 10:12:10.334 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] stored->1
+2025-10-01 10:12:10.335 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] all->1
+2025-10-01 10:12:10.335 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] a->11
+2025-10-01 10:12:10.336 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] bolt->2
+2025-10-01 10:12:10.336 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Schema->1
+2025-10-01 10:12:10.336 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] a->12
+2025-10-01 10:12:10.337 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] evolution->1
+2025-10-01 10:12:10.337 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] in->7
+2025-10-01 10:12:10.337 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] challenge->1
+2025-10-01 10:12:10.337 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] single->1
+2025-10-01 10:12:10.338 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] big->4
+2025-10-01 10:12:10.338 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] data->13
+2025-10-01 10:12:10.338 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] is->11
+2025-10-01 10:12:10.338 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] routes->1
+2025-10-01 10:12:10.339 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] is->12
+2025-10-01 10:12:10.339 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] data->14
+2025-10-01 10:12:10.339 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] grouping->3
+2025-10-01 10:12:10.340 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] user->1
+2025-10-01 10:12:10.340 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Custom->1
+2025-10-01 10:12:10.340 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] defined->1
+2025-10-01 10:12:10.340 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] and->11
+2025-10-01 10:12:10.341 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Protobuf->1
+2025-10-01 10:12:10.341 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] common->1
+2025-10-01 10:12:10.341 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] human->1
+2025-10-01 10:12:10.341 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] but->2
+2025-10-01 10:12:10.341 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] less->1
+2025-10-01 10:12:10.342 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] provides->5
+2025-10-01 10:12:10.342 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] efficient->1
+2025-10-01 10:12:10.342 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Local->1
+2025-10-01 10:12:10.342 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] clusters->2
+2025-10-01 10:12:10.343 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] help->1
+2025-10-01 10:12:10.343 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] developers->1
+2025-10-01 10:12:10.343 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Storm->15
+2025-10-01 10:12:10.344 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] routing->1
+2025-10-01 10:12:10.344 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] logic->1
+2025-10-01 10:12:10.344 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Avro->1
+2025-10-01 10:12:10.345 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] is->13
+2025-10-01 10:12:10.345 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] test->1
+2025-10-01 10:12:10.345 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] reduce->1
+2025-10-01 10:12:10.345 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] payload->1
+2025-10-01 10:12:10.346 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Kafka->21
+2025-10-01 10:12:10.346 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] are->6
+2025-10-01 10:12:10.346 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] serialization->1
+2025-10-01 10:12:10.347 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] formats->1
+2025-10-01 10:12:10.347 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] JSON->1
+2025-10-01 10:12:10.347 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] readable->1
+2025-10-01 10:12:10.347 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] formats->2
+2025-10-01 10:12:10.348 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] topologies->4
+2025-10-01 10:12:10.348 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Binary->1
+2025-10-01 10:12:10.348 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] size->1
+2025-10-01 10:12:10.349 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] in->8
+2025-10-01 10:12:10.349 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Capture)->1
+2025-10-01 10:12:10.349 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] streams->5
+2025-10-01 10:12:10.349 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] database->1
+2025-10-01 10:12:10.350 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] a->13
+2025-10-01 10:12:10.350 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Debezium->1
+2025-10-01 10:12:10.350 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] popular->2
+2025-10-01 10:12:10.351 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] CDC->1
+2025-10-01 10:12:10.351 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] (Change->1
+2025-10-01 10:12:10.351 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] tool->1
+2025-10-01 10:12:10.352 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Data->2
+2025-10-01 10:12:10.352 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] updates->1
+2025-10-01 10:12:10.352 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] is->14
+2025-10-01 10:12:10.353 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] CDC->2
+2025-10-01 10:12:10.353 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] with->3
+2025-10-01 10:12:10.353 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Kafka->22
+2025-10-01 10:12:10.353 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Nimbus->1
+2025-10-01 10:12:10.354 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] is->15
+2025-10-01 10:12:10.354 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] master->1
+2025-10-01 10:12:10.354 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] node->1
+2025-10-01 10:12:10.354 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] the->5
+2025-10-01 10:12:10.355 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] in->9
+2025-10-01 10:12:10.355 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Storm->16
+2025-10-01 10:12:10.355 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Supervisors->1
+2025-10-01 10:12:10.356 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] processes->1
+2025-10-01 10:12:10.356 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] in->10
+2025-10-01 10:12:10.356 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Storm->17
+2025-10-01 10:12:10.357 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] run->2
+2025-10-01 10:12:10.357 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] processing->13
+2025-10-01 10:12:10.357 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Streams->2
+2025-10-01 10:12:10.357 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] partitions->1
+2025-10-01 10:12:10.358 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] topic->1
+2025-10-01 10:12:10.358 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] supports->2
+2025-10-01 10:12:10.358 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] worker->1
+2025-10-01 10:12:10.359 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] stream->8
+2025-10-01 10:12:10.359 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] handle->1
+2025-10-01 10:12:10.359 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Kafka->23
+2025-10-01 10:12:10.360 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] with->4
+2025-10-01 10:12:10.360 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] written->1
+2025-10-01 10:12:10.361 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] and->12
+2025-10-01 10:12:10.361 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Storm->18
+2025-10-01 10:12:10.361 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] in->11
+2025-10-01 10:12:10.361 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Clojure->1
+2025-10-01 10:12:10.362 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Storm->19
+2025-10-01 10:12:10.362 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] be->2
+2025-10-01 10:12:10.362 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] HDFS->1
+2025-10-01 10:12:10.363 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] for->8
+2025-10-01 10:12:10.363 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] integrated->1
+2025-10-01 10:12:10.363 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] storage->1
+2025-10-01 10:12:10.364 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Storm->20
+2025-10-01 10:12:10.364 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] topologies->5
+2025-10-01 10:12:10.365 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] be->3
+2025-10-01 10:12:10.365 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] submitted->1
+2025-10-01 10:12:10.366 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] or->1
+2025-10-01 10:12:10.366 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] can->4
+2025-10-01 10:12:10.367 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] can->5
+2025-10-01 10:12:10.367 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] recommendation->1
+2025-10-01 10:12:10.368 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] engines->1
+2025-10-01 10:12:10.368 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] pipelines->4
+2025-10-01 10:12:10.368 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Online->1
+2025-10-01 10:12:10.368 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] on->2
+2025-10-01 10:12:10.369 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] CLI->1
+2025-10-01 10:12:10.369 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] rely->2
+2025-10-01 10:12:10.369 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] failures->1
+2025-10-01 10:12:10.369 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Kafka->24
+2025-10-01 10:12:10.370 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] recover->1
+2025-10-01 10:12:10.370 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Kafka->25
+2025-10-01 10:12:10.370 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] brokers->2
+2025-10-01 10:12:10.370 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] is->16
+2025-10-01 10:12:10.371 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Java->2
+2025-10-01 10:12:10.371 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] with->5
+2025-10-01 10:12:10.372 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] via->1
+2025-10-01 10:12:10.372 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] API->1
+2025-10-01 10:12:10.372 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] streaming->2
+2025-10-01 10:12:10.373 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Checkpointing->1
+2025-10-01 10:12:10.373 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] helps->3
+2025-10-01 10:12:10.373 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] from->3
+2025-10-01 10:12:10.373 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Telemetry->1
+2025-10-01 10:12:10.374 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] pipelines->5
+2025-10-01 10:12:10.374 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] connected->1
+2025-10-01 10:12:10.374 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] devices->1
+2025-10-01 10:12:10.375 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] monitor->1
+2025-10-01 10:12:10.375 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Data->3
+2025-10-01 10:12:10.375 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] late->1
+2025-10-01 10:12:10.375 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] data->15
+2025-10-01 10:12:10.376 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] handle->2
+2025-10-01 10:12:10.376 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] arriving->1
+2025-10-01 10:12:10.376 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] pipelines->6
+2025-10-01 10:12:10.376 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] must->1
+2025-10-01 10:12:10.377 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] duplicate->1
+2025-10-01 10:12:10.377 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Idempotent->1
+2025-10-01 10:12:10.377 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] producers->1
+2025-10-01 10:12:10.377 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] avoid->1
+2025-10-01 10:12:10.378 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Kafka->26
+2025-10-01 10:12:10.378 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] records->4
+2025-10-01 10:12:10.378 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] on->3
+2025-10-01 10:12:10.378 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] be->4
+2025-10-01 10:12:10.379 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] managed->3
+2025-10-01 10:12:10.379 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] must->2
+2025-10-01 10:12:10.380 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] carefully->1
+2025-10-01 10:12:10.380 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] in->12
+2025-10-01 10:12:10.380 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Event->2
+2025-10-01 10:12:10.381 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] driven->1
+2025-10-01 10:12:10.381 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] streaming->3
+2025-10-01 10:12:10.381 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] architectures->1
+2025-10-01 10:12:10.382 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Compaction->1
+2025-10-01 10:12:10.382 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] the->6
+2025-10-01 10:12:10.382 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] keeps->1
+2025-10-01 10:12:10.383 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Kafka->27
+2025-10-01 10:12:10.383 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] value->1
+2025-10-01 10:12:10.383 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] per->1
+2025-10-01 10:12:10.384 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] in->13
+2025-10-01 10:12:10.384 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] latest->1
+2025-10-01 10:12:10.384 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] key->3
+2025-10-01 10:12:10.384 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] depend->1
+2025-10-01 10:12:10.385 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] messaging->3
+2025-10-01 10:12:10.385 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] systems->3
+2025-10-01 10:12:10.385 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Backpressure->2
+2025-10-01 10:12:10.385 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] systems->4
+2025-10-01 10:12:10.386 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] emit->1
+2025-10-01 10:12:10.386 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Storm->21
+2025-10-01 10:12:10.386 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] tuples->5
+2025-10-01 10:12:10.386 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] to->7
+2025-10-01 10:12:10.387 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] partitions->2
+2025-10-01 10:12:10.387 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] and->13
+2025-10-01 10:12:10.387 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] aggregate->1
+2025-10-01 10:12:10.388 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] tuples->6
+2025-10-01 10:12:10.388 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] spouts->3
+2025-10-01 10:12:10.388 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] series->1
+2025-10-01 10:12:10.389 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] downstream->1
+2025-10-01 10:12:10.389 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] bolts->5
+2025-10-01 10:12:10.389 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Kafka->28
+2025-10-01 10:12:10.389 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Bolts->3
+2025-10-01 10:12:10.389 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] stores->1
+2025-10-01 10:12:10.390 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] table->1
+2025-10-01 10:12:10.390 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] data->16
+2025-10-01 10:12:10.390 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] HBase->1
+2025-10-01 10:12:10.391 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] time->5
+2025-10-01 10:12:10.391 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] and->14
+2025-10-01 10:12:10.392 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] topics->3
+2025-10-01 10:12:10.392 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] can->6
+2025-10-01 10:12:10.392 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] have->1
+2025-10-01 10:12:10.392 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] multiple->1
+2025-10-01 10:12:10.398 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] transform,->1
+2025-10-01 10:12:10.398 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] filter,->1
+2025-10-01 10:12:10.399 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] big->5
+2025-10-01 10:12:10.399 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] once->3
+2025-10-01 10:12:10.399 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Consumers->2
+2025-10-01 10:12:10.399 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] in->14
+2025-10-01 10:12:10.400 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] group->1
+2025-10-01 10:12:10.400 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] the->7
+2025-10-01 10:12:10.400 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] requires->4
+2025-10-01 10:12:10.401 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Exactly->2
+2025-10-01 10:12:10.401 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] delivery->1
+2025-10-01 10:12:10.401 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] partitions->3
+2025-10-01 10:12:10.401 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] share->1
+2025-10-01 10:12:10.402 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] detection->2
+2025-10-01 10:12:10.402 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Anomaly->1
+2025-10-01 10:12:10.402 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] applied->1
+2025-10-01 10:12:10.402 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] time->6
+2025-10-01 10:12:10.403 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] to->8
+2025-10-01 10:12:10.403 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] series->2
+2025-10-01 10:12:10.403 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] careful->1
+2025-10-01 10:12:10.404 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] design->1
+2025-10-01 10:12:10.404 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] same->3
+2025-10-01 10:12:10.404 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] is->17
+2025-10-01 10:12:10.404 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] data->17
+2025-10-01 10:12:10.405 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] redistributes->1
+2025-10-01 10:12:10.405 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] across->3
+2025-10-01 10:12:10.406 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] partitions->4
+2025-10-01 10:12:10.406 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] consumers->2
+2025-10-01 10:12:10.406 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Rebalancing->1
+2025-10-01 10:12:10.406 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Sticky->1
+2025-10-01 10:12:10.407 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] reduces->1
+2025-10-01 10:12:10.407 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] partitioning->2
+2025-10-01 10:12:10.407 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] rebalancing->1
+2025-10-01 10:12:10.408 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] churn->1
+2025-10-01 10:12:10.408 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] simplifies->1
+2025-10-01 10:12:10.409 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] dashboards->2
+2025-10-01 10:12:10.409 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] help->2
+2025-10-01 10:12:10.409 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] enterprise->1
+2025-10-01 10:12:10.410 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Kafka->29
+2025-10-01 10:12:10.410 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] integration->2
+2025-10-01 10:12:10.411 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] features->1
+2025-10-01 10:12:10.411 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] databases->1
+2025-10-01 10:12:10.411 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] business->1
+2025-10-01 10:12:10.412 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Connect->2
+2025-10-01 10:12:10.412 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] in->15
+2025-10-01 10:12:10.412 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Metrics->1
+2025-10-01 10:12:10.413 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] be->5
+2025-10-01 10:12:10.413 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] stored->2
+2025-10-01 10:12:10.414 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] can->7
+2025-10-01 10:12:10.414 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] with->6
+2025-10-01 10:12:10.414 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Operational->1
+2025-10-01 10:12:10.414 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] teams->1
+2025-10-01 10:12:10.414 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Confluent->1
+2025-10-01 10:12:10.415 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] provides->6
+2025-10-01 10:12:10.415 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Kafka->30
+2025-10-01 10:12:10.415 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Prometheus->1
+2025-10-01 10:12:10.416 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] common->2
+2025-10-01 10:12:10.416 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] use->3
+2025-10-01 10:12:10.416 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] time->7
+2025-10-01 10:12:10.417 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] detection->3
+2025-10-01 10:12:10.417 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] a->14
+2025-10-01 10:12:10.417 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] fraud->1
+2025-10-01 10:12:10.417 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] case->1
+2025-10-01 10:12:10.418 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Real->3
+2025-10-01 10:12:10.418 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] is->18
+2025-10-01 10:12:10.418 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] ksqlDB->1
+2025-10-01 10:12:10.418 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] builds->1
+2025-10-01 10:12:10.419 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] top->1
+2025-10-01 10:12:10.419 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] on->4
+2025-10-01 10:12:10.419 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] of->11
+2025-10-01 10:12:10.419 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Streams->3
+2025-10-01 10:12:10.420 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Kafka->31
+2025-10-01 10:12:10.420 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Processing->1
+2025-10-01 10:12:10.420 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] streams->6
+2025-10-01 10:12:10.420 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Complex->1
+2025-10-01 10:12:10.421 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] used->3
+2025-10-01 10:12:10.421 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] in->16
+2025-10-01 10:12:10.421 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] detection->4
+2025-10-01 10:12:10.421 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Event->3
+2025-10-01 10:12:10.421 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] CEP->1
+2025-10-01 10:12:10.422 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] is->19
+2025-10-01 10:12:10.422 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] correlates->1
+2025-10-01 10:12:10.422 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] multiple->2
+2025-10-01 10:12:10.422 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] fraud->2
+2025-10-01 10:12:10.423 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] telecom->1
+2025-10-01 10:12:10.423 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] and->15
+2025-10-01 10:12:10.424 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] large->1
+2025-10-01 10:12:10.425 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] amounts->1
+2025-10-01 10:12:10.425 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] of->12
+2025-10-01 10:12:10.425 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] devices->2
+2025-10-01 10:12:10.426 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] key-value->1
+2025-10-01 10:12:10.426 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] use->4
+2025-10-01 10:12:10.426 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] cases->1
+2025-10-01 10:12:10.426 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] IoT->1
+2025-10-01 10:12:10.426 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] supports->3
+2025-10-01 10:12:10.427 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] streaming->4
+2025-10-01 10:12:10.427 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] log->1
+2025-10-01 10:12:10.427 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] data->18
+2025-10-01 10:12:10.428 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Kafka->32
+2025-10-01 10:12:10.428 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] generate->1
+2025-10-01 10:12:10.428 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] compaction->1
+2025-10-01 10:12:10.429 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] for->9
+2025-10-01 10:12:10.429 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Storm->22
+2025-10-01 10:12:10.429 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] topologies->6
+2025-10-01 10:12:10.430 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] horizontally->1
+2025-10-01 10:12:10.430 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] more->1
+2025-10-01 10:12:10.430 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Storm->23
+2025-10-01 10:12:10.431 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] acking->1
+2025-10-01 10:12:10.431 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] mechanism->1
+2025-10-01 10:12:10.431 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] guarantees->2
+2025-10-01 10:12:10.432 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] message->1
+2025-10-01 10:12:10.432 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] processing->14
+2025-10-01 10:12:10.432 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] scale->2
+2025-10-01 10:12:10.433 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] with->7
+2025-10-01 10:12:10.433 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] bolts->6
+2025-10-01 10:12:10.433 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] via->2
+2025-10-01 10:12:10.434 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] bursts->1
+2025-10-01 10:12:10.434 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] of->13
+2025-10-01 10:12:10.434 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] and->16
+2025-10-01 10:12:10.435 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Kafka->33
+2025-10-01 10:12:10.435 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] incoming->1
+2025-10-01 10:12:10.435 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] data->19
+2025-10-01 10:12:10.435 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] worker->2
+2025-10-01 10:12:10.436 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] can->8
+2025-10-01 10:12:10.436 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] buffer->1
+2025-10-01 10:12:10.436 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] CPU->1
+2025-10-01 10:12:10.436 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] performance->1
+2025-10-01 10:12:10.437 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Memory->1
+2025-10-01 10:12:10.437 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] affect->1
+2025-10-01 10:12:10.437 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] delay->1
+2025-10-01 10:12:10.437 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] controls->1
+2025-10-01 10:12:10.437 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Kafka->34
+2025-10-01 10:12:10.438 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] batching->1
+2025-10-01 10:12:10.438 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Storm->24
+2025-10-01 10:12:10.438 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Linger.ms->1
+2025-10-01 10:12:10.438 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] in->17
+2025-10-01 10:12:10.439 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Storm->25
+2025-10-01 10:12:10.439 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Redis->1
+2025-10-01 10:12:10.439 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Cassandra->1
+2025-10-01 10:12:10.439 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] integrates->1
+2025-10-01 10:12:10.440 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] with->8
+2025-10-01 10:12:10.440 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] and->17
+2025-10-01 10:12:10.440 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] segment->1
+2025-10-01 10:12:10.440 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] size->2
+2025-10-01 10:12:10.441 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Spark->2
+2025-10-01 10:12:10.441 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] system->5
+2025-10-01 10:12:10.441 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] a->15
+2025-10-01 10:12:10.442 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Segment.bytes->1
+2025-10-01 10:12:10.442 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] log->2
+2025-10-01 10:12:10.442 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] micro->1
+2025-10-01 10:12:10.442 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] and->18
+2025-10-01 10:12:10.443 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] controls->2
+2025-10-01 10:12:10.443 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Flink->2
+2025-10-01 10:12:10.443 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Kafka->35
+2025-10-01 10:12:10.444 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Streaming->1
+2025-10-01 10:12:10.444 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] is->20
+2025-10-01 10:12:10.444 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] supports->4
+2025-10-01 10:12:10.445 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] batch->1
+2025-10-01 10:12:10.445 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] event->1
+2025-10-01 10:12:10.445 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] time->8
+2025-10-01 10:12:10.445 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] watermarks->1
+2025-10-01 10:12:10.446 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] fetch->1
+2025-10-01 10:12:10.446 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] data->20
+2025-10-01 10:12:10.447 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] poll()->1
+2025-10-01 10:12:10.448 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Consumers->3
+2025-10-01 10:12:10.448 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] use->5
+2025-10-01 10:12:10.448 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] to->9
+2025-10-01 10:12:10.449 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] events->2
+2025-10-01 10:12:10.449 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Data->4
+2025-10-01 10:12:10.449 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] adds->1
+2025-10-01 10:12:10.449 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] raw->1
+2025-10-01 10:12:10.450 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] enrichment->1
+2025-10-01 10:12:10.450 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] context->1
+2025-10-01 10:12:10.450 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Kafka->36
+2025-10-01 10:12:10.451 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] partition->1
+2025-10-01 10:12:10.451 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] skew->1
+2025-10-01 10:12:10.452 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] cause->1
+2025-10-01 10:12:10.452 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] to->10
+2025-10-01 10:12:10.452 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] can->9
+2025-10-01 10:12:10.453 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] imbalance->1
+2025-10-01 10:12:10.453 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] null->1
+2025-10-01 10:12:10.453 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] and->19
+2025-10-01 10:12:10.454 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] malformed->1
+2025-10-01 10:12:10.454 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] pipelines->7
+2025-10-01 10:12:10.454 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] must->3
+2025-10-01 10:12:10.454 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] time->9
+2025-10-01 10:12:10.455 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] visualizes->1
+2025-10-01 10:12:10.455 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] metrics->2
+2025-10-01 10:12:10.455 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Data->5
+2025-10-01 10:12:10.456 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] real->2
+2025-10-01 10:12:10.456 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] handle->3
+2025-10-01 10:12:10.456 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] messages->1
+2025-10-01 10:12:10.456 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Grafana->1
+2025-10-01 10:12:10.457 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] should->1
+2025-10-01 10:12:10.457 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Whitespace->1
+2025-10-01 10:12:10.458 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] sentences->1
+2025-10-01 10:12:10.458 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] can->10
+2025-10-01 10:12:10.458 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] trimmed->1
+2025-10-01 10:12:10.459 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] removed->1
+2025-10-01 10:12:10.459 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] from->4
+2025-10-01 10:12:10.460 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] input->1
+2025-10-01 10:12:10.460 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Stop->1
+2025-10-01 10:12:10.460 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] be->6
+2025-10-01 10:12:10.461 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] be->7
+2025-10-01 10:12:10.461 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] processing->15
+2025-10-01 10:12:10.461 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] words->1
+2025-10-01 10:12:10.461 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] during->1
+2025-10-01 10:12:10.462 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] OpenTelemetry->1
+2025-10-01 10:12:10.462 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] observability->2
+2025-10-01 10:12:10.462 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] normalization->1
+2025-10-01 10:12:10.463 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] based->1
+2025-10-01 10:12:10.463 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] on->5
+2025-10-01 10:12:10.463 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] streams->7
+2025-10-01 10:12:10.463 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] cloud->1
+2025-10-01 10:12:10.464 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Lemmatization->1
+2025-10-01 10:12:10.464 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] provides->7
+2025-10-01 10:12:10.464 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] live->2
+2025-10-01 10:12:10.465 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] unified->1
+2025-10-01 10:12:10.465 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] provides->8
+2025-10-01 10:12:10.465 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] dictionary->1
+2025-10-01 10:12:10.465 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Streaming->2
+2025-10-01 10:12:10.466 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] testing->1
+2025-10-01 10:12:10.466 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] SQL->1
+2025-10-01 10:12:10.466 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] allows->2
+2025-10-01 10:12:10.466 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] queries->1
+2025-10-01 10:12:10.467 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] costly->1
+2025-10-01 10:12:10.467 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] experiments->1
+2025-10-01 10:12:10.468 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Local->2
+2025-10-01 10:12:10.468 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] prevents->1
+2025-10-01 10:12:10.468 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] is->21
+2025-10-01 10:12:10.469 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Text->1
+2025-10-01 10:12:10.469 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] cleaning->1
+2025-10-01 10:12:10.470 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] for->10
+2025-10-01 10:12:10.470 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] pipelines->8
+2025-10-01 10:12:10.470 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] NLP->1
+2025-10-01 10:12:10.470 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] vital->1
+2025-10-01 10:12:10.471 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] deployment->1
+2025-10-01 10:12:10.471 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] tuning->1
+2025-10-01 10:12:10.472 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] resources->1
+2025-10-01 10:12:10.472 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Cluster->1
+2025-10-01 10:12:10.472 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] requires->5
+2025-10-01 10:12:10.473 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] can->11
+2025-10-01 10:12:10.473 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] serving->1
+2025-10-01 10:12:10.473 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] systems->5
+2025-10-01 10:12:10.474 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Kafka->37
+2025-10-01 10:12:10.474 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] feed->1
+2025-10-01 10:12:10.474 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] TensorFlow->1
+2025-10-01 10:12:10.475 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] making->1
+2025-10-01 10:12:10.475 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Streaming->3
+2025-10-01 10:12:10.475 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] real->3
+2025-10-01 10:12:10.476 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] AI->1
+2025-10-01 10:12:10.476 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] enables->1
+2025-10-01 10:12:10.476 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] decision->1
+2025-10-01 10:12:10.477 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] user->2
+2025-10-01 10:12:10.477 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] time->10
+2025-10-01 10:12:10.477 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] pipelines->9
+2025-10-01 10:12:10.478 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] transactions->1
+2025-10-01 10:12:10.478 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Social->1
+2025-10-01 10:12:10.478 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] pipelines->10
+2025-10-01 10:12:10.479 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] posts->1
+2025-10-01 10:12:10.479 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] and->20
+2025-10-01 10:12:10.479 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Fraud->2
+2025-10-01 10:12:10.480 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] topology->3
+2025-10-01 10:12:10.480 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] stats->1
+2025-10-01 10:12:10.480 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] and->21
+2025-10-01 10:12:10.481 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] errors->1
+2025-10-01 10:12:10.481 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Storm->26
+2025-10-01 10:12:10.482 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] JMX->1
+2025-10-01 10:12:10.482 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] analyze->1
+2025-10-01 10:12:10.482 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] shows->1
+2025-10-01 10:12:10.483 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] media->1
+2025-10-01 10:12:10.483 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] analyze->2
+2025-10-01 10:12:10.483 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] comments->1
+2025-10-01 10:12:10.484 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Kafka->38
+2025-10-01 10:12:10.484 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] UI->1
+2025-10-01 10:12:10.484 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] via->3
+2025-10-01 10:12:10.485 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] are->7
+2025-10-01 10:12:10.485 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] exposed->1
+2025-10-01 10:12:10.485 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] metrics->3
+2025-10-01 10:12:10.486 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Producers->2
+2025-10-01 10:12:10.486 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] for->11
+2025-10-01 10:12:10.486 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] can->12
+2025-10-01 10:12:10.486 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] batch->2
+2025-10-01 10:12:10.487 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] throughput->4
+2025-10-01 10:12:10.487 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] messages->2
+2025-10-01 10:12:10.488 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] and->22
+2025-10-01 10:12:10.488 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] deserialization->1
+2025-10-01 10:12:10.488 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] reduces->2
+2025-10-01 10:12:10.488 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] bandwidth->1
+2025-10-01 10:12:10.489 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] usage->1
+2025-10-01 10:12:10.489 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] costly->2
+2025-10-01 10:12:10.489 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Compression->1
+2025-10-01 10:12:10.490 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Serialization->1
+2025-10-01 10:12:10.490 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] are->8
+2025-10-01 10:12:10.491 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Acks->1
+2025-10-01 10:12:10.491 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] controls->3
+2025-10-01 10:12:10.492 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] setting->1
+2025-10-01 10:12:10.492 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] guarantees->3
+2025-10-01 10:12:10.493 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Snappy->1
+2025-10-01 10:12:10.493 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] and->23
+2025-10-01 10:12:10.493 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] compressions->1
+2025-10-01 10:12:10.493 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] common->3
+2025-10-01 10:12:10.494 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] delivery->2
+2025-10-01 10:12:10.494 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] are->9
+2025-10-01 10:12:10.495 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Gzip->1
+2025-10-01 10:12:10.495 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Kafka->39
+2025-10-01 10:12:10.495 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] resilience->1
+2025-10-01 10:12:10.495 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] factor->1
+2025-10-01 10:12:10.496 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Replication->2
+2025-10-01 10:12:10.496 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] determines->1
+2025-10-01 10:12:10.496 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Cloud->3
+2025-10-01 10:12:10.497 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] native->1
+2025-10-01 10:12:10.497 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] use->6
+2025-10-01 10:12:10.497 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] operators->1
+2025-10-01 10:12:10.497 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Kafka->40
+2025-10-01 10:12:10.498 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] deployments->1
+2025-10-01 10:12:10.498 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] charts->1
+2025-10-01 10:12:10.498 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] simplify->1
+2025-10-01 10:12:10.499 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] deployment->2
+2025-10-01 10:12:10.499 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Helm->1
+2025-10-01 10:12:10.499 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Kubernetes->2
+2025-10-01 10:12:10.499 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Retention.ms->1
+2025-10-01 10:12:10.500 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] controls->4
+2025-10-01 10:12:10.500 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] log->3
+2025-10-01 10:12:10.500 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] retention->1
+2025-10-01 10:12:10.500 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] helps->4
+2025-10-01 10:12:10.501 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] reproducibility->1
+2025-10-01 10:12:10.501 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] duration->1
+2025-10-01 10:12:10.501 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Containerization->1
+2025-10-01 10:12:10.501 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] pipelines->11
+2025-10-01 10:12:10.502 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] CI/CD->1
+2025-10-01 10:12:10.502 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] data->21
+2025-10-01 10:12:10.502 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] must->4
+2025-10-01 10:12:10.503 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] monitored->1
+2025-10-01 10:12:10.503 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] validates->1
+2025-10-01 10:12:10.503 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Integration->1
+2025-10-01 10:12:10.503 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Consumer->1
+2025-10-01 10:12:10.504 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] deploy->1
+2025-10-01 10:12:10.504 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] applications->1
+2025-10-01 10:12:10.504 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] be->8
+2025-10-01 10:12:10.505 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] lag->1
+2025-10-01 10:12:10.505 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] testing->2
+2025-10-01 10:12:10.505 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] can->13
+2025-10-01 10:12:10.505 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] streaming->5
+2025-10-01 10:12:10.506 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] jobs->2
+2025-10-01 10:12:10.506 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] bolts->7
+2025-10-01 10:12:10.506 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] results->1
+2025-10-01 10:12:10.507 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Kafka->41
+2025-10-01 10:12:10.507 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] write->1
+2025-10-01 10:12:10.507 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Storm->27
+2025-10-01 10:12:10.507 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] back->1
+2025-10-01 10:12:10.508 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] to->11
+2025-10-01 10:12:10.508 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] count->3
+2025-10-01 10:12:10.508 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] be->9
+2025-10-01 10:12:10.508 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] written->2
+2025-10-01 10:12:10.509 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] to->12
+2025-10-01 10:12:10.513 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] another->1
+2025-10-01 10:12:10.514 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] splits->1
+2025-10-01 10:12:10.514 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Word->2
+2025-10-01 10:12:10.515 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] can->14
+2025-10-01 10:12:10.515 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] results->2
+2025-10-01 10:12:10.515 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] text->1
+2025-10-01 10:12:10.515 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] words->2
+2025-10-01 10:12:10.515 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] into->2
+2025-10-01 10:12:10.516 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Kafka->42
+2025-10-01 10:12:10.516 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] topic->2
+2025-10-01 10:12:10.516 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Tokenization->1
+2025-10-01 10:12:10.516 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] simulates->1
+2025-10-01 10:12:10.517 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] heavy->1
+2025-10-01 10:12:10.517 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] testing->3
+2025-10-01 10:12:10.517 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Load->1
+2025-10-01 10:12:10.517 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] event->2
+2025-10-01 10:12:10.518 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] flow->1
+2025-10-01 10:12:10.518 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] reduces->3
+2025-10-01 10:12:10.518 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] to->13
+2025-10-01 10:12:10.518 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] words->3
+2025-10-01 10:12:10.518 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] forms->1
+2025-10-01 10:12:10.519 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Stemming->1
+2025-10-01 10:12:10.519 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] validates->2
+2025-10-01 10:12:10.519 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] resilience->2
+2025-10-01 10:12:10.519 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Chaos->1
+2025-10-01 10:12:10.520 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] testing->4
+2025-10-01 10:12:10.520 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] root->1
+2025-10-01 10:12:10.520 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Storm->28
+2025-10-01 10:12:10.520 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] integrate->1
+2025-10-01 10:12:10.520 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] machine->1
+2025-10-01 10:12:10.521 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Predictive->1
+2025-10-01 10:12:10.521 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] with->9
+2025-10-01 10:12:10.521 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] maintenance->1
+2025-10-01 10:12:10.521 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] analyzes->1
+2025-10-01 10:12:10.522 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] streams->8
+2025-10-01 10:12:10.522 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] silent->1
+2025-10-01 10:12:10.522 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] prevents->2
+2025-10-01 10:12:10.522 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] failures->2
+2025-10-01 10:12:10.523 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] notify->1
+2025-10-01 10:12:10.523 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] learning->2
+2025-10-01 10:12:10.523 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] can->15
+2025-10-01 10:12:10.524 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] models->1
+2025-10-01 10:12:10.524 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Monitoring->2
+2025-10-01 10:12:10.524 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] engineers->2
+2025-10-01 10:12:10.524 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Alerts->1
+2025-10-01 10:12:10.525 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] of->14
+2025-10-01 10:12:10.525 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] expenses->1
+2025-10-01 10:12:10.525 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] analyze->3
+2025-10-01 10:12:10.525 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Cost->1
+2025-10-01 10:12:10.526 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] optimization->1
+2025-10-01 10:12:10.526 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] reduces->4
+2025-10-01 10:12:10.526 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] cloud->2
+2025-10-01 10:12:10.526 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Cybersecurity->1
+2025-10-01 10:12:10.526 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] pipelines->12
+2025-10-01 10:12:10.527 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] events->3
+2025-10-01 10:12:10.527 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] and->24
+2025-10-01 10:12:10.528 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] IoT->2
+2025-10-01 10:12:10.528 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] systems->6
+2025-10-01 10:12:10.528 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] sensor->1
+2025-10-01 10:12:10.528 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] mix->1
+2025-10-01 10:12:10.529 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] pipeline->1
+2025-10-01 10:12:10.529 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Python,->1
+2025-10-01 10:12:10.529 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] issues->1
+2025-10-01 10:12:10.529 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] network->1
+2025-10-01 10:12:10.530 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Polyglot->1
+2025-10-01 10:12:10.530 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] AdTech->1
+2025-10-01 10:12:10.530 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] pipelines->13
+2025-10-01 10:12:10.531 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] optimize->1
+2025-10-01 10:12:10.531 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] time->11
+2025-10-01 10:12:10.531 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] bidding->1
+2025-10-01 10:12:10.531 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Java,->1
+2025-10-01 10:12:10.532 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Scala->1
+2025-10-01 10:12:10.532 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] real->4
+2025-10-01 10:12:10.532 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] pipelines->14
+2025-10-01 10:12:10.532 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] must->5
+2025-10-01 10:12:10.533 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Streaming->4
+2025-10-01 10:12:10.533 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] locality->1
+2025-10-01 10:12:10.533 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] minimize->1
+2025-10-01 10:12:10.533 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] latency->2
+2025-10-01 10:12:10.534 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Data->6
+2025-10-01 10:12:10.534 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] throughput->5
+2025-10-01 10:12:10.534 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] improves->1
+2025-10-01 10:12:10.534 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Storm->29
+2025-10-01 10:12:10.535 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] and->25
+2025-10-01 10:12:10.535 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] both->1
+2025-10-01 10:12:10.535 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] in->18
+2025-10-01 10:12:10.535 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] run->3
+2025-10-01 10:12:10.536 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] can->16
+2025-10-01 10:12:10.536 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Docker->2
+2025-10-01 10:12:10.536 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Kafka->43
+2025-10-01 10:12:10.536 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Scaling->1
+2025-10-01 10:12:10.536 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] auto->1
+2025-10-01 10:12:10.537 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] resources->2
+2025-10-01 10:12:10.537 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] adjust->1
+2025-10-01 10:12:10.537 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] policies->2
+2025-10-01 10:12:10.538 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] complements->1
+2025-10-01 10:12:10.538 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Stream->3
+2025-10-01 10:12:10.538 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] batch->3
+2025-10-01 10:12:10.538 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] processing->16
+2025-10-01 10:12:10.539 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] processing->17
+2025-10-01 10:12:10.539 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] to->14
+2025-10-01 10:12:10.539 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] modern->1
+2025-10-01 10:12:10.539 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] central->1
+2025-10-01 10:12:10.539 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] big->6
+2025-10-01 10:12:10.540 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] Streaming->5
+2025-10-01 10:12:10.540 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] is->22
+2025-10-01 10:12:10.540 o.e.b.ReportBolt Thread-17-reportBolt-executor[4, 4] [INFO] data->22

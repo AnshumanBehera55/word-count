@@ -1,0 +1,154 @@
+Apache Storm is a distributed realtime computation system
+Kafka provides a high throughput distributed messaging system
+Big data processing requires scalability and fault tolerance
+Storm topologies consist of spouts and bolts
+Spouts are sources of streams in a Storm topology
+Bolts process streams of data in Storm
+Stream processing is powerful for real time analytics
+Machine learning pipelines often use Kafka as the data backbone
+Storm guarantees at least once processing semantics
+Kafka supports partitioning and replication for fault tolerance
+This is a word count example using Storm and Kafka
+Docker helps run distributed systems locally
+Kubernetes can orchestrate Kafka and Storm clusters
+Monitoring is crucial for production big data systems
+Logs and metrics provide observability into pipelines
+Data engineers use Kafka Connect for integration
+ETL jobs can be implemented using streaming frameworks
+Fraud detection pipelines rely on fast stream processing
+Real time sentiment analysis requires low latency processing
+Word count is the Hello World of stream processing
+Python and Java are popular languages for big data
+Cloud providers offer managed Kafka services
+AWS MSK provides a fully managed Kafka cluster
+Azure Event Hubs can act as Kafka brokers
+Google Cloud PubSub is similar to Kafka
+Stream joins are useful for correlating events
+Windowing allows aggregation of data over time
+Storm Trident provides higher level stream APIs
+Kafka Streams is a lightweight stream processing library
+Flink competes with Spark and Storm for stream processing
+Hadoop introduced the era of distributed data processing
+MapReduce was the first widely used big data framework
+Batch processing is different from stream processing
+Real time dashboards visualize live data feeds
+Microservices often communicate using Kafka
+Producers send records to Kafka topics
+Consumers read records from Kafka topics
+Offsets track consumer progress in Kafka
+Zookeeper was traditionally used to manage Kafka
+Newer Kafka versions remove Zookeeper dependency
+Exactly once semantics are hard but achievable
+Backpressure occurs when consumers cannot keep up
+Storm uses tuples to represent data records
+Tuple fields carry named values across bolts
+Parallelism helps scale out stream topologies
+Shuffling distributes tuples randomly across bolts
+Field grouping ensures tuples with same key go to same bolt
+Global grouping routes all tuples to a single bolt
+Custom grouping provides user defined routing logic
+Local clusters help developers test Storm topologies
+Nimbus is the master node in Storm
+Supervisors run worker processes in Storm
+Kafka brokers handle topic partitions
+Replication ensures high availability in Kafka
+High throughput is a key feature of Kafka
+Storm can be integrated with HDFS for storage
+Checkpointing helps recover from failures
+Data pipelines must handle late arriving data
+Idempotent producers avoid duplicate Kafka records
+Compaction keeps the latest value per key in Kafka
+Retention policies control how long data is stored
+Schema evolution is a challenge in big data
+Avro and Protobuf are common serialization formats
+JSON is human readable but less efficient
+Binary formats reduce payload size in Kafka
+Kafka topics can have multiple partitions
+Consumers in the same group share partitions
+Rebalancing redistributes partitions across consumers
+Sticky partitioning reduces rebalancing churn
+Kafka Connect simplifies integration with databases
+CDC (Change Data Capture) streams database updates
+Debezium is a popular CDC tool with Kafka
+Confluent provides enterprise Kafka features
+Kafka supports stream processing with Kafka Streams
+Storm is written in Java and Clojure
+Storm topologies can be submitted via CLI or API
+Real time fraud detection is a common use case
+Online recommendation engines rely on streaming pipelines
+IoT devices generate large amounts of streaming data
+Telemetry pipelines monitor connected devices
+Event driven architectures depend on messaging systems
+Backpressure must be carefully managed in streaming systems
+Storm guarantees message processing via acking mechanism
+Storm spouts emit tuples to downstream bolts
+Bolts transform, filter, and aggregate tuples
+Kafka can buffer bursts of incoming data
+Storm integrates with Redis and Cassandra
+HBase stores time series and big table data
+Spark Streaming is a micro batch system
+Flink supports event time and watermarks
+Exactly once delivery requires careful design
+Data enrichment adds context to raw events
+Anomaly detection is applied to time series data
+Operational dashboards help business teams
+Metrics can be stored in Prometheus
+Grafana visualizes real time metrics
+OpenTelemetry provides unified observability
+Streaming SQL allows queries on live streams
+ksqlDB builds on top of Kafka Streams
+Complex Event Processing correlates multiple streams
+CEP is used in telecom and fraud detection
+Kafka supports log compaction for key-value use cases
+Storm topologies scale horizontally with more bolts
+Local testing prevents costly cloud experiments
+Cluster deployment requires tuning resources
+Memory and CPU affect Storm worker performance
+Storm UI shows topology stats and errors
+Kafka metrics are exposed via JMX
+Producers can batch messages for throughput
+Linger.ms controls batching delay in Kafka
+Acks setting controls delivery guarantees
+Replication factor determines resilience
+Retention.ms controls log retention duration
+Segment.bytes controls Kafka log segment size
+Consumers use poll() to fetch data
+Consumer lag must be monitored
+Kafka partition skew can cause imbalance
+Storm bolts can write results back to Kafka
+Word count results can be written to another Kafka topic
+Data pipelines must handle null and malformed messages
+Whitespace should be trimmed from input sentences
+Tokenization splits text into words
+Stop words can be removed during processing
+Stemming reduces words to root forms
+Lemmatization provides dictionary based normalization
+Text cleaning is vital for NLP pipelines
+Storm can integrate with machine learning models
+Kafka can feed TensorFlow serving systems
+Streaming AI enables real time decision making
+Predictive maintenance analyzes IoT sensor streams
+Cybersecurity pipelines analyze network events
+Fraud pipelines analyze user transactions
+AdTech pipelines optimize real time bidding
+Social media pipelines analyze posts and comments
+Streaming pipelines must minimize latency
+Data locality improves throughput
+Serialization and deserialization are costly
+Compression reduces bandwidth usage
+Snappy and Gzip are common Kafka compressions
+Cloud native Kafka deployments use operators
+Helm charts simplify Kubernetes deployment
+Storm and Kafka can both run in Docker
+Containerization helps reproducibility
+CI/CD pipelines deploy data applications
+Integration testing validates streaming jobs
+Load testing simulates heavy event flow
+Chaos testing validates resilience
+Monitoring prevents silent failures
+Alerts notify engineers of pipeline issues
+Scaling policies auto adjust resources
+Cost optimization reduces cloud expenses
+Stream processing complements batch processing
+Polyglot systems mix Python, Java, and Scala
+Streaming is central to modern big data

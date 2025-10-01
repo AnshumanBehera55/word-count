@@ -1,0 +1,6 @@
+org\example\bolt\ReportBolt.class
+org\example\App.class
+org\example\bolt\WordCountBolt.class
+org\example\bolt\SentenceSplitBolt.class
+org\example\config\ConfigReader.class
+org\example\spout\KafkaSpoutBuilder.class
