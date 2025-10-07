@@ -10,6 +10,7 @@ import org.apache.storm.topology.base.BaseRichBolt;
 import org.apache.storm.tuple.Fields;
 import org.apache.storm.tuple.Tuple;
 import org.apache.storm.tuple.Values;
+import redis.clients.jedis.Jedis;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -20,6 +21,7 @@ public class WordCountBolt extends BaseRichBolt {
     private Map<String, Integer> counts;
     private KafkaProducer<String, String> producer;
     private final String outputTopic="processed-data";
+    private Jedis jedis;
 
     @Override
     public void prepare(Map<String, Object> map, TopologyContext topologyContext, OutputCollector outputCollector) {
@@ -30,15 +32,18 @@ public class WordCountBolt extends BaseRichBolt {
         props.put("key.serializer", "org.apache.kafka.common.serialization.StringSerializer");
         props.put("value.serializer", "org.apache.kafka.common.serialization.StringSerializer");
         producer = new KafkaProducer<>(props);
+        jedis = new Jedis("redis", 6379);
+
     }
 
     @Override
     public void execute(Tuple tuple) {
 
         String word=tuple.getStringByField("word");
-        counts.put(word,counts.getOrDefault(word,0)+1);
+        long count = jedis.hincrBy("wordcount", word, 1);
+        //counts.put(word,counts.getOrDefault(word,0)+1);
         collector.emit(new Values(word, counts.get(word)));
-        String msg = word + ":" + counts.get(word);
+        String msg = word + " -> " + count;
         producer.send(new ProducerRecord<>(outputTopic, msg));
         collector.ack(tuple);
 
@@ -54,6 +59,8 @@ public class WordCountBolt extends BaseRichBolt {
         if (producer != null) {
             producer.close();
         }
+
+        if (jedis != null) jedis.close();
     }
 
 }
